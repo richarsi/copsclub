@@ -1,0 +1,24 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="copsclub.content">
+
+    <!-- Define new permissions -->
+    
+    <permission
+        id="copsclub.AddSwimmingMeet"
+        title="COPS: Add Swimming Meet"
+        />
+
+    <permission
+        id="copsclub.AddLocation"
+        title="COPS: Add Location"
+        />
+
+    <permission
+        id="copsclub.AddSquad"
+        title="COPS: Add Squad"
+        />
+  
+</configure>
+

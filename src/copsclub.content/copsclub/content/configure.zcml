@@ -1,0 +1,21 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:grok="http://namespaces.zope.org/grok"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="copsclub.content">
+
+  <includeDependencies package="." />
+  <include file="permissions.zcml" />
+  <grok:grok package="." />
+
+  <genericsetup:registerProfile
+      name="default"
+      title="City of Peterborough Swimming Club Content Types"
+      directory="profiles/default"
+      description="Installs the copsclub.content package"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+  <!-- -*- extra stuff goes here -*- -->
+  
+</configure>

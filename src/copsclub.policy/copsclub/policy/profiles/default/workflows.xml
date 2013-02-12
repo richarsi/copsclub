@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<object name="portal_workflow" meta_type="Plone Workflow Tool">
+ <property
+    name="title">Contains workflow definitions for your portal</property>
+ <object name="copsclub_publication_workflow" meta_type="Workflow"/>
+ <bindings>
+  <default>
+   <bound-workflow workflow_id="simple_publication_workflow"/>
+  </default>
+  <type type_id="News Item">
+   <bound-workflow workflow_id="copsclub_publication_workflow"/>
+  </type>
+  <type type_id="File"/>
+  <type type_id="Image"/>
+ </bindings>
+</object>
