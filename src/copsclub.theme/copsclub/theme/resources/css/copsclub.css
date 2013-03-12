@@ -378,7 +378,6 @@ pre {
   overflow-x: auto;
 }
 #content {
-  background-color: #fffff0;
   clear: both;
   line-height: 1.5em;
   padding: 1em 1em 2em;
@@ -589,7 +588,7 @@ div.field.error {
 }
 #visual-portal-wrapper {
   margin: 0 auto;
-  max-width: 1000px;
+  width: 1000px;
 }
 #link-presentation a:link,
 #link-presentation a:hover {
@@ -648,7 +647,7 @@ div.field.error {
   height: 33px;
   padding: 0 0 0 10px;
   vertical-align: top;
-  width: 224px;
+  width: 196px;
   float: left;
 }
 input.inputLabelActive {
@@ -1537,6 +1536,9 @@ input[type="submit"].btn.btn-mini {
   background-color: transparent;
   cursor: default;
 }
+#theme-globalnav li {
+  margin-top: 0.5em;
+}
 .navbar {
   overflow: visible;
   *position: relative;
@@ -2062,159 +2064,6 @@ input[type="submit"].btn.btn-mini {
   left: 250px;
   background: url("../images/Male-swimmer-340x215-pixels.png") no-repeat scroll 0 0;
 }
-@media (max-width: 979px) {
-  body {
-    padding-top: 0;
-  }
-  .navbar-fixed-top,
-  .navbar-fixed-bottom {
-    position: static;
-  }
-  .navbar-fixed-top {
-    margin-bottom: 20px;
-  }
-  .navbar-fixed-bottom {
-    margin-top: 20px;
-  }
-  .navbar-fixed-top .navbar-inner,
-  .navbar-fixed-bottom .navbar-inner {
-    padding: 5px;
-  }
-  .navbar .container {
-    width: auto;
-    padding: 0;
-  }
-  .navbar .brand {
-    padding-left: 10px;
-    padding-right: 10px;
-    margin: 0 0 0 -5px;
-  }
-  .nav-collapse {
-    clear: both;
-  }
-  .nav-collapse .nav {
-    float: none;
-    margin: 0 0 10px;
-  }
-  .nav-collapse .nav > li {
-    float: none;
-  }
-  .nav-collapse .nav > li > a {
-    margin-bottom: 2px;
-  }
-  .nav-collapse .nav > .divider-vertical {
-    display: none;
-  }
-  .nav-collapse .nav .nav-header {
-    color: #ffffff;
-    text-shadow: none;
-  }
-  .nav-collapse .nav > li > a,
-  .nav-collapse .dropdown-menu a {
-    padding: 9px 15px;
-    font-weight: bold;
-    color: #ffffff;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-  }
-  .nav-collapse .btn {
-    padding: 4px 10px 4px;
-    font-weight: normal;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-  }
-  .nav-collapse .dropdown-menu li + li a {
-    margin-bottom: 2px;
-  }
-  .nav-collapse .nav > li > a:hover,
-  .nav-collapse .dropdown-menu a:hover {
-    background-color: #111987;
-  }
-  .navbar-inverse .nav-collapse .nav > li > a,
-  .navbar-inverse .nav-collapse .dropdown-menu a {
-    color: #999999;
-  }
-  .navbar-inverse .nav-collapse .nav > li > a:hover,
-  .navbar-inverse .nav-collapse .dropdown-menu a:hover {
-    background-color: #111111;
-  }
-  .nav-collapse.in .btn-group {
-    margin-top: 5px;
-    padding: 0;
-  }
-  .nav-collapse .dropdown-menu {
-    position: static;
-    top: auto;
-    left: auto;
-    float: none;
-    display: none;
-    max-width: none;
-    margin: 0 15px;
-    padding: 0;
-    background-color: transparent;
-    border: none;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 0;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-  }
-  .nav-collapse .open > .dropdown-menu {
-    display: block;
-  }
-  .nav-collapse .dropdown-menu:before,
-  .nav-collapse .dropdown-menu:after {
-    display: none;
-  }
-  .nav-collapse .dropdown-menu .divider {
-    display: none;
-  }
-  .nav-collapse .nav > li > .dropdown-menu:before,
-  .nav-collapse .nav > li > .dropdown-menu:after {
-    display: none;
-  }
-  .nav-collapse .navbar-form,
-  .nav-collapse .navbar-search {
-    float: none;
-    padding: 10px 15px;
-    margin: 10px 0;
-    border-top: 1px solid #111987;
-    border-bottom: 1px solid #111987;
-    -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.1);
-    -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.1);
-    box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.1);
-  }
-  .navbar-inverse .nav-collapse .navbar-form,
-  .navbar-inverse .nav-collapse .navbar-search {
-    border-top-color: #111111;
-    border-bottom-color: #111111;
-  }
-  .navbar .nav-collapse .nav.pull-right {
-    float: none;
-    margin-left: 0;
-  }
-  .nav-collapse,
-  .nav-collapse.collapse {
-    overflow: hidden;
-    height: 0;
-  }
-  .navbar .btn-navbar {
-    display: block;
-  }
-  .navbar-static .navbar-inner {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-}
-@media (min-width: 980px) {
-  .nav-collapse.collapse {
-    height: auto !important;
-    overflow: visible !important;
-  }
-}
 /*---------- PORTAL PERSONAL TOOLS ----------*/
 #portal-personaltools-wrapper {
   bottom: 0;
@@ -2327,7 +2176,6 @@ input[type="submit"].btn.btn-mini {
 #footer-columns a {
   color: #ffffff;
   font-size: 85%;
-  text-decoration: none;
 }
 #address {
   background-color: #111987;
@@ -2344,7 +2192,6 @@ input[type="submit"].btn.btn-mini {
   font-family: inherit;
   font-size: 80%;
   color: #ffcc00;
-  text-shadow: 0 1px 0 #ffffff;
 }
 #address li .divider {
   padding: 0 5px;
@@ -3767,151 +3614,6 @@ dl.collapsedInlineCollapsible dt.collapsibleHeader {
 #plone-contentmenu-factories #settings {
   background-image: none;
   padding: 0;
-}
-@media screen and (max-width: 650px) {
-  body {
-    min-width: 300px;
-  }
-  div.row {
-    float: none;
-    padding-left: 0;
-  }
-  div.cell {
-    float: none;
-    left: auto;
-    margin-left: 0 !important;
-    width: auto;
-  }
-  #portal-header {
-    background-position: 0 72px;
-    text-align: center;
-  }
-  #portal-logo {
-    display: block;
-    padding: 0.5em;
-  }
-  #portal-logo img {
-    margin: 0;
-  }
-  #portal-slogan {
-    display: block;
-    padding: 0.5em;
-    width: auto;
-  }
-  #portal-siteactions {
-    float: none;
-    padding: 0.5em 1em;
-  }
-  #portal-personaltools-wrapper {
-    height: 2em;
-    position: static;
-  }
-  #portal-languageselector {
-    padding: 0.5em 0;
-  }
-  #theme-globalnav.mobileMenuOn {
-    display: none;
-  }
-  #portal-globalnav-mobile {
-    background: #fff;
-    border: 1px solid #ccc;
-    display: block;
-    font-size: 1.17em;
-    font-weight: bold;
-    line-height: 1.65em;
-    margin: 0.5em auto;
-    max-width: 100%;
-    min-width: 150px;
-    padding: 0.4em 0.1em 0.4em 1em;
-  }
-  #theme-globalnav {
-    padding: 0.5em 0;
-  }
-  #theme-globalnav li {
-    margin: 0 0 0 1%;
-    width: auto;
-    white-space: normal;
-  }
-  #theme-globalnav li a {
-    border-radius: 0;
-    display: block;
-    padding: 1em;
-  }
-  #theme-globalnav li ul {
-    display: none !important;
-  }
-  #subscribe-links {
-    float: none;
-  }
-  .subsribeWrapper {
-    text-align: center;
-  }
-  #portal-breadcrumbs {
-    padding: 1em;
-  }
-  #portal-searchbox {
-    padding: 0.5em 0;
-    position: static;
-  }
-  #portal-searchbox .LSBox {
-    display: inline-block;
-  }
-  .searchSection {
-    display: none !important;
-  }
-  #searchGadget {
-    font-size: 2em;
-    line-height: 1em;
-  }
-  .LSResult {
-    left: 0;
-    text-align: left;
-    top: 3em;
-  }
-  .livesearchContainer {
-    width: 300px;
-  }
-  #visual-portal-wrapper,
-  #portal-column-content.cell,
-  #portal-column-content .cell,
-  #portal-column-one,
-  #portal-column-two {
-    width: auto !important;
-  }
-  #portal-footer,
-  #portal-colophon {
-    padding: 0.5em;
-  }
-  .carousel-banners,
-  .carousel-slider,
-  .carousel-banner {
-    max-width: 100% !important;
-  }
-  .carousel-image img {
-    height: auto;
-    width: auto;
-  }
-  .portletStaticText img {
-    width: 100%;
-  }
-  #portal-logo h1 {
-    margin: 4px;
-    display: block;
-    background-image: url("../images/Cops-single-colour-r17-g25-b135-110-pixels.png");
-    height: 79px;
-    width: 110px;
-  }
-  .navbar span.swimmer {
-    width: 194px;
-    height: 104px;
-    position: absolute;
-    top: -89px;
-    left: 126px;
-    background: url("../images/Female-swimmer-194-pixels.png") no-repeat scroll 0 0;
-  }
-  #portal-footer {
-    padding: 0 !important;
-  }
 }
 [class^="icon-"],
 [class*=" icon-"] {

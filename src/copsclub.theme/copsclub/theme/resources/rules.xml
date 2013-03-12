@@ -44,5 +44,9 @@ css:theme='#portal-logo' attributes="href title accesskey"/>
 <!-- Search -->
 <replace css:content='#portal-searchbox'
 css:theme='#portal-searchbox' />
+<!-- Viewport -->
+<replace css:content="head meta[name='viewport']">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport" />
+</replace>
     </rules>
 </rules>
