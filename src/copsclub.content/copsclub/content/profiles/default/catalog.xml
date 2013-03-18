@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<object name="portal_catalog">
+	<index name="organisers_entry_date" meta_type="DateIndex">
+		<indexed_attr value="organisers_entry_date" />
+	</index>
+	<index name="club_entry_date" meta_type="DateIndex">
+		<indexed_attr value="club_entry_date" />
+	</index>
+	<column value="organisers_entry_date"/>
+	<column value="club_entry_date"/>
+</object>
