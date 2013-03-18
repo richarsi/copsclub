@@ -35,10 +35,30 @@
             <span id="club_entry_date" tal:content="view/club_entry_date_formatted" />
         </div>
 
+        <div class="locations" tal:condition="view/locations">
+            <h3 i18n:translate="heading_locations">Locations:</h3>
+            <div tal:repeat="location view/locations">
+                <a tal:attributes="href location/url; title location/summary">
+                    <div tal:content="location/title" />
+                </a>
+            </div>
+        </div>
+
+        <div class="squads" tal:condition="view/squads">
+            <h3 i18n:translate="heading_squads">Squads:</h3>
+            <div tal:repeat="squad view/squads">
+                <a tal:attributes="href squad/url; title squad/summary">
+                    <img tal:replace="structure squad/imageTag" />
+                    <div tal:content="squad/title" />
+                </a>
+            </div>
+        </div>
+
         <div>
             <label for="team_manager" i18n:translate="label_team_manager">Team Manager</label>
             <span id="team_manager" tal:content="context/team_manager" />
         </div>
+
         <fieldset id="folder-listing">
             <legend>Contents</legend>
             <tal:block define="listing_macro context/folder_listing/macros/listing">

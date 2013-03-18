@@ -7,9 +7,9 @@
   <default>
    <bound-workflow workflow_id="simple_publication_workflow"/>
   </default>
-  <type type_id="News Item">
+  <!-- type type_id="News Item">
    <bound-workflow workflow_id="copsclub_publication_workflow"/>
-  </type>
+  </type -->
   <type type_id="File"/>
   <type type_id="Image"/>
  </bindings>

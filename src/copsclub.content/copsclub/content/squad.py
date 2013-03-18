@@ -3,11 +3,12 @@ from zope import schema
 from plone.directives import form, dexterity
 
 from plone.app.textfield import RichText
-from plone.namedfile.field import NamedImage
+from plone.namedfile.interfaces import IImageScaleTraversable
+from plone.namedfile.field import NamedBlobImage
 
 from copsclub.content import _
 
-class ISquad(form.Schema):
+class ISquad(form.Schema, IImageScaleTraversable):
     """A content item to hold squad details as used by the SwimmingMeet content type
     """
     
@@ -18,8 +19,12 @@ class ISquad(form.Schema):
             description=_(u"A 2 digit code which is used to uniquely identify the squad"),
             required=True
         )
-    information = schema.Text (
+    information = RichText (
             title=_(u"Information"),
             description=_(u"Some information about the squad"),
             required=False
+        )
+    image = NamedBlobImage(
+            title=_(u"Squad image icon"),
+            description=_(u"An image used for this swimming squad when displayed with the swimming meet"),
         )

@@ -86,5 +86,26 @@
       <role name="Reader"/>
       <role name="Site Administrator"/>
     </permission>
+    <permission name="COPS: Add Location" acquire="True">
+      <role name="Coach"/>
+      <role name="Editor"/>
+      <role name="Manager"/>
+      <role name="Owner"/>
+      <role name="Site Administrator"/>
+    </permission>
+    <permission name="COPS: Add Squad" acquire="True">
+      <role name="Coach"/>
+      <role name="Editor"/>
+      <role name="Manager"/>
+      <role name="Owner"/>
+      <role name="Site Administrator"/>
+    </permission>
+    <permission name="COPS: Add Swimming Meet" acquire="True">
+      <role name="Coach"/>
+      <role name="Editor"/>
+      <role name="Manager"/>
+      <role name="Owner"/>
+      <role name="Site Administrator"/>
+    </permission>
   </permissions>
 </rolemap>

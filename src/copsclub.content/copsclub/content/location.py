@@ -28,7 +28,7 @@ class ILocation(form.Schema):
         )
     town_or_city = schema.TextLine (
             title=_(u"Town or City"),
-            description=_(u"Town or City"),
+            description=_(u"Town or city"),
             required=False
         )
     county_or_state = schema.TextLine (
