@@ -1,0 +1,64 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="copsclub.content">
+<body>
+
+<metal:content-core fill-slot="content-core">
+    <metal:content-core define-macro="content-core">
+        
+        <div tal:replace="structure context/text/output" />
+        
+        <tal:folder_contents condition="view/haveSwimmingMeets"
+                       tal:define="all_items view/swimmingmeets;">
+                <dl>
+                    <tal:block tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime;
+                       DateTime python:modules['DateTime'].DateTime;
+                       Batch python:modules['Products.CMFPlone'].Batch;
+                       b_start python:request.get('b_start', 0);
+                       b_orphan python:1;
+                       b_size python:request.get('b_size', 8);
+                       batch python:Batch(all_items, b_size,
+int(b_start), orphan=int(b_orphan));">
+                        <div tal:repeat="swimmingmeet batch">
+                            <div class="width-3 event-panel">
+                            <tal:comment tal:replace="nothing">
+                              Attributes available on the swimmingmeet:
+                              url
+                              type
+                              title
+                              description
+                              start_date
+                              end_date
+                              organisers_entry_date
+                              club_entry_date
+                              locations
+                              date_range_formatted
+                              days_left_formatted
+                              days_left
+                             </tal:comment>
+                                <dl>
+                                    <dt>
+                                        <a tal:attributes="href swimmingmeet/url"
+                                               tal:content="swimmingmeet/title" />
+                                    </dt>
+                                    <dd tal:content="swimmingmeet/date_range_formatted">3 - 4 Dec 2013</dd>
+                                    <!-- dd tal:content="swimmingmeet/locations">Locations</dd -->
+                                    <dd tal:attributes="title swimmingmeet/organisers_entry_date"
+                                               tal:content="swimmingmeet/days_left_formatted">Entry closed</dd>
+                                    <a class="btn" tal:attributes="href swimmingmeet/url">View details »</a>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="batch-navigation" metal:use-macro="context/batch_macros/macros/navigation" />
+                    </tal:block>
+                </dl>
+        </tal:folder_contents>
+    </metal:content-core>
+</metal:content-core>
+
+</body>
+</html>
