@@ -20,5 +20,9 @@
         title="COPS: Add Squad"
         />
   
+    <permission
+        id="copsclub.AddSwimmingFolder"
+        title="COPS: Add Swimming Folder"
+        />
 </configure>
 

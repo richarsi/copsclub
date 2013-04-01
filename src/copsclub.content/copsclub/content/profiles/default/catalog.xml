@@ -6,6 +6,8 @@
 	<index name="club_entry_date" meta_type="DateIndex">
 		<indexed_attr value="club_entry_date" />
 	</index>
+	<column value="start_date"/>
+	<column value="end_date"/>
 	<column value="organisers_entry_date"/>
 	<column value="club_entry_date"/>
 </object>

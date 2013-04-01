@@ -20,7 +20,7 @@ from plone.memoize.instance import memoize
 from plone.indexer import indexer
 
 class ISwimmingMeet(form.Schema):
-    """A folder that can contain cinemas
+    """A folder that can contain files
     """
 
     # form.widget(locations=AutcompleteFieldWidget)
@@ -113,6 +113,8 @@ class View(grok.View):
         self.age_as_of_date_formatted = self.context.age_as_of_date.strftime("%d %b %Y")
         self.organisers_entry_date_formatted = self.context.organisers_entry_date.strftime("%d %b %Y")
         self.club_entry_date_formatted = self.context.club_entry_date.strftime("%d %b %Y")
+        self.haveLocations = len(self.locations()) > 0
+        self.haveSquads    = len(self.squads()) > 0
 
     @memoize
     def locations(self):

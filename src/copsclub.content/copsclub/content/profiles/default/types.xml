@@ -2,4 +2,5 @@
   <object name="copsclub.swimmingmeet" meta_type="Dexterity FTI"/>	
   <object name="copsclub.location" meta_type="Dexterity FTI"/>	
   <object name="copsclub.squad" meta_type="Dexterity FTI"/>	
+  <object name="copsclub.swimmingfolder" meta_type="Dexterity FTI"/>	
 </object> 
