@@ -751,6 +751,7 @@ input.inputLabelActive {
   margin-bottom: 10px;
 }
 /* new for cops site */
+/* background-image: url("../images/Cops-single-colour-r17-g25-b135-167-pixels.png"); */
 #portal-logo h1 {
   text-indent: -7777px;
   margin-left: 25px;
@@ -758,8 +759,8 @@ input.inputLabelActive {
   margin-right: 25px;
   margin-bottom: 10px;
   display: block;
-  background-image: url("../images/Cops-single-colour-r17-g25-b135-167-pixels.png");
-  height: 120px;
+  background-image: url("../images/Yellow-on-Blue-CMYK-300dpi-167x119.jpg");
+  height: 119px;
   width: 167px;
 }
 /*---------- PORTAL SLOGAN ----------*/

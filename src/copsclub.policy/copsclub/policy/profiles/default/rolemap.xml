@@ -4,81 +4,6 @@
     <role name="Coach"/>
   </roles>
   <permissions>
-    <!-- Removed the permission to add the Coach for News Items -->
-    <!-- permission name="ATContentTypes: Add News Item" acquire="True">
-      <role name="Coach"/>
-      <role name="Contributor"/>
-      <role name="Manager"/>
-      <role name="Owner"/>
-      <role name="Site Administrator"/>
-    </permission -->
-    <permission name="Access contents information" acquire="True">
-      <role name="Coach"/>
-      <role name="Contributor"/>
-      <role name="Editor"/>
-      <role name="Reader"/>
-      <role name="Site Administrator"/>
-    </permission>
-    <permission name="Add portal content" acquire="True">
-      <role name="Coach"/>
-      <role name="Contributor"/>
-      <role name="Manager"/>
-      <role name="Owner"/>
-      <role name="Site Administrator"/>
-    </permission>
-    <permission name="Add portal folders" acquire="True">
-      <role name="Coach"/>
-      <role name="Contributor"/>
-      <role name="Manager"/>
-      <role name="Owner"/>
-      <role name="Site Administrator"/>
-    </permission>
-    <permission name="CMFEditions: Access previous versions" acquire="True">
-      <role name="Coach"/>
-      <role name="Contributor"/>
-      <role name="Editor"/>
-      <role name="Manager"/>
-      <role name="Owner"/>
-      <role name="Reviewer"/>
-    </permission>
-    <permission name="CMFEditions: Apply version control" acquire="True">
-      <role name="Coach"/>
-      <role name="Contributor"/>
-      <role name="Editor"/>
-      <role name="Manager"/>
-      <role name="Owner"/>
-      <role name="Reviewer"/>
-    </permission>
-    <permission name="CMFEditions: Save new version" acquire="True">
-      <role name="Coach"/>
-      <role name="Contributor"/>
-      <role name="Editor"/>
-      <role name="Manager"/>
-      <role name="Owner"/>
-      <role name="Reviewer"/>
-    </permission>
-    <permission name="Delete objects" acquire="True">
-      <role name="Coach"/>
-      <role name="Editor"/>
-      <role name="Manager"/>
-      <role name="Owner"/>
-      <role name="Site Administrator"/>
-    </permission>
-    <permission name="List folder contents" acquire="True">
-      <role name="Coach"/>
-      <role name="Contributor"/>
-      <role name="Editor"/>
-      <role name="Manager"/>
-      <role name="Owner"/>
-      <role name="Reviewer"/>
-      <role name="Site Administrator"/>
-    </permission>
-    <permission name="Review portal content" acquire="True">
-      <role name="Coach"/>
-      <role name="Manager"/>
-      <role name="Reviewer"/>
-      <role name="Site Administrator"/>
-    </permission>
     <permission name="View" acquire="True">
       <role name="Coach"/>
       <role name="Contributor"/>
@@ -86,32 +11,11 @@
       <role name="Reader"/>
       <role name="Site Administrator"/>
     </permission>
-    <permission name="COPS: Add Location" acquire="True">
+    <permission name="Access contents information" acquire="True">
       <role name="Coach"/>
+      <role name="Contributor"/>
       <role name="Editor"/>
-      <role name="Manager"/>
-      <role name="Owner"/>
-      <role name="Site Administrator"/>
-    </permission>
-    <permission name="COPS: Add Squad" acquire="True">
-      <role name="Coach"/>
-      <role name="Editor"/>
-      <role name="Manager"/>
-      <role name="Owner"/>
-      <role name="Site Administrator"/>
-    </permission>
-    <permission name="COPS: Add Swimming Meet" acquire="True">
-      <role name="Coach"/>
-      <role name="Editor"/>
-      <role name="Manager"/>
-      <role name="Owner"/>
-      <role name="Site Administrator"/>
-    </permission>
-    <permission name="COPS: Add Swimming Folder" acquire="True">
-      <role name="Coach"/>
-      <role name="Editor"/>
-      <role name="Manager"/>
-      <role name="Owner"/>
+      <role name="Reader"/>
       <role name="Site Administrator"/>
     </permission>
   </permissions>

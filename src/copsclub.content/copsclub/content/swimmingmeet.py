@@ -72,27 +72,28 @@ class ISwimmingMeet(form.Schema):
                 ),
             required=False,
         )
+
     team_manager = schema.TextLine (
             title=_(u"Team Manager"),
             description=_(u"The team manager for the swimming meet"),
             required=True
         )
 
-@grok.adapter(ISwimmingMeet, name='start')
 @indexer(ISwimmingMeet)
 def swimmingmeetStartIndexer(context):
     """Create a catalogue indexer, registered as an adapter, which can
     populate the ``start`` index with the swimmingmeet's start date.
     """
     return context.start_date
+grok.global_adapter(swimmingmeetStartIndexer, name='start')
 
-@grok.adapter(ISwimmingMeet, name='end')
 @indexer(ISwimmingMeet)
 def swimmingmeetEndIndexer(context):
     """Create a catalogue indexer, registered as an adapter, which can
     populate the ``end`` index with the swimmingmeet's end date.
     """
     return context.end_date
+grok.global_adapter(swimmingmeetEndIndexer, name='end')
 
 class View(grok.View):
     """Default view (called "@@view"") for a swimmingmeet.
@@ -107,15 +108,14 @@ class View(grok.View):
     def update(self):
         """Prepare information for the template
         """
-        
+        self.haveLocations = len(self.locations()) > 0
+        self.haveSquads    = len(self.squads()) > 0
         self.start_date_formatted = self.context.start_date.strftime("%d %b %Y")
         self.end_date_formatted = self.context.end_date.strftime("%d %b %Y")
         self.age_as_of_date_formatted = self.context.age_as_of_date.strftime("%d %b %Y")
         self.organisers_entry_date_formatted = self.context.organisers_entry_date.strftime("%d %b %Y")
         self.club_entry_date_formatted = self.context.club_entry_date.strftime("%d %b %Y")
-        self.haveLocations = len(self.locations()) > 0
-        self.haveSquads    = len(self.squads()) > 0
-
+    
     @memoize
     def locations(self):
         

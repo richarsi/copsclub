@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<rolemap>
+  <permissions>
+    <permission name="COPS: Add Location" acquire="False">
+      <role name="Coach"/>
+      <role name="Editor"/>
+      <role name="Manager"/>
+      <role name="Owner"/>
+      <role name="Site Administrator"/>
+    </permission>
+    <permission name="COPS: Add Squad" acquire="False">
+      <role name="Coach"/>
+      <role name="Editor"/>
+      <role name="Manager"/>
+      <role name="Owner"/>
+      <role name="Site Administrator"/>
+    </permission>
+    <permission name="COPS: Add Swimming Meet" acquire="False">
+      <role name="Coach"/>
+      <role name="Editor"/>
+      <role name="Manager"/>
+      <role name="Owner"/>
+      <role name="Site Administrator"/>
+    </permission>
+    <permission name="COPS: Add Swimming Folder" acquire="False">
+      <role name="Manager"/>
+      <role name="Site Administrator"/>
+    </permission>
+  </permissions>
+</rolemap>

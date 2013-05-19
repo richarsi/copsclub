@@ -5,7 +5,7 @@
  <object name="copsclub_publication_workflow" meta_type="Workflow"/>
  <bindings>
   <default>
-   <bound-workflow workflow_id="simple_publication_workflow"/>
+   <bound-workflow workflow_id="intranet_workflow"/>
   </default>
   <!-- type type_id="News Item">
    <bound-workflow workflow_id="copsclub_publication_workflow"/>

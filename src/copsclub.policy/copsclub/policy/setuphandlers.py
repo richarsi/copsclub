@@ -4,6 +4,9 @@ def setupGroups(portal):
     if not acl_users.searchGroups(name='Coaches'):
         gtool = getToolByName(portal, 'portal_groups')
         gtool.addGroup('Coaches', roles=['Coach'])
+    if not acl_users.searchGroups(name='Authors'):
+        gtool = getToolByName(portal, 'portal_groups')
+        gtool.addGroup('Authors', roles=['Contributor','Editor'])
 def importVarious(context):
     """Miscellanous steps import handle
     """

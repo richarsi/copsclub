@@ -66,3 +66,8 @@ class TestSetup(unittest.TestCase):
         portal = self.layer['portal']
         acl_users = portal['acl_users']
         self.assertEqual(1, len(acl_users.searchGroups(name='Coaches')))
+
+    def test_authors_group_added(self):
+        portal = self.layer['portal']
+        acl_users = portal['acl_users']
+        self.assertEqual(1, len(acl_users.searchGroups(name='Authors')))

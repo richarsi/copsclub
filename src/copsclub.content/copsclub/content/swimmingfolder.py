@@ -1,4 +1,5 @@
 import datetime
+from DateTime import DateTime
 from five import grok
 from zope import schema
 from plone.directives import form
@@ -24,15 +25,117 @@ from plone.portlets.interfaces import IPortletAssignmentMapping
 
 from Acquisition import aq_parent
 
+def formatDateRange(start_date, end_date):
+    # Create the formatted output for the event date
+    # if same date then
+    #     output = dd mmm
+    # else if same month
+    #     output = dd_start - dd_end mmm (e.g. 27 - 28 March)
+    # else
+    #     output = dd_start mmm_start - dd_end mmm_end
+    if isinstance(start_date, DateTime):
+        start_date = start_date.asdatetime().date()
+    if isinstance(end_date, DateTime):
+        end_date = end_date.asdatetime().date()
+    date_range_formatted = "Date Error"
+    if (start_date is not None) and (end_date is not None):
+        if start_date == end_date:
+            date_range_formatted = start_date.strftime("%d %b %Y")
+        else:
+            if start_date.month == end_date.month:
+                date_range_formatted = start_date.strftime("%d") + " - " + end_date.strftime("%d %b %Y")
+            else:
+                date_range_formatted = start_date.strftime("%d %b") + " - " + end_date.strftime("%d %b %Y")
+    return date_range_formatted
+        
+def daysLeft(test_date):
+    days_left = None
+    today = datetime.datetime.now().date()
+    # if ((test_date is not None) and (isinstance(test_date, datetime.date))):
+    if (test_date is not None):
+        days_left = (test_date - today).days
+    else:
+        days_left = -9999
+    return days_left
+        
+def formatDaysLeft(test_date):
+    # Create the formatted output for days left to enter the meet
+    # if days remaining is == 1
+    #     output = "1 day left"
+    # else if days remaining is > 1
+    #     output = "dd days left"
+    # else
+    #     output = "Entry Closed"
+    days_left = daysLeft(test_date)
+    days_left_formatted = "Entry Closed"
+    if (days_left == 1):
+        days_left_formatted = "1 day left to enter"
+    else:
+        if (days_left > 1):
+           days_left_formatted = "%d days left to enter" % days_left
+    return days_left_formatted
+
+def get_folder_contents(view):
+    """Get all child contents in this swimming folder.
+    """
+    catalog = getToolByName(view.context, 'portal_catalog')
+
+    folders = []
+    query = { 'portal_type': 'copsclub.swimmingfolder',
+                'path': dict(query='/'.join(view.context.getPhysicalPath()),
+                     depth=1),
+                'sort_on': 'sortable_title' }
+    for folder in catalog.searchResults(query):
+        folders.append( dict(url=folder.getURL(),
+                  type= folder.Type,
+                  title=folder.Title,
+                  description=folder.Description,)
+            )
+
+    locations = []
+    query = { 'portal_type': 'copsclub.location',
+                'path': dict(query='/'.join(view.context.getPhysicalPath()),
+                     depth=1),
+                'sort_on': 'sortable_title' }
+    for location in catalog.searchResults(query):
+        locations.append( dict(url=location.getURL(),
+                  type= location.Type,
+                  title=location.Title,
+                  description=location.Description,)
+            )
+
+    """Get all child Events and copsclub.swimmingmeets in this swimming folder.
+    """
+    results = []
+    query = { 'portal_type': ( 'Event', 'copsclub.swimmingmeet' ),
+                'path': dict(query='/'.join(view.context.getPhysicalPath()),
+                     depth=1),
+                'sort_on': 'start'}
+    for event in catalog.searchResults(query):
+        if event.Type is not None and event.Type == 'Swimming Meet':
+            entry_date = event.club_entry_date
+            if event.organisers_entry_date < event.club_entry_date:
+                entry_date = event.organisers_entry_date
+            results.append( dict(url=event.getURL(),
+                      type= event.Type,
+                      title=event.Title,
+                      description=event.Description,
+                      date_range_formatted=formatDateRange(event.start, event.end),
+                      days_left=daysLeft(entry_date),
+                      days_left_formatted=formatDaysLeft(entry_date))
+                )
+        else:
+           results.append( dict(url=event.getURL(),
+                     type= event.Type,
+                     title=event.Title,
+                     description=event.Description,
+                     date_range_formatted=formatDateRange(event.start, event.end))
+               )
+    return folders + locations + results
+    
 class ISwimmingFolder(form.Schema):
     """A folder that can contain swimmingmeets
     """
-    
-    text = RichText(
-            title=_(u"Body text"),
-            description=_(u"Introductory text for this swimming folder"),
-            required=False
-        )
 
 class View(grok.View):
     """Default view (called "@@view"") for a swimming folder.
@@ -48,107 +151,33 @@ class View(grok.View):
         """Called before rendering the template for this view
         """
         
-        self.haveSwimmingMeets       = len(self.swimmingmeets()) > 0
+        self.haveContents       = len(self.folder_contents()) > 0
     
     @memoize
-    def swimmingmeets(self):
-        """Get all child swimmingmeets in this swimming folder.
+    def folder_contents(self):
+        """Get all child contents in this swimming folder.
         """
-        results = []
-        catalog = getToolByName(self.context, 'portal_catalog')
-        query = {'object_provides': ISwimmingMeet.__identifier__,
-                    'path': dict(query='/'.join(self.context.getPhysicalPath()),
-                         depth=1),
-                    'sort_on': 'start'}
-        for swimmingmeet in catalog.searchResults(query):
-            start_date=swimmingmeet.start_date
-            end_date=swimmingmeet.end_date
-            # Create the formatted output for the event date
-            # if same date then
-            #     output = dd mmm
-            # else if same month
-            #     output = dd_start - dd_end mmm (e.g. 27 - 28 March)
-            # else
-            #     output = dd_start mmm_start - dd_end mmm_end
-            date_range_formatted = "Date Error"
-            if start_date == end_date:
-                date_range_formatted = start_date.strftime("%d %b %Y")
-            else:
-                if start_date.month == end_date.month:
-                    date_range_formatted = start_date.strftime("%d") + " - " + end_date.strftime("%d %b %Y")
-                else:
-                    date_range_formatted = start_date.strftime("%d %b") + " - " + end_date.strftime("%d %b %Y")
+        return get_folder_contents(self)
 
-            # Create the formatted output for days left to enter the meet
-            # if days remaining is == 1
-            #     output = "1 day left"
-            # else if days remaining is > 1
-            #     output = "dd days left"
-            # else
-            #     output = "Entry Closed"
-            days_left_formatted = "Entry Closed"
-            today = datetime.datetime.now().date()
-            days_left = (swimmingmeet.organisers_entry_date - today).days
-            if (days_left == 1):
-                days_left_formatted = "%d day left to enter" % days_left
-            else:
-                if (days_left > 1):
-                    days_left_formatted = "%d days left to enter" % days_left
+class AllSFContent(grok.View):
+    """A new view for a swimming folder.
+    
+    The associated template is found in swimmingfolder_templates/allsfcontent.pt.
+    """
+    
+    grok.context(ISwimmingFolder)
+    grok.require('zope2.View')
+    grok.name('all-sf-content')
 
-            # Build the locations
-#            locations = []
-#            if swimmingmeet.locations is not None:
-#                for ref in swimmingmeet.locations:
-#                    obj = ref.to_object
-#                    locations.append({
-#                            'url': obj.absolute_url(),
-#                            'title': obj.title,
-#                        })
-#
-#            print locations
+    def update(self):
+        """Called before rendering the template for this view
+        """
+        
+        self.haveContents       = len(self.folder_contents()) > 0
+    
+    @memoize
+    def folder_contents(self):
+        """Get all child contents in this swimming folder.
+        """
+        return get_folder_contents(self)
 
-            results.append( dict(url=swimmingmeet.getURL(),
-                      type=swimmingmeet.Type,
-                      title=swimmingmeet.Title,
-                      description=swimmingmeet.Description,
-                      start_date=swimmingmeet.start_date,
-                      end_date=swimmingmeet.end_date,
-                      organisers_entry_date=swimmingmeet.organisers_entry_date,
-                      club_entry_date=swimmingmeet.club_entry_date,
-#                      locations=locations,
-                      date_range_formatted=date_range_formatted,
-                      days_left_formatted=days_left_formatted,
-                      days_left=days_left,)
-                )
-        return results
-
-# You can use this method to add a portlet which would be able to display
-# a list of the meets that were nearing thier cut off date. Or you could 
-# use it to promote an event... 
-# 
-# @grok.subscribe(ISwimmingFolder, IObjectAddedEvent)
-# def addPromotionsPortlet(obj, event):
-#     """Event handler triggered when adding a swimming folder. This will add
-#        the promotions portlet automatically.
-#     """
-#     
-#     # Only do this if the parent is not a swimming folder, i.e. only do it on
-#     # top-level swimming folders. Of course, site managers can move things 
-#     # around once the site structure is created
-#     
-#     parent = aq_parent(obj)
-#     if ISwimmingFolder.providedBy(parent):
-#         return
-#     
-#     # A portlet manager is akin to a column
-#     column = getUtility(IPortletManager, name=PROMOTIONS_PORTLET_COLUMN)
-#     
-#     # We multi-adapt the object and the column to an assignment mapping,
-#     # which acts like a dict where we can put portlet assignments
-#     manager = getMultiAdapter((obj, column,), IPortletAssignmentMapping)
-#     
-#     # We then create the assignment and put it in the assignment manager,
-#     # using the default name-chooser to pick a suitable name for us.
-#     assignment = promotions.Assignment()
-#     chooser = INameChooser(manager)
-#     manager[chooser.chooseName(None, assignment)] = assignment

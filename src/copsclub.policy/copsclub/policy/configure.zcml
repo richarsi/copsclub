@@ -8,9 +8,9 @@
 
   <genericsetup:registerProfile
       name="default"
-      title="copsclub.policy"
+      title="City of Peterborough Swimming Club Policy"
       directory="profiles/default"
-      description="Installs the copsclub.policy package"
+      description="Installs the City of Peterborough Swimming Club Policy package"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
       
