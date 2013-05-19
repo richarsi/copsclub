@@ -128,19 +128,19 @@ class TestContent(unittest.TestCase):
         ev1.reindexObject()
 
         view = sf1.restrictedTraverse('@@view')
-        swimmingmeets = view.swimmingmeets()
-        self.assertEqual(1, len(swimmingmeets))
-        self.assertEqual(u"30 Dec 2013",swimmingmeets[0]['date_range_formatted'])
+        folder_contents = view.folder_contents()
+        self.assertEqual(1, len(folder_contents))
+        self.assertEqual(u"30 Dec 2013",folder_contents[0]['date_range_formatted'])
 
         view = sf2.restrictedTraverse('@@view')
-        swimmingmeets = view.swimmingmeets()
-        self.assertEqual(1, len(swimmingmeets))
-        self.assertEqual(u"30 - 31 Dec 2013",swimmingmeets[0]['date_range_formatted'])
+        folder_contents = view.folder_contents()
+        self.assertEqual(1, len(folder_contents))
+        self.assertEqual(u"30 - 31 Dec 2013",folder_contents[0]['date_range_formatted'])
 
         view = sf3.restrictedTraverse('@@view')
-        swimmingmeets = view.swimmingmeets()
-        self.assertEqual(1, len(swimmingmeets))
-        self.assertEqual(u"30 Dec - 01 Jan 2014",swimmingmeets[0]['date_range_formatted'])
+        folder_contents = view.folder_contents()
+        self.assertEqual(1, len(folder_contents))
+        self.assertEqual(u"30 Dec - 01 Jan 2014",folder_contents[0]['date_range_formatted'])
 
         view = sf4.restrictedTraverse('@@all-sf-content')
         folder_contents = view.folder_contents()
@@ -175,22 +175,22 @@ class TestContent(unittest.TestCase):
         sf3 = portal['sf3']
 
         view = sf1.restrictedTraverse('@@view')
-        swimmingmeets = view.swimmingmeets()
-        self.assertEqual(1, len(swimmingmeets))
-        self.assertEqual(0, swimmingmeets[0]['days_left'])
-        self.assertEqual(u"Entry Closed",swimmingmeets[0]['days_left_formatted'])
+        folder_contents = view.folder_contents()
+        self.assertEqual(1, len(folder_contents))
+        self.assertEqual(0, folder_contents[0]['days_left'])
+        self.assertEqual(u"Entry Closed",folder_contents[0]['days_left_formatted'])
 
         view = sf2.restrictedTraverse('@@view')
-        swimmingmeets = view.swimmingmeets()
-        self.assertEqual(1, len(swimmingmeets))
-        self.assertEqual(1, swimmingmeets[0]['days_left'])
-        self.assertEqual(u"1 day left to enter",swimmingmeets[0]['days_left_formatted'])
+        folder_contents = view.folder_contents()
+        self.assertEqual(1, len(folder_contents))
+        self.assertEqual(1, folder_contents[0]['days_left'])
+        self.assertEqual(u"1 day left to enter",folder_contents[0]['days_left_formatted'])
 
         view = sf3.restrictedTraverse('@@view')
-        swimmingmeets = view.swimmingmeets()
-        self.assertEqual(1, len(swimmingmeets))
-        self.assertEqual(2, swimmingmeets[0]['days_left'])
-        self.assertEqual(u"2 days left to enter",swimmingmeets[0]['days_left_formatted'])
+        folder_contents = view.folder_contents()
+        self.assertEqual(1, len(folder_contents))
+        self.assertEqual(2, folder_contents[0]['days_left'])
+        self.assertEqual(u"2 days left to enter",folder_contents[0]['days_left_formatted'])
 
     def test_swimmingfolder_sort(self):
         yesterday = self.today - self.one_day
@@ -210,9 +210,9 @@ class TestContent(unittest.TestCase):
         sf1 = portal['sf1']
 
         view = sf1.restrictedTraverse('@@view')
-        swimmingmeets = view.swimmingmeets()
-        self.assertEqual(3, len(swimmingmeets))
-        self.assertEqual(u"Swimming Meet 3", swimmingmeets[0]['title'])
-        self.assertEqual(u"Swimming Meet 1", swimmingmeets[1]['title'])
-        self.assertEqual(u"Swimming Meet 2", swimmingmeets[2]['title'])
+        folder_contents = view.folder_contents()
+        self.assertEqual(3, len(folder_contents))
+        self.assertEqual(u"Swimming Meet 3", folder_contents[0]['title'])
+        self.assertEqual(u"Swimming Meet 1", folder_contents[1]['title'])
+        self.assertEqual(u"Swimming Meet 2", folder_contents[2]['title'])
 
