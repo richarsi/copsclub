@@ -687,8 +687,11 @@ input[type="submit"].btn.btn-mini {
  **/
 .event-panel {
   float: left;
-  background-color: #b5d1e8;
-  margin: 15px 4px;
+  position: relative;
+  background-color: #adafae;
+  line-height: 1.6em;
+  min-height: 11.21em;
+  margin: 15px 9.75px;
 }
 .event-panel dl {
   text-align: center;
@@ -706,6 +709,26 @@ input[type="submit"].btn.btn-mini {
   color: #ffffcc;
   text-decoration: none;
 }
+/*
+.folder dl dt {
+  background-color: #777777;
+}
+.folder dl dt a {
+  color: #555555;
+}
+.event dl dt {
+  background-color: #FFCC00;
+}
+.event dl dt a {
+  color: #555555;
+}
+.location dl dt {
+  background-color: #b5d1e8;
+}
+.location dl dt a {
+  color: #555555;
+}
+*/
 .event-panel dl dd {
   color: #332c34;
   font-size: 1.17em;
@@ -715,7 +738,10 @@ input[type="submit"].btn.btn-mini {
   padding: 2px 4px;
 }
 .event-panel a.btn {
-  float: right;
+  // float: right;
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
   margin: 4px 4px;
 }
 dl .listingBar {

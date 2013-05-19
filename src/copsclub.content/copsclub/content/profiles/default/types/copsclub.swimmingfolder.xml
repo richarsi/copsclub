@@ -13,8 +13,10 @@
     <property name="global_allow">True</property>
     <property name="filter_content_types">True</property>
     <property name="allowed_content_types">
+        <element value="copsclub.swimmingfolder" />
         <element value="copsclub.swimmingmeet" />
         <element value="copsclub.location" />
+        <element value="Event" />
     </property>
 
     <!-- Schema, class and security -->
