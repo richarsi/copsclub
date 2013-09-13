@@ -124,6 +124,9 @@ class View(grok.View):
         if self.context.locations is not None:
             for ref in self.context.locations:
                 obj = ref.to_object
+                # be defensive
+                if obj is None:
+                     continue
             
                 locs.append({
                         'url': obj.absolute_url(),
@@ -141,6 +144,9 @@ class View(grok.View):
         if self.context.squads is not None:
             for ref in self.context.squads:
                 obj = ref.to_object
+                # be defensive
+                if obj is None:
+                     continue
             
                 scales = getMultiAdapter((obj, self.request), name='images')
                 scale = scales.scale('image', scale='tile')

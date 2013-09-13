@@ -748,3 +748,28 @@ dl .listingBar {
   float: none;
   clear: both;
 }
+/* --- swimming meet --- */
+div.squads:before, div.squads:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+div.squads:after {
+    clear: both;
+}
+* html div.squads { zoom: 1; } /* IE 6 */
+* :first-child+html div.squads { zoom: 1; } /* IE 6 */
+
+div.squads div {
+    float: left;
+}
+div.squads a>img {
+    margin: 0 0.5em;
+    float: left;
+}
+div.squads a>div {
+    text-align: center;
+    clear: left;
+    width: 100%;
+}

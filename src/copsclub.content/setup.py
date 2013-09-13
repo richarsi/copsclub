@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '1.0'
+version = '1.1'
 
 setup(name='copsclub.content',
       version=version,
@@ -15,9 +15,9 @@ setup(name='copsclub.content',
         "Programming Language :: Python",
         ],
       keywords='',
-      author='',
-      author_email='',
-      url='http://svn.plone.org/svn/collective/',
+      author='Simon Richardson',
+      author_email='claretnbluester@gmail.com',
+      url='http://www.copsclub.co.uk/',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['copsclub'],

@@ -2155,29 +2155,59 @@ input[type="submit"].btn.btn-mini {
 }
 /*---------- PORTAL FOOTER ----------*/
 #footer-columns {
-  min-height: 7em;
-}
-#footer-columns {
-  background-color: #adafae;
-  border-top: 3px solid #111987;
-  padding: 2px 0 12px;
-}
-#footer-columns h3,
-#footer-columns li {
-  border: 1px;
-}
-#footer-columns h3 {
-  line-height: 1.73em;
-  color: #ffffff;
-  padding: 0 0 0 11px;
-}
-#footer-columns li {
-  padding: 0 0 0 20px;
+    min-height: 7em;
+    border-top: 3px solid #111987;
+    padding: 2px 0 12px;
+    background: none repeat scroll 0 0 #adafae;
+    float: left;
+    font-size: 90%;
+    color: #ffffff;
+    margin: 0.83em 0;
+    width: 100%;
 }
 #footer-columns a {
-  color: #ffffff;
-  font-size: 85%;
+    color: #fff;
 }
+#footer-columns a:visited {
+    color: white;
+    text-decoration: none;
+}
+#footer-columns h2 {
+    margin: 0.5em 0.5em 0;
+}
+#footer-columns h3 {
+    margin: 0.5em 0;
+}
+#footer-columns dl {
+    margin: 0.5em 0;
+}
+#footer-columns dl dd {
+    margin-left: 0;
+    line-height: 1em;
+}
+#footer-columns .doormatColumn {
+    float: left;
+    margin: 0 0.75em;
+}
+#footer-columns.columns-2 .doormatColumn {
+    width: 45%;
+}
+#footer-columns.columns-3 .doormatColumn {
+    width: 31%;
+}
+#footer-columns.columns-4 .doormatColumn {
+    width: 23%;
+}
+#footer-columns.columns-5 .doormatColumn {
+    width: 17.85%;
+}
+#footer-columns.columns-6 .doormatColumn {
+    width: 14%;
+}
+#footer-columns.columns-7 .doormatColumn {
+    width: 12%;
+}
+
 #address {
   background-color: #111987;
   list-style: none;
@@ -2197,6 +2227,7 @@ input[type="submit"].btn.btn-mini {
 #address li .divider {
   padding: 0 5px;
 }
+/*---------- PORTAL COLOPHON ----------*/
 #connect-with-us .social-media-group {
   padding: 0.2em 0;
 }
@@ -2206,7 +2237,7 @@ input[type="submit"].btn.btn-mini {
   height: 32px;
 }
 #connect-with-us h4 {
-  margin: 0 0 0 53px;
+  margin: 0 0 0 38px;
   display: inline-block;
   text-indent: -7777em;
 }
@@ -2222,7 +2253,6 @@ input[type="submit"].btn.btn-mini {
 #connect-with-us .facebook {
   background: url(../images/facebook.png) no-repeat;
 }
-/*---------- PORTAL COLOPHON ----------*/
 #portal-colophon {
   color: #666;
   margin: 0 0 1em;
