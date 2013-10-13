@@ -1,0 +1,2512 @@
+/**
+ * CSS Media query detection within JS 
+ */
+@media (min-device-width: 1px) {
+  #media-query-check {
+    margin-bottom: 1px;
+  }
+  p,
+  img,
+  embed,
+  object{
+    max-width: 100%;
+  }
+  iframe {
+    max-width: 99%;
+    max-height: 100%;
+  }
+
+}
+/* For devices with narrow screens, phones, tablets, etc. */
+/* support these sizes: 320,480, 600, 768, 1024, 1200 Ethan Marcotte */
+/*  * 1. 1201px and above huge screens * */
+/*  * 2. 1025px to 1200px * */
+/*  * 3. 769px to 1024px  * */
+/*  * 4. 769px to 1024px  * */
+/*  * 5. 601px to 768px  * */
+/*  * 6. 600px and below  * */
+/*  * 7. 481px to 600px  * */
+/*  * 8. 480px wide and below * */
+/*  * 9. iPhone Portrait * */
+/*  * 10. iPhone Landscape * */
+/*  * 1. 1625px and above huge screens * */
+@media only screen and (min-width: 1625px) {
+  body {
+    width: 100%;
+  }
+}
+/*  * 2. 1301px and above huge screens * */
+@media only screen and (min-width: 1301px) {
+  body {
+    width: 100%;
+  }
+  #portal-header,
+  #breadcrumbs-wrapper,
+  #portal-globalnav,
+  #visual-portal-wrapper,
+  #doormat-container {
+    max-width: 1280px;
+  }
+  #edit-bar {
+    font-size: 75%;
+  }
+}
+/*  * END 2. 1301px and above huge screens * */
+/*  * 3. 1025px to 1300px * */
+@media only screen and (min-width: 1025px) and (max-width: 1300px) {
+  
+}
+/*  * END 3. 1025px to 1300px * */
+/*  * 4. 769px to 1024px  * */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  body.debug {
+    background-color: blue;
+    /* blue */
+  }
+}
+/*  * END 4. 769px to 1024px * */
+/*  * 5. 601px to 768px  * */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+  body.debug {
+    background-color: purple;
+    /* purple */
+  }
+  #gf-3, #gf-4, #gf-5, #gf-6 {
+    display: none;
+  }
+  body #gf-highlight-widget {
+    height: 228.331249972px;
+  }
+  .gf-highlight-background img {
+    width: 476px;
+    height: 228.331249972px;
+  }
+  body .gf-event-listing h3 {
+    font-size: 1.0em;
+  }
+
+
+}
+/*  * END 5. 601px to 985px  * */
+/*  * 6. 600px and below-common things for 480px, 600px, and below .. IE 9 ignored this if it had 'only screen' in the query* */
+@media (max-width: 600px) {
+  body {
+    background-image: none !important;
+  }
+  body.debug {
+    background-color: green;
+    /* green */
+  }
+  body {
+    font-size: 110%;
+  }
+  body #visual-portal-wrapper {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  body .cloned {
+    display: none;
+  }
+  body .clone {
+    display: block
+  }
+
+  /** Hide navigation, show menu bar and icon **/
+  body #menu {
+    margin-top: 8px;
+    float: none;
+    width: 100%;
+    top:0;
+    clear: both;
+    background-color: #fff;
+
+  }
+  #menu ul#portal-globalnav {
+    display: none;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    padding-left: 0px;
+  }
+  #menu ul#portal-globalnav > li > a {
+    border-right: 0;
+    padding: 5px 5px 5px 0px;
+
+  }
+  #menu li {
+    display: block;
+    margin: 0;
+  }
+  #menu li a {
+    display: inline-block;
+    border-bottom: 1px solid #555;
+    background-color: #333;
+  }
+  #menu a {
+    width: 100%;
+    padding: 0.5rem 0 0 0;
+    font-size: 1.3rem;
+    padding-left: 0px;
+    margin-left: 4px;
+  }
+  #menu a#pull {
+    color: black;
+    display: block;
+  }
+  #menu a#pull i {
+    display: inline;
+    text-indent: 0;
+  }
+  #menu #portaltab-index_html {
+    display: none;
+  }
+  body #menu .gf-divider {
+    display: block;
+  }
+  /* Logo */
+  body #portal-logo {
+    display: block;
+    margin: 0;
+    background: #fff;
+
+  }
+  body #portal-logo img {
+    width: 55.713286713px;
+    height: 55px;
+    margin-left: 0;
+  }
+
+  /* Searchbox  */
+  body #portal-searchbox {
+    position: absolute;
+    width: 70%;
+    margin: 0;
+    padding: 0;
+    display: block;
+    height: 21px;
+    margin-top: 23px;
+    text-align: right;
+    right: 0;
+  }
+  #portal-searchbox input[type='text'] {
+    width: 86%;
+    height: 21px;
+  }
+  body #portal-searchbox input.searchButton {
+    width: 32px;
+    padding: 0 !important;
+    max-width: 29px;
+    height: 25px;
+  }
+/* Global nav*/
+  body #portal-globalnav {
+    display: block;
+    top: 0;
+    left: 0;
+    bottom: 0;
+  }
+  body #visual-portal-wrapper {
+    width: 97%;
+    margin: 0 1.5%;
+  }
+  body #content {
+    width: 100%;
+  }
+  body #gf-title,
+  body #portal-breadcrumbs {
+    display: none;
+  }
+  body #gf-highlight-widget {
+    display: none;
+  }
+/*Full width columns  */
+
+  body.template-document_view #portal-column-content,
+  body.template-document_view #portal-column-one,
+  body.template-document_view #portal-column-two,
+  body.template-activiteit_view #portal-column-content,
+  body.template-activiteit_view #portal-column-one,
+  body.template-activiteit_view #portal-column-two,
+  body.template-homepage-event-view #portal-column-one,
+  body.template-homepage-event-view #portal-column-two,
+  body.template-homepage-event-view #portal-column-content {
+    width: 99%;
+    float: none;
+    clear: both;
+    left:0;
+    margin-left: 0;
+  }
+  body #portal-column-one,
+  body #portal-column-two,
+  body #portal-column-content {
+    width: 100%;
+  }
+  body #gf-activiteit-sociallinks ul li { 
+    display:block;
+  }
+/*Full width news*/  
+  body #gf-news-widget .gf-news-widget-cell.even {
+    padding-right: 0;
+    border-right: 0;
+  }
+  body #gf-news-widget .gf-news-widget-cell {
+    width: 99%;
+    float: none;
+    padding: 0;
+    margin: 0 0;
+    padding-right: 0;
+    border-right: 0;
+  }
+  body #gf-news-widget .gf-news-widget-cell.odd {
+    float: none;
+  }
+  body #gf-news-widget .gf-news-widget-cell h2 {
+    margin-top: 1em;
+  }
+    /*Today tomorrow portlet*/
+  #today-tomorrow {
+    font-size: 110%;
+    margin-left: 0px;
+  }
+  /*Don't show extra stuff on hover*/
+  body #today-tomorrow .item:hover .location,
+  body .gf-vandaagUitgelichtItem:hover .gf-vandaag-uitgelicht-location-buyticket {
+    display: none;
+  }
+  /*Don't show any hover stuff at all.*/
+  body dl.portlet.gf-AndereFilmsVandaag .gf-vandaagUitgelichtItem .gf-vandaag-uitgelicht-item-title a:hover,
+  body #today-tomorrow .item .item-title a:hover,
+  body #today-tomorrow .item:hover .item-title a,
+  body .gf-vandaagUitgelichtItem .gf-vandaag-uitgelicht-item-title a:hover {
+    color: black !important;
+  }
+  body dl.portlet.gf-AndereFilmsVandaag .gf-vandaagUitgelichtItem:hover,
+  body dl.portlet.gf-AndereFilmsVandaag .gf-vandaagUitgelichtItem.even:hover,
+  body #today-tomorrow .item.even:hover,
+  body .gf-vandaagUitgelichtItem.even:hover,
+  body #gf-vandaag-uitgelicht-portlet .gf-vandaagUitgelichtItem.even:hover,
+  body.gf-vandaagUitgelichtItem:hover {
+    background-color: #e7e7e7;
+  }
+  body #gf-vandaag-uitgelicht-portlet .gf-vandaagUitgelichtItem:hover,
+  body #today-tomorrow .item:hover {
+    background-color: #f2f2f2;
+  }
+  body #portal-columns {
+    margin-top: 5px;
+  }
+
+  /*Hide some stuff, to prevent flashes of unstyled.*/
+  body #gf-site-selector,
+  body #portal-personaltools-wrapper {
+    display: none;
+  }
+  /*Hide footer stuff*/
+  .gf-divider,
+  #social_newsletter_footer,
+  #doormat-container {
+    display: none;
+  }
+  /*Keep the divider in the footer*/
+  #gf-portal-footer-copyright .gf-divider {
+    display: block;
+  }
+  /*Site selector*/
+  body #gf-site-selector {
+    width: 100%;
+    text-align: center;
+    height: 25px;
+    margin-bottom: 5px;
+  }
+  body #gf-site-selector ul li {
+    margin-left: 1px;
+    font-size: 0.913rem;
+  }
+  body #gf-portal-footer-copyright .clone {
+    display: block;
+  }
+  /*Personal tools*/
+  body #portal-personaltools-wrapper {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    float: none;
+  }
+  body #portal-personaltools {
+    float: none;
+  }
+
+  /* Hide these elements, we show them in the bottom */
+  body #portal-top #portal-personaltools,
+  body #portal-top #gf-site-selector {
+    display: none;
+  }
+  
+
+  /* News widget */
+  body #content #gf-news-widget hr {
+    display: block;
+  }
+  body #content #gf-news-widget p {
+    display: none;
+  }
+  body #content #gf-news-widget .twtr-tweet-text p {
+    display: block;
+  }
+  body .gf-news-widget-cell hr.gf-divider {
+    border-width: 0px 0px 2px 0px;
+}
+
+  /*Agenda view*/
+  body.template-agenda-overzicht #portal-column-one {
+    width: 100%;
+  }
+  body.template-agenda-overzicht #portal-column-content {
+    width: 100%;
+  }
+
+  body .gf-batching-wrapper:first-child {
+    display: none;
+  }
+
+  body .gf-AgendaFilter {
+    font-size: 100%;
+  }
+  body .gf-AgendaFilter ul {
+    font-size: 110%;
+  }
+  .gf-AgendaFilter .gf-filter {
+    display: none;
+  }
+  .gf-AgendaFilter .gf-filter-header {
+    cursor: pointer;
+    border-bottom: grey 1px dotted;
+  }
+  body .gf-AgendaFilter i {
+    display: inline;
+    font-size: 1.25rem;
+    margin-left: 5px;
+  }
+  body p.gf-firstonly-filter-shortcut {
+    display: none !important;
+  }
+  #portal-column-one dl.gf-AgendaFilter dd.portletItem {
+    padding: 1em 0.5em 0.5em 5px;
+  }
+  body .gf-agenda-item .gf-item-footer {
+    font-size: 1rem;
+  }
+  /*Hide most of the agenda item stuff.*/
+  body .gf-agenda-item {
+    display: block;
+    height: 80px;
+  }
+   body .gf-agenda-item .gf-agenda-item-inner .gf-item-container {
+    width: 100%;
+   }
+  body .gf-agenda-item .gf-date-location a,
+  body .gf-agenda-item .gf-date-location .location,
+  body .gf-agenda-item .gf-tags,
+  body .gf-agenda-item .gf-item-image,
+  body .gf-agenda-item .gf-item-price,
+  body .gf-agenda-item .gf-event-links,
+  body .gf-agenda-item .gf-description {
+    display: none;
+  }
+  .odd .gf-agenda-item-inner {
+    background-color: #999999;
+  }
+    .odd .gf-agenda-item-inner .gf-item-footer {
+      color: #555;
+    }
+  /*Film/Activeiteit*/
+  body.template-activiteit_view #content h2 {
+    margin: 0 0;
+  }
+  body.template-activiteit_view .TodayTomorrowPortlet {
+    display: none;
+  }
+  body.template-activiteit_view #gf-title {
+    display: block;
+  }
+  body.template-activiteit_view .gf-intro,
+  body.template-activiteit_view .gf-activiteitImage {
+    float: none;
+    width: 100%;
+    clear: both;
+  }
+  body.template-activiteit_view .gf-activiteitImage {
+    background-position: left;
+  }
+  body.template-activiteit_view .header {
+    display: block;
+  }
+  body.template-activiteit_view .header i {
+    display: inline;
+  }
+  body.template-activiteit_view #portal-column-content #content {
+    margin-left:5px;
+  }
+  body.template-activiteit_view #portal-column-two,
+  #gf-activiteit-sociallinks,
+  body.template-activiteit_view #gf-programma .gf-programma-list,
+  body.template-activiteit_view #gf-programma .gf-programma-info,
+  body.template-activiteit_view .gf-intro,
+  body.template-activiteit_view .gf-film-info,
+  body.template-activiteit_view #gf-trailer {
+    display: none;
+  }
+  body.template-activiteit_view .gf-intro,
+  body.template-activiteit_view .gf-film-info {
+    margin-top: 0.5em;
+  }
+  body.template-activiteit_view .gf-programma-list .gf-programma-column {
+    width: 100%;
+  }
+  body #content h1.documentFirstHeading { 
+    border-bottom: 0;
+    margin-top: 0.5rem;
+    margin-left: 4px;
+  }
+  body #gf-news-widget {
+    margin-left:5px;
+  }
+  body #today-tomorrow .item {
+    margin-left:1px;
+  }
+  body #today-tomorrow .link {
+    margin-left:1px;
+  }
+  body dl.portletBanner {
+    padding-left: 7px;
+  }
+  /*Events Pagina*/
+  body #gf-events-overview-listing-container {
+    overflow: visible;
+  }
+  body.template-events-overview .gf-event-listing div.gf-text,
+  body.template-events-overview .gf-event-listing {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    min-height: 0px;
+    margin-right:0;
+    margin-left: 0px;
+    float: none;
+    overflow: visible;
+  }
+  body.template-events-overview .gf-event-listing h3 {
+    margin-left:2px;
+  }
+
+  body.template-events-overview .gf-event-listing div.gf-text {
+    margin-bottom: 0;
+  }
+  body.template-events-overview .gf-event-listing-image {
+    margin: 5px 0;
+    height: auto;
+  }
+  body.template-events-overview p.archief,
+  body.template-events-overview div.gf-divider {
+    display: none;
+  }
+
+  /* Navigation Portlet before Content */
+  body dl.portletNavigationTree {
+    font-size: 100%;
+    border-width: 0 1px 0 0 ;
+    margin-left: 5px;
+  }
+  body dl.portletNavigationTree dt.portletHeader {
+    display: block;
+    font-size: 120%;
+    font-weight: normal;
+    padding: 0.42em 0;
+    background: transparent;
+    
+  }
+  body dl.portletNavigationTree dt.portletHeader a:link {
+    color: #000;
+  }
+  body dl.portletNavigationTree dd.portletItem {
+    display: none;
+    padding: 0.42em 0;
+  }
+  body dl.portletNavigationTree ul {
+    margin-left: 0;
+    list-style-type: none;
+  }
+  body dl.portlet.portletNavigationTree ul.navTree li.navTreeItem {
+    padding:0;
+  }
+  iframe {
+    width: 100%;
+  }
+
+  img.image-right, img.image-left, img.image-inline {
+    float: none;
+    margin:0;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Zoek formulier */
+  .template-search form .discreet {
+    display: none;
+  }
+  .template-search form input.searchPage {
+    font-size: 100% !important;
+  }
+  .template-search h1 .discreet {
+    display: block;
+  }
+  .template-search h1 {
+    font-size: 1rem;
+  }
+  .template-search  a.link-feed {
+    display: none;
+  }
+
+  body .gf-event-listing h3.place-holder {
+    height: auto;
+  }
+
+}
+/*  * END 6. 600px and below  * */
+/*  * 7. 481px to 600px  * */
+@media only screen and (min-width: 481px) and (max-width: 600px) {
+  
+}
+/*  * END 7. 481px to 600px  * */
+/*  *  8. 480px wide and below many smart phones * */
+@media only screen and (max-width: 480px) {
+  body.debug {
+    background-color: #CEDEF4;
+    /* blue */
+  }
+  body #portal-searchbox {
+    width: 300px;
+  }
+
+}
+/*  * END 8. 480px wide and below * */
+/*  * 9. iPhone Portrait * */
+@media screen and (max-width: 320px) {
+  body.debug {
+    background-color: #a8e0af;
+    /* green */
+  }
+  #gf-6 {
+    display: none;
+  }
+  body #portal-searchbox {
+    width: 188px;
+  }
+  #portal-searchbox input[type='text'] {
+    width: 79%;
+  }
+
+}
+/*  * END 9. iPhone Portrait * */
+/*  * 10. iPhone Landscape. Since portrait has a max of 320 this effects the iPhone in landscape only * */
+@media screen and (min-width: 321px) and (max-width: 480px) {
+  body.debug {
+    background-color: yellow;
+    /* yellow */
+  }
+
+}
+/*  * END 10. iPhone Landscape * */
+@media screen and (max-width: 240px) {
+  body.debug {
+    background-color: #34f534;
+    /* green */
+  }
+
+  body #gf-site-selector {
+    height: auto;
+    clear: both;
+  }
+  body #gf-site-selector ul li {
+    display: block;
+    margin-bottom: 2px;
+    font-size: 1rem;
+  }
+  #gf-4, #gf-5 {
+    display: none;
+  }
+  body #portal-searchbox {
+    width: 118px;
+  }
+  #portal-searchbox input[type='text'] {
+    width: 68%;
+  }
+}
+
+
+/* End of media queries */
+#menu .gf-divider,
+#menu #pull {
+  display: none;
+}
+#content p,
+#content table,
+#content dl,
+dl.portlet p,
+dl.portlet {
+  margin-bottom: 0px;
+}
+#content #banners a.link-overlay {
+  border-bottom: none !important;
+}
+body {
+  background-image: url("++resource++forumbase.theme.images/background-circles-grey.png");
+  background-repeat: repeat-x;
+}
+#portal-logo img {
+  background-color: #fff;
+}
+#visual-portal-wrapper {
+  width: 90%;
+  max-width: 960px;
+  margin: auto;
+}
+.width-full.position-0 {
+  margin-left: -100%;
+}
+div.width-full {
+  width: 100%;
+}
+div.position-0 {
+  margin-left: -100%;
+}
+div.width-1\3a 4 {
+  width: 24%;
+}
+.template-homepage-event-view #portal-column-content {
+  width: 66.6666667%;
+  float: left;
+  margin-left: 0;
+  left: 0;
+}
+div.width-1\:2 {
+  width: 47.75%;
+}
+.template-homepage-event-view #portal-column-content {
+  width: 66.666666667%;
+}
+.template-homepage-event-view #portal-column-two {
+  width: 30.208333333%;
+  margin-left: 0;
+  padding-top: 0.3125em;
+  line-height: 1.2em;
+  float: right;
+  left: 0;
+}
+#portal-column-two dl.portletBanner dd.portletItem {
+  padding: 0 ;
+}
+dl.portletBanner dd.portletItem a {
+  border-bottom: 0;
+}
+dl.portletBanner dd.portletItem img {
+  max-width: 100%;
+}
+dl.portletBanner {
+  padding-bottom: 1.2em;
+}
+.template-homepage-event-view #portal-column-two #today-tomorrow .portletItem {
+  padding: 0;
+}
+#content a:hover,
+dl.portlet a:hover {
+  color: #000 !important;
+}
+#gf-titlebar-links li a:link,
+#gf-titlebar-links li a:visited,
+#content a:link,
+#content a:visited,
+dl.portlet a:link,
+dl.portlet a:visited {
+  color: #444444;
+}
+#content a:link,
+#content a:visited,
+dl.portlet a:link,
+dl.portlet a:visited {
+  border-bottom: 1px solid #444444;
+}
+#content .plonetruegallery a:link,
+#content .plonetruegallery a:visited {
+  border-bottom: none;
+}
+div.plonetruegallery p.plonetruegallery a img {
+  border: none;
+  margin: 0;
+}
+p.plonetruegallery > a {
+  width: 160px;
+  height: 120px;
+  display: inline-block;
+  margin: 0 22px 22px 0;
+}
+#gf-title {
+  border-bottom: 1px solid #e5e5e5;
+}
+#gf-title h1 {
+  display: inline-block;
+}
+#gf-titlebar-links {
+  float: right;
+}
+#gf-titlebar-links li {
+  margin-left: 10px;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+#gf-titlebar-links li.gf-rss {
+  padding-left: 15px;
+  background-image: url('++resource++forumbase.theme.images/rss-icon.png');
+}
+#gf-titlebar-links li.gf-calendar {
+  padding-left: 19px;
+  background-image: url('++resource++forumbase.theme.images/calendar-icon.png');
+}
+#gf-titlebar-links li a {
+  font-size: 13px;
+}
+div.clearFloat {
+  clear: both;
+  border: none;
+  background-color: transparent;
+}
+#gf-site-selector {
+  background-color: transparent;
+  text-align: right;
+  padding-top: 3px;
+}
+#gf-site-selector ul {
+  margin-top: 3px;
+  display: inline;
+}
+#gf-site-selector ul li {
+  padding: 5px 10px;
+  margin-left: 2px;
+  background-color: #000;
+  font-size: 0.813rem;
+}
+#gf-site-selector ul li a:link,
+#gf-site-selector ul li a:visited,
+#gf-site-selector ul li a {
+  color: #fff;
+}
+#portal-logo {
+  float: left;
+  margin: -5px 0px 15px 0px;
+}
+#portal-personaltools-wrapper {
+  float: right;
+}
+#portal-searchbox {
+  clear: none;
+  font-size: 1rem;
+  /*float: right;*/
+}
+#menu {
+/*  float: right;
+  position: relative;
+  top: 20px;
+  width: 84%;
+  max-width: 804px;*/
+}
+ul#portal-globalnav {
+  position: absolute;
+  top: 95px;
+  left: 153px; 
+}
+#portal-top {
+  z-index: 500;
+}
+#portal-searchbox,
+#portal-personaltools-wrapper {
+  padding: 10px;
+  margin: 15px 0px;
+  height: 25px;
+  background-color: #fff;
+}
+#portal-searchbox form .searchSection {
+  display: none;
+}
+#portal-searchbox input.searchField {
+  height: 19px;
+  border: 1px solid #ccc;
+  border-right: 0px;
+  background-color: #eee;
+  color: #000;
+  padding: 2px 0px 2px 5px;
+  float: left;
+}
+#portal-searchbox input.searchButton {
+  background: transparent url("++resource++forumbase.theme.images/search-button.png") no-repeat center;
+  width: 29px;
+  height: 25px;
+  border: none;
+  color: transparent;
+  margin-left: 0px;
+  padding: 0 0 0 29px !important;
+}
+#portal-personaltools {
+  background-color: #fff;
+}
+#portal-personaltools a {
+  background-image: url("++resource++forumbase.theme.images/bullet-grey.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 16px;
+}
+#portal-personaltools a:link,
+#portal-personaltools a:visited {
+  color: #000;
+}
+#today-tomorrow .tabDate h3,
+dt.portletHeader,
+.gf-buy-ticket input[type='submit'],
+#gf-portal-footer-newsletter form input[type="submit"],
+#menu a,
+#gf-portal-footer-newsletter h2,
+#portal-columns h1,
+#portal-columns h2,
+#portal-columns h4,
+#gf-title h1 {
+  font-weight: normal;
+  font-style: normal;
+  line-height: normal;
+  font-family: 'AntennaCondBlack', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.00em;
+}
+#content h1 {
+  margin-top: 0px;
+}
+#content h2.tileHeadline {
+  margin-top: 0.7em;
+}
+ul#portal-globalnav {
+  background-color: transparent;
+  display: inline;
+}
+ul#portal-globalnav > li > a {
+  padding: 5px 15px;
+  min-width: 0px;
+  font-size: 1.125rem;
+  border-right: 4px solid #f4f4f4;
+}
+ul#portal-globalnav li:last-child a {
+  border-right-color: transparent ;
+}
+ul#portal-globalnav ul.submenu a:hover,
+ul#portal-globalnav li.selected ul.submenu a,
+ul#portal-globalnav li.selected a:focus,
+ul#portal-globalnav li a {
+  background-color: #fff;
+  color: #000;
+}
+ul#portal-globalnav > li > a:hover,
+ul#portal-globalnav > li > a:focus,
+ul#portal-globalnav li.selected > a:hover,
+ul#portal-globalnav li.selected > a {
+  background-color: #000;
+  background-image: url("++resource++forumbase.theme.images/gradient-black-29.png");
+  background-repeat: repeat-x;
+  color: #fff;
+}
+#gf-highlight-widget {
+  z-index: 1;
+}
+ul.submenu {
+  border-width: 0;
+  padding: 1em 1em;
+  z-index: 500;
+}
+#portal-globalnav ul.submenu li a {
+  border-width: 0;
+  font-size: 1.3em;
+  padding: 0.3em 0;
+}
+#portal-globalnav ul.submenu li.end-of-list {
+  background: url('++resource++forumbase.theme.images/diagonal-stripes-white.png') repeat;
+  height: 0.8em;
+  margin-top: 0.5em;
+}
+div.gf-divider {
+  background-image: url("++resource++forumbase.theme.images/diagonal-stripes-white.png");
+  clear: both;
+  height: 10px;
+  margin: 10px 0px 5px 0px;
+}
+div.gf-divider.black {
+  background-image: url("++resource++forumbase.theme.images/diagonal-stripes-black.png");
+}
+div.gf-divider hr {
+  border: none;
+}
+#portal-breadcrumbs {
+  margin-bottom: 0;
+  font-size: 0.813em;
+}
+#breadcrumbs-you-are-here {
+  display: none;
+}
+.breadcrumbSeparator {
+  padding: 0 0.25em;
+}
+#portal-breadcrumbs span,
+#portal-breadcrumbs a,
+.breadcrumbSeparator {
+  color: #999999;
+}
+body.portaltype-plone-site #portal-breadcrumbs {
+  display: none;
+}
+#portal-column-content {
+  margin-bottom: 10px;
+}
+#portal-column-content #content {
+  margin: 0px 0px 5px 0px;
+}
+#social_newsletter_footer {
+  margin-top: 10px;
+}
+.gf-footer-left {
+  float: left;
+  width: 68.76%;
+}
+#gf-portal-footer-newsletter {
+  background-color: #444444;
+  padding: 10px 15px;
+  float: none;
+  height: 130px;
+}
+#gf-portal-footer-newsletter td.form {
+  max-width: 390px;
+}
+#gf-footer-facebook,
+#gf-footer-twitter {
+  padding: 10px 1.5525%;
+  float: left;
+  height: 130px;
+}
+#gf-footer-facebook,
+#gf-footer-twitter {
+  width: 11.9791667%;
+  text-align: center;
+  margin-left: 00.8333333%;
+}
+#gf-footer-facebook {
+  width: 11.3541667%;
+}
+#gf-portal-footer-newsletter h2 {
+  color: #fff;
+  font-size: 1.25em;
+  display: inline;
+}
+#gf-portal-footer-newsletter p {
+  margin-top: 0.5em;
+  font-size: 0.75em;
+}
+#gf-portal-footer-newsletter p {
+  font-weight: bold;
+  padding-right: 0.313em;
+}
+#gf-portal-footer-newsletter td {
+  vertical-align: top;
+}
+#gf-portal-footer-newsletter th.text {
+  width: 38.095238095%;
+  vertical-align: top;
+  text-align: left;
+}
+#gf-portal-footer-newsletter form {
+  display: inline;
+}
+#gf-portal-footer-newsletter form input[type="text"] {
+  width: 220px;
+  height: 22px;
+  padding: 1px 1px 1px 4px;
+}
+#gf-portal-footer-newsletter form input[type="submit"] {
+  background-color: transparent;
+  background-image: url("++resource++forumbase.theme.images/submit-button-black.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  color: #fff;
+  font-size: 1.166666667em;
+  border: 0px solid #444444;
+  padding: 5px 18px 5px 12px;
+  padding: 1.282051282% 4.615384615% 1.282051282% 3.076923077% ;
+}
+#gf-footer-facebook p a,
+#gf-footer-twitter p a {
+  color: #444444;
+}
+#gf-footer-facebook p,
+#gf-footer-twitter p {
+  margin-top: -26px;
+  font-size: 12px;
+  position: relative;
+  top: 50%;
+  margin-left: 0px;
+  left: 0%;
+}
+#gf-footer-twitter,
+#gf-footer-facebook {
+  background-color: #000;
+}
+#doormat-container {
+  background-color: #f3f3f3;
+  border: 1px solid #e1e1e1;
+  padding: 1.03950104%;
+  width: 97.883657343%;
+}
+#doormat-container .doormatColumn h3 {
+  text-transform: uppercase;
+}
+#doormat-container .doormatColumn h3 {
+  font-size: 1.09375em;
+  font-weight: bold;
+  border-bottom: 1px solid #e1e1e1;
+}
+#doormat-container h2,
+#doormat-container h3,
+#doormat-container a:link,
+#doormat-container a:visited {
+  color: black;
+  margin-left: 0px;
+}
+#doormat-container a:hover {
+  color: #444444;
+}
+#doormat-container .doormatColumn {
+  width: 20%;
+  margin: 0px;
+  padding: 0px;
+}
+#doormat-container dl.doormatSection,
+#doormat-container h3 {
+  padding-right: 2em;
+}
+dt.doormatSectionHeader {
+  padding-bottom: 0.5em;
+}
+#gf-portal-footer-copyright p {
+  font-size: 0.813em;
+}
+#gf-portal-footer-copyright p a:link,
+#gf-portal-footer-copyright p a:visited {
+  color: #000;
+}
+#gf-portal-footer-copyright p a:hover {
+  color: #444444;
+}
+#formfield-form-widgets-rate {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+.discussion .documentByLine,
+.discussion .documentByLine .author,
+.discussion .commentRate {
+  display: inline;
+}
+.discussion .documentByLine {
+  margin-left: 0px;
+}
+.discussion .documentByLine .author {
+  font-weight: bolder;
+}
+.gf-waardering {
+  font-weight: bold;
+}
+.gf-waardering {
+  margin: 0 5px 0 10px;
+}
+.reply-to-comment-button {
+  display: none;
+}
+#viewlet-below-content {
+  font-size: 80%;
+  line-height: 1.5em;
+}
+.comment {
+  border-top: 1px solid #e5e5e5;
+  padding: 5px 0 0 0;
+  min-height: 0px !important;
+  font-size: 100%;
+}
+#gf-write-comment {
+  background-image: url("++resource++forumbase.theme.images/pencil.png");
+  background-repeat: no-repeat;
+  padding-left: 20px;
+}
+div.star-rating,
+div.star-rating a {
+  background: url("star.gif") no-repeat 0 0px;
+}
+#gf-homepage-event {
+  margin-top: 0.39125em;
+}
+.gf-right {
+  float: right;
+  width: 30.208333333%;
+}
+.gf-right #banners img {
+  width: 30.208333333%;
+}
+.gf-highlight,
+#gf-highlight-widget {
+  height: 23.985em;
+  width: 100%;
+  background-color: transparent;
+}
+#gf-highlight-widget {
+  position: relative;
+  margin-bottom: 0.78125em;
+  overflow: hidden;
+}
+.gf-highlight-selector {
+  width: 90%;
+}
+.gf-highlight-info {
+  width: 30.625%;
+  height: 100%;
+  background-image: url('++resource++forumbase.theme.images/semi-transparent-black-tile-16x16.png');
+  position: absolute;
+  padding: 8px;
+}
+.gf-highlight-background {
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  top: 0px;
+}
+.gf-highlight-background img {
+  max-width: 100%;
+}
+.gf-position-bottom {
+  position: absolute;
+  bottom: 20px;
+}
+.gf-highlight-info .gf-position-bottom {
+  width: 96%;
+}
+#content .gf-highlight a,
+#content .gf-highlight a:link {
+  border-bottom: 0px solid transparent;
+}
+.gf-highlight-title h1,
+.gf-highlight-text p {
+  color: #fff;
+}
+p.gf-highlight-lees-meer {
+  display: inline;
+}
+.gf-highlight-selector .gf-highlight-selection {
+  background-color: #c2c2c1;
+  width: 8px;
+  height: 8px;
+  margin: 6px 6px 6px 0px;
+  display: inline-block;
+}
+.gf-highlight-selector .gf-highlight-selection.selected {
+  background-color: #444444;
+}
+a.gf-linkToDescriptionPage {
+  display: block;
+  margin-top: -2em;
+}
+#content a.gf-linkToDescriptionPage,
+#content a.gf-linkToDescriptionPage:visited {
+  border-bottom: 0px;
+}
+#gf-news-widget {
+  width: 100%;
+  overflow: hidden;
+  padding-top: 0.39125em;
+}
+#gf-news-widget .gf-news-widget-cell {
+  width: 46.09375%;
+  overflow: hidden;
+  float: left;
+  padding-bottom: 1em;
+}
+#gf-news-widget .gf-news-widget-cell.odd {
+  float: right;
+}
+#gf-news-widget .gf-news-widget-cell.even {
+  padding-right: 3.125%;
+  border-right: 1px solid #ddd;
+}
+#content #gf-news-widget .gf-news-widget-cell a:link,
+#content #gf-news-widget .gf-news-widget-cell a:visited {
+  border-bottom: none;
+  color: black;
+}
+#gf-news-widget .gf-news-widget-cell h2,
+#gf-news-widget .gf-news-widget-cell h3 {
+  color: #000;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+#gf-news-widget .gf-news-widget-cell h2 {
+  font-size: 18px;
+}
+.gf-newswidget-image {
+  width: 100%;
+  max-height: 123px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+.gf-newswidget-image img {
+  margin-left: -3px;
+  margin-right: -6px;
+}
+#gf-news-widget .gf-news-widget-cell p.gf-description {
+  font-size: 18px;
+  margin-bottom: 0.5em;
+  color: #999999;
+}
+.gf-news-widget-cell hr.gf-divider {
+  border-color: #ebebeb;
+  border-style: solid;
+  border-width: 0px 0px 1px 0px;
+  margin: 0 0 1em 0;
+}
+#gf-activiteiten-filter-viewlet {
+  height: 277px;
+  width: 270px;
+  padding: 10px;
+  padding-top: 20px;
+  background-color: #0e0e0e;
+  margin-bottom: 10px;
+  position: relative;
+}
+#gf-activiteiten-filter-viewlet h2 {
+  margin-top: 0px;
+  color: white;
+}
+#gf-activiteiten-filter-viewlet h3 {
+  display: none;
+}
+.gf-filterBlok {
+  float: left;
+  padding: 5px 0px;
+}
+.gf-filterBlok.gf-wanneer {
+  float: right;
+  padding-right: 10px;
+}
+#content #gf-activiteiten-filter-viewlet .gf-filterBlok ul {
+  list-style-image: url("/bullet-right.png");
+  margin-left: 1px;
+  list-style-position: inside;
+}
+#content #gf-activiteiten-filter-viewlet .gf-filterBlok ul li.gf-all {
+  display: none;
+}
+#content #gf-activiteiten-filter-viewlet .gf-filterBlok ul li {
+  margin: 0.5em 0em;
+}
+#content #gf-activiteiten-filter-viewlet .gf-filterBlok ul li a:link,
+#content #gf-activiteiten-filter-viewlet .gf-filterBlok ul li a:visited {
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+#content #gf-activiteiten-filter-viewlet .gf-filterBlok ul li a:hover {
+  color: #444444 !important;
+}
+.portlets-manager .section {
+  line-height: 2em;
+}
+div.managePortletsLink,
+a.managePortletsFallback {
+  margin-top: 2em;
+}
+p.tileFooter,
+dl.portlet dd.portletFooter span,
+#content p.gf-button {
+  background-image: url("++resource++forumbase.theme.images/gradient-black-29.png");
+  background-position: bottom;
+  background-repeat: repeat-x;
+  position: absolute;
+  padding: 0.385em 4.867211704%;
+}
+dl.portlet dd.portletFooter span,
+#content #gf-activiteiten-filter-viewlet p.gf-button {
+  bottom: 0px;
+}
+#content #gf-activiteiten-filter-viewlet p.gf-button a:hover {
+  color: #444444 !important;
+}
+p.tileFooter,
+dl.portlet dd.portletFooter span,
+#content p.gf-button.white {
+  background-color: #fefefe;
+  background-image: url("++resource++forumbase.theme.images/gradient-white-23.png");
+  border: 1px solid #e2e2e2;
+}
+p.tileFooter a,
+dl.portlet dd.portletFooter span a,
+#content p.gf-button a {
+  color: #fff;
+  background-image: url("/bullet-right.png");
+  background-position: right center;
+  padding-right: 1.5em;
+  background-repeat: no-repeat;
+  font-weight: bold;
+  display: block;
+}
+#content p.tileFooter a:link,
+#content p.tileFooter a:visited,
+dl.portlet dd.portletFooter span a:link,
+dl.portlet dd.portletFooter span a:visited,
+#content p.gf-button a:link,
+#content p.gf-button a:visited {
+  border-bottom: none;
+}
+p.tileFooter a,
+dl.portlet dd.portletFooter span a,
+#content p.gf-button.white a.gf-button {
+  color: #444444;
+  background-image: url("/bullet-right.png");
+}
+body dl.portletVandaagUitgelicht dd.portletItem {
+  padding: 0;
+}
+#gf-vandaag-uitgelicht-portlet a:visited,
+#gf-vandaag-uitgelicht-portlet a:link {
+  border-bottom: 0;
+}
+.gf-vandaagUitgelichtItem .gf-buy-ticket {
+  float: right !important;
+}
+#gf-forum-vandaag-content .gf-vandaagUitgelichtItem span.gf-datetime .gf-date,
+#gf-vandaag-content .gf-datetime .gf-date,
+#gf-images-vandaag-content .gf-datetime .gf-date {
+  display: none;
+}
+body.portaltype-forumevent .gf-vandaagUitgelichtItem span.gf-datetime .gf-time,
+#gf-uitgelicht-content .gf-datetime .gf-time {
+  display: none;
+}
+#gf-vandaag-uitgelicht-portlet .content.gf-deselected {
+  display: none;
+}
+#today-tomorrow .title h2 {
+  font-size: 100%;
+  padding: 0.4em;
+}
+.gf-vandaagUitgelichtTitle h2 {
+  color: #000;
+  font-size: 17px;
+  padding: 0.5em;
+}
+#gf-vandaag-uitgelicht-portlet .gf-vandaagUitgelichtTitle {
+  float: left;
+}
+#today-tomorrow .title,
+#gf-vandaag-uitgelicht-portlet .gf-vandaagUitgelichtTitle:first-child {
+  float: left;
+  cursor: pointer;
+}
+#today-tomorrow .title.one-item,
+#gf-vandaag-uitgelicht-portlet .gf-vandaagUitgelichtTitle.gf-one-item {
+  float: none;
+}
+#today-tomorrow .title h2,
+.gf-vandaagUitgelichtTitle.gf-selected h2 {
+  color: #444444;
+}
+#today-tomorrow .tabDate,
+#today-tomorrow .title.selected,
+.gf-vandaagUitgelichtTitle.gf-selected {
+  background-color: #f2f2f2;
+}
+#today-tomorrow .link,
+.gf-vandaag-uitgelicht-collection-text,
+#today-tomorrow .item,
+.gf-vandaagUitgelichtItem {
+  padding: 5px;
+}
+#today-tomorrow .item,
+.gf-vandaagUitgelichtItem {
+  background-color: #f2f2f2;
+}
+#today-tomorrow .item.even,
+.gf-vandaagUitgelichtItem.even {
+  background-color: #e7e7e7;
+}
+#today-tomorrow .datetime,
+.gf-datetime {
+  background-color: #444444;
+  color: #fff;
+  width: 40px;
+  text-align: center;
+}
+#today-tomorrow .datetime,
+.gf-datetime,
+#today-tomorrow .item-title,
+.gf-vandaag-uitgelicht-item-title {
+  font-weight: bold;
+  padding: 1px 5px;
+}
+.nothingFound {
+  margin-left: 6px;
+}
+#today-tomorrow .datetime,
+.gf-datetime {
+  display: inline-block;
+  float: left;
+}
+#today-tomorrow .item-title,
+.gf-vandaag-uitgelicht-item-title {
+  width: 200px;
+  overflow: hidden;
+}
+#today-tomorrow .item a.bullet,
+dl.portletVandaagUitgelicht .gf-vandaagUitgelichtItem a.gf-vandaag-uitgelicht-bullet {
+  border-bottom: none;
+  float: right;
+  margin-top: 5px;
+}
+#today-tomorrow .location,
+.gf-vandaag-uitgelicht-location-buyticket {
+  display: none;
+}
+#today-tomorrow .location-string,
+.gf-vandaag-uitgelicht-location-string {
+  color: #999999;
+}
+#today-tomorrow .link,
+.gf-vandaag-uitgelicht-collection-text {
+  display: inline-block;
+  padding: 10px 5px;
+}
+#today-tomorrow .link p,
+dl.portletVandaagUitgelicht .gf-vandaag-uitgelicht-collection-text p {
+  background-image: url("++resource++forumbase.theme.images/gradient-black-29.png");
+  background-position: center bottom;
+  background-repeat: repeat-x;
+  display: inline;
+}
+#today-tomorrow .link p {
+  padding: 5px 10px;
+}
+dl.portletVandaagUitgelicht .gf-vandaag-uitgelicht-collection-text p {
+  padding: 5px 15px;
+}
+#today-tomorrow .link p a,
+dl.portletVandaagUitgelicht .gf-vandaag-uitgelicht-collection-text p a {
+  border-bottom: none;
+}
+#today-tomorrow .link p a:link,
+#today-tomorrow .link p a:visited,
+dl.portletVandaagUitgelicht .gf-vandaag-uitgelicht-collection-text p a:link,
+dl.portletVandaagUitgelicht .gf-vandaag-uitgelicht-collection-text p a:visited {
+  color: #fff;
+}
+#today-tomorrow .link p a:hover,
+dl.portletVandaagUitgelicht .gf-vandaag-uitgelicht-collection-text p a:hover {
+  color: #444444 !important;
+}
+.link p a,
+dl.portletVandaagUitgelicht .gf-vandaag-uitgelicht-collection-text p a {
+  background-image: url("/bullet-right.png");
+  background-position: right center;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-weight: bold;
+  padding-right: 1.5em;
+}
+#today-tomorrow .tabDate h3 {
+  font-size: 90%;
+  padding: 0.5em;
+}
+#today-tomorrow .portletHeader {
+  background-color: white;
+  line-height: 1em;
+  display: none;
+}
+dl.portlet.gf-AndereFilmsVandaag .gf-vandaag-uitgelicht-item-title a {
+  width: 150px;
+}
+dl.portlet.gf-AndereFilmsVandaag .gf-vandaagUitgelichtItem.even {
+  background-color: #f2f2f2;
+}
+dl.portlet.gf-AndereFilmsVandaag .gf-vandaagUitgelichtItem {
+  background-color: #e7e7e7;
+}
+dl.portlet.gf-AndereFilmsVandaag .gf-vandaagUitgelichtItem:hover,
+dl.portlet.gf-AndereFilmsVandaag .gf-vandaagUitgelichtItem.even:hover,
+#today-tomorrow .item.even:hover,
+#today-tomorrow .item:hover,
+.gf-vandaagUitgelichtItem.even:hover,
+.gf-vandaagUitgelichtItem:hover {
+  background-color: #000;
+  display: block;
+  overflow: hidden;
+}
+dl.portlet.gf-AndereFilmsVandaag .gf-vandaag-uitgelicht-item-title a:visited,
+dl.portlet.gf-AndereFilmsVandaag .gf-vandaag-uitgelicht-item-title a:link,
+dl#gf-vandaag-uitgelicht-portlet a:visited,
+dl#gf-vandaag-uitgelicht-portlet a:link,
+#today-tomorrow .item-title a:visited,
+#today-tomorrow .item-title a:link,
+dl.portletVandaagUitgelicht .gf-vandaag-uitgelicht-item-title a:visited,
+dl.portletVandaagUitgelicht .gf-vandaag-uitgelicht-item-title a:link {
+  border-bottom: 0px solid transparent;
+  color: black;
+}
+dl.portlet.gf-AndereFilmsVandaag .gf-vandaagUitgelichtItem:hover .gf-vandaag-uitgelicht-item-title a,
+#today-tomorrow .item:hover .item-title a,
+dl.portletVandaagUitgelicht .gf-vandaagUitgelichtItem:hover .gf-vandaag-uitgelicht-item-title a {
+  color: white;
+}
+dl.portlet.gf-AndereFilmsVandaag .gf-vandaagUitgelichtItem .gf-vandaag-uitgelicht-item-title a:hover,
+#today-tomorrow .item .item-title a:hover,
+.gf-vandaagUitgelichtItem .gf-vandaag-uitgelicht-item-title a:hover {
+  color: white !important;
+  float: left;
+}
+#today-tomorrow .item:hover .location,
+.gf-vandaagUitgelichtItem:hover .gf-vandaag-uitgelicht-location-buyticket {
+  display: block;
+  margin-top: 5px;
+}
+#gf-timeline {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.template-agenda-overzicht #portal-column-one {
+  width: 18.4375%;
+  margin-left: 0;
+  float: left;
+  left: 0;
+  background-color: #f3f3f3;
+}
+.template-events-overview #portal-column-content {
+  width: 100%;
+}
+.template-agenda-overzicht #portal-column-content {
+  width: 79.583333333%;
+  margin-left: 0;
+  float: right;
+  left: 0;
+}
+#gf-agenda-overview ul {
+  list-style: none;
+  margin-left: 0px;
+  clear: both;
+}
+.gf-batching-wrapper {
+  background-color: #f3f3f3;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+}
+div.listingBar {
+  display: inline;
+  font-size: 100%;
+  margin: 0 0 0 0;
+}
+#content div.listingBar a {
+  border: none;
+}
+#content div.listingBar .next {
+  float: none;
+}
+#content .listingBar a:visited,
+#content .listingBar a:link {
+  color: black;
+}
+#content .listingBar > a.gf-batch-page {
+  border: 1px solid #e5e5e5;
+}
+.listingBar span a:hover,
+#content .listingBar span a,
+#content .listingBar span a:visited {
+  border-bottom: 1px none;
+  background-color: transparent;
+}
+.listingBar > a.gf-batch-page,
+.listingBar > a.gf-batch-page:hover,
+.listingBar span.current {
+  background-color: #fff;
+  padding: 0.5em 0.75em;
+}
+.listingBar span.current {
+  border: 1px solid #444444;
+  color: #444444;
+  font-weight: bold;
+}
+#content .listingBar span.previous {
+  padding-left: 15px;
+  background-image: url("bullet-white-background-left.gif");
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+#content .listingBar span.next {
+  padding-right: 15px;
+  background-image: url("/bullet-right.png");
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+body.template-agenda-overzicht .gf-agenda-description {
+  margin-top: 10px;
+  background-color: #444444;
+  color: white;
+  padding: 10px;
+}
+body.template-agenda-overzicht #content .gf-agenda-description p {
+  margin-bottom: 0px;
+}
+p.gf-firstonly-filter-shortcut {
+  display: none;
+}
+body.template-agenda-overzicht #content .gf-agenda-description p.gf-firstonly-filter-shortcut a {
+  color: white;
+  margin-right: 1em;
+  border-bottom: 1px white solid;
+}
+.gf-agenda-description p.gf-selected-filter .gf-selected-filter-name {
+  font-weight: bold;
+}
+.gf-agenda-description p.gf-selected-filter .gf-selected-filter-value {
+  margin-right: 1em;
+}
+.gf-agenda-list {
+  padding-top: 10px;
+}
+.gf-agenda-item-inner {
+  background-color: #f2f2f2;
+}
+.gf-agenda-item-inner .gf-item-container {
+  padding: 0.78125em 1.308900524%;
+  width: 67.539267016%;
+  float: left;
+}
+.gf-agenda-item .gf-agenda-item-inner {
+  float: left;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.gf-agenda-item .gf-item-image {
+  width: 27.879581152%;
+  height: 144px;
+  float: right;
+  overflow: hidden;
+  position: relative;
+}
+.gf-agenda-item .gf-item-image img {
+  max-width: none;
+}
+.gf-agenda-item .gf-item-image .gf-buy-ticket {
+  position: absolute;
+  bottom: 0px;
+}
+.gf-event-links a {
+  margin-right: 10px;
+}
+#content .gf-item-container a:visited,
+#content .gf-item-container a:link {
+  border-bottom: none;
+}
+#content .gf-item-container h2 a:hover {
+  color: #444444 !important;
+}
+#portal-columns .gf-item-container h2 {
+  font-family: Helvetica, Arial, sans-serif, "Lucida Grande", Verdana, Lucida;
+  font-weight: bold;
+  margin-top: 10px;
+  text-transform: none;
+  font-size: 1.4em;
+  display: inline;
+}
+#portal-columns .gf-agenda-list h2 a {
+  color: #000;
+}
+.gf-agenda-list .gf-kijkwijzer-icons {
+  display: inline;
+  margin-left: 10px;
+}
+.gf-agenda-item .gf-description {
+  font-size: 13px;
+  padding-right: 20px;
+  margin-bottom: 10px;
+}
+.gf-agenda-item .gf-tags,
+.gf-agenda-item .gf-item-footer {
+  color: #999999;
+  font-size: 0.688rem;
+  font-weight: bold;
+}
+.gf-agenda-item .gf-item-footer .gf-date-location {
+  width: 400px;
+  float: left;
+}
+.gf-agenda-item .gf-item-footer .gf-date-location a {
+  margin-left: 10px;
+}
+#content .gf-agenda-item .gf-item-footer .gf-date-location a:visited,
+#content .gf-agenda-item .gf-item-footer .gf-date-location a:link {
+  color: #444444;
+}
+.gf-agenda-item .gf-item-footer .gf-item-price {
+  padding-bottom: 10px;
+  float: right;
+  width: 110px;
+}
+.gf-agenda-item .gf-item-image .gf-buy-ticket form {
+  padding-right: 9px;
+  background-color: transparent;
+  background-image: url("right-triangle.gif");
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+.gf-agenda-item .gf-item-image .gf-buy-ticket input[type="submit"] {
+  border: none;
+  background-color: #444444;
+  padding: 5px;
+  height: 35px;
+  color: #fff;
+  min-width: 140px;
+  font-size: 14px;
+}
+.gf-agenda-list div.gf-divider:last-child {
+  margin-bottom: 0px;
+}
+.gf-batching-wrapper.bottom {
+  margin-top: 0px;
+}
+.gf-AgendaFilter i {
+  display: none;
+}
+.gf-filter {
+  margin-bottom: 1em;
+}
+.gf-filter label {
+  font-weight: normal;
+}
+.gf-filter label.selected {
+  font-weight: bold;
+  color: #444444;
+}
+.gf-filter-header {
+  color: black;
+  margin-bottom: 0.5em;
+}
+h2.gf-filter-header {
+  font-size: 1.25em;
+}
+.ui-widget {
+  font-family: Helvetica, Arial, sans-serif, "Lucida Grande", Verdana, Lucida;
+}
+.ui-widget-header {
+  background-color: #444444;
+  border-width: 0px;
+}
+.ui-widget-content .ui-state-default,
+.ui-state-default {
+  color: white;
+}
+#gf-title.activiteit {
+  margin: 1em 0em;
+  padding: 0 0 5px 0;
+}
+#gf-title.activiteit h1 {
+  line-height: 24px;
+  font-size: 27px;
+  margin: 0 0.5em 0 0;
+  display: inline;
+}
+#gf-title.activiteit img {
+  margin: 0 0 1px 0;
+}
+.template-activiteit_view #content h2 {
+  margin: 1em 0;
+  padding: 1.00286533% 0 0.429799427% 0;
+  color: #000;
+  border-color: #f2f2f2;
+  border-style: solid;
+  border-width: 1px 0px;
+  font-size: 1.5625em;
+  clear: both;
+}
+.gf-intro {
+  width: 53.724928367%;
+}
+.gf-activiteitImage {
+  float: right;
+  width: 43.839541547%;
+  height: 16.1725em;
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.gf-film-info {
+  margin-top: 2em;
+}
+.header i {
+  display: none;
+}
+.header {
+  display: none;
+}
+
+#trailer {
+  display: block;
+}
+#social-header {
+  display: block;
+}
+#gf-programma .header {
+  display: block;
+}
+#gf-programma table {
+  width: 100%;
+}
+#gf-programma table td,
+#gf-programma table th {
+  vertical-align: top;
+  margin-right: 1rem;
+  text-align: left;
+}
+#gf-programma table .gf-date {
+  width: 50%;
+}
+#gf-programma table .gf-performance {
+  width: 10%;
+}
+#gf-programma table .gf-price {
+  width: 40%;
+  text-align: center;
+}
+.gf-programma-info {
+  margin-top: 5px;
+}
+.gf-label {
+  font-weight: bold;
+  float: left;
+  margin-right: 5px;
+}
+
+.gf-locatie-alert {
+  font-style: italic;
+  padding-bottom: 10px;
+}
+.gf-programma-list {
+  display: block;
+  clear: both;
+  float:left;
+  width: 100%;
+  margin-bottom: 1em;
+}
+.gf-programma-list div.gf-programma-row {
+  width: 100%;
+  display: block;
+}
+.gf-programma-list .gf-programma-column {
+  width: 50%;
+  float: left;
+}
+.gf-programma-list .gf-programma-column .gf-voorstelling {
+  width: 100%;
+}
+.gf-programma-list .gf-date {
+  font-weight: bold;
+}
+.gf-programma-list div.gf-performance {
+  float: left;
+  margin-left: 1%;
+}
+.gf-programma-list div.gf-price {
+  float: left;
+  margin-left: 5%;
+}
+.gf-programma-list div.gf-column-separator {
+  width: 0px;
+  float: left;
+}
+#gf-programma .gf-programma-list div .hidden {
+  color: white;
+}
+
+
+#gf-activiteit-sociallinks ul li {
+  display: inline;
+  margin-right: 5px;
+  padding-left: 20px;
+  background-repeat: no-repeat;
+}
+#gf-activiteit-sociallinks ul {
+  margin: 0px 1.432664756%;
+}
+.gf-twitter {
+  background-image: url(++resource++forumbase.theme.images/twitter_icon.png);
+}
+.gf-facebook {
+  background-image: url(++resource++forumbase.theme.images/facebook_icon.png);
+}
+.gf-hyves {
+  background-image: url(++resource++forumbase.theme.images/hyves_icon.png);
+}
+.gf-mail_to_friend {
+  background-image: url(++resource++forumbase.theme.images/email_icon.png);
+}
+.template-activiteit_view #portal-column-content {
+  width: 72.708333333%;
+  margin-left: 0;
+  left: 0;
+  float: left;
+}
+.template-activiteit_view #portal-column-two {
+  width: 23.958333333%;
+  margin-left: 0;
+  left: 0;
+  float: right;
+}
+.template-activiteit_view .gf-film {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.discussion a:link,
+.discussion a:visited {
+  color: #444444;
+}
+.row .discussion #commenting fieldset {
+  border-color: #e5e5e5;
+}
+body.template-activiteit_view dl.portlet {
+  margin-bottom: 2em;
+}
+body.template-activiteit_view dt.portletHeader {
+  background-color: #fff;
+  padding: 0.42em 0;
+  font-size: 16px;
+}
+body.template-activiteit_view dl.portlet dd.portletItem {
+  padding: 0;
+}
+dl.portlet dt.portletHeader a:visited,
+dl.portlet dt.portletHeader a:link {
+  color: #999999;
+}
+dl.portlet.gf-AndereFilmsVandaag {
+  background-color: #e7e7e7;
+}
+dl.portlet.gf-AndereFilmsVandaag .gf-vandaagUitgelichtItem.even {
+  background-color: #f2f2f2;
+}
+dl.portlet.gf-AndereFilmsVandaag dd.portletFooter,
+dl.portlet.gf-AndereFilmsVandaag .gf-datetime .gf-date,
+dl.portlet.gf-AndereFilmsVandaag a img {
+  display: none;
+}
+dl.portlet.portletTwitterPortlet {
+  border-bottom: 1px solid #f2f2f2;
+}
+dl.portlet.portletTwitterPortlet a:visited,
+dl.portlet.portletTwitterPortlet a:link {
+  color: #999999;
+  border-color: #999999;
+}
+dl.portlet.gf-EventOfActiviteit dt.portletHeader a {
+  color: black;
+}
+dl.portlet.gf-EventOfActiviteit dd p.image a {
+  border-bottom: 0px;
+}
+body.template-folder_listing #gf-title,
+body.template-folder_summary_view #gf-title {
+  display: none;
+}
+dl.portlet dd.portletFooter span.portletBottomLeft,
+dl.portlet dd.portletFooter span.portletBottomRight {
+  display: none;
+}
+dl.portlet dd.portletItem {
+  padding: 1em 1em 0.5em 1em;
+}
+dl.portlet dd.portletFooter {
+  padding-top: 0px;
+}
+dl.portlet dd.portletFooter span {
+  position: relative;
+  display: inline-block;
+}
+#content p.tileFooter {
+  line-height: 100%;
+}
+
+/* Navigation Portlet */
+#content dl.portlet.portletNavigationTree i {
+  font-size: 100%;
+  margin-left: 0.2rem;
+  font-weight: normal
+}
+#content dl.portlet.portletNavigationTree ,
+dl.portlet.portletNavigationTree {
+  border-width: 1px 0px;
+  border-style: solid;
+  border-color: #e5e5e5;
+}
+#content dl.portlet.portletNavigationTree ul.navTree li.navTreeItem ,
+dl.portlet.portletNavigationTree ul.navTree li.navTreeItem {
+  background-color: #f3f3f3;
+  margin-bottom: 0px;
+  border-bottom: 1px solid #e5e5e5;
+  border-top: 1px solid #fafafa;
+}
+#content dl.portlet.portletNavigationTree .navTreeItem a,
+dl.portlet.portletNavigationTree .navTreeItem a {
+  background-color: transparent;
+  border-bottom: 0;
+}
+#content dl.portlet.portletNavigationTree a:visited,
+#content dl.portlet.portletNavigationTree a:link,
+dl.portlet.portletNavigationTree a:visited,
+dl.portlet.portletNavigationTree a:link {
+  color: #000;
+  border-bottom: 0;
+}
+dl.portlet.portletNavigationTree ul.navTree li.navTreeItem.navTreeCurrentNode {
+  background-color: #fff;
+}
+dl.portlet.portletNavigationTree a.navTreeCurrentItem {
+  border-left: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  font-weight: bold;
+}
+#content h1.documentFirstHeading {
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+}
+#content .documentDescription {
+  margin-bottom: 14px;
+}
+#content dl.image-inline.captioned {
+  line-height: 1em;
+}
+#content dd.image-caption {
+  margin: 0px 0px 0px 0px;
+  padding: 5px 10px;
+  border-bottom: 1px solid #e5e5e5;
+  background-color: #f3f3f3;
+  color: #000;
+  font-size: 100%;
+}
+body #content dd {
+  margin: 0;
+  padding: 0;
+}
+div.InlinePhotoAlbum {
+  background-color: #f3f3f3;
+  padding: 5px;
+}
+div.InlinePhotoAlbum .photoAlbumEntry {
+  background-color: transparent;
+  background-image: none;
+}
+div.InlinePhotoAlbum .photoAlbumEntryTitle {
+  display: none;
+}
+table.gf-full-width {
+  width: 100%;
+}
+p.plonetruegallery a img {
+  border: none;
+}
+#gf-events-overview > p {
+  margin-top: 1em;
+}
+#gf-events-overview .gf-event {
+  float: left;
+  width: 312px;
+}
+.gf-event-listing {
+  width: 32.291666667%;
+  max-height: 400px;
+  min-height: 300px;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+.gf-event-listing.left {
+  float: left;
+  margin-right: 1.538461538%;
+}
+.gf-event-listing.left.rowlast {
+  margin-right: 0;
+}
+#gf-events-overview-listing-container {
+  overflow: hidden;
+}
+#content .gf-event-listing a:link,
+#content .gf-event-listing a:visited {
+  border-bottom: none;
+}
+.gf-event-listing h2,
+.gf-event-listing h3 {
+  color: #000;
+}
+.gf-event-listing h2 {
+  font-size: 18px;
+  margin: 5px 0px;
+}
+.gf-event-listing h3 {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+.gf-event-listing-image {
+  max-height: 141px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+.gf-event-listing-image img {
+  width: 100%;
+  min-height: 105px;
+}
+.gf-event-listing h3.place-holder {
+  height: 21px;
+}
+.gf-event-listing p.gf-description {
+  font-size: 1.4em;
+  margin-bottom: 0.5em;
+}
+.gf-event-listing div.gf-text {
+  min-height: 80px;
+  height: 80px;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+p.tileFooter,
+#content .gf-event-listing p.gf-button.white {
+  position: relative;
+  display: inline-block;
+}
+.gf-event-listing hr.gf-divider {
+  border-color: #ebebeb;
+  border-style: solid;
+  border-width: 0px 0px 1px 0px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.template-search #content h1 {
+  margin-top: 5px;
+}
+#search-results-wrapper {
+  text-align: left;
+}
+#search-results-bar .actionMenu {
+  display: none;
+}
+#content dl.searchResults dt a {
+  font-family: 'Helvetica Neue', Arial, FreeSans, sans-serif;
+  font-weight: bold;
+  line-height: 1.5em;
+  font-size: 18px;
+  color: black;
+  text-decoration: none;
+  border: 0;
+}
+#content dl.searchResults dd {
+  margin-left: 0;
+  padding-bottom: 20px;
+  background: transparent url("++resource++forumbase.theme.images/diagonal-stripes-white.png") left bottom repeat-x;
+}
+body.gf-tvscreens {
+  background-image: none;
+  background-color: black;
+  width: 1910px;
+  height: 1070px;
+}
+#tvscreen {
+  padding: 70px 62px;
+  width: 1786px;
+  height: 930px;
+  position: absolute;
+  overflow: hidden;
+}
+#tvscreen #logo,
+#tvscreen #clock,
+#tvscreen #list {
+  z-index: 99;
+}
+#tvscreen #background {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  opacity: 0.3;
+}
+#tvscreen #logo {
+  position: absolute;
+  top: 70px;
+  left: 62px;
+}
+#tvscreen #clock {
+  position: absolute;
+  top: 880px;
+  color: white;
+  font-weight: normal;
+  font-style: normal;
+  line-height: normal;
+  font-family: 'AntennaCondBlack', sans-serif;
+  font-size: 104px;
+  opacity: 0.4;
+}
+#tvscreen #list {
+  position: absolute;
+  top: 70px;
+  left: 630px;
+}
+#tvscreen table {
+  color: white;
+  width: 1200px;
+  font-size: 42px;
+}
+#tvscreen td {
+  padding: 10px 20px;
+}
+#tvscreen .title {
+  width: 100%;
+}
+#tvscreen tr {
+  height: 66px;
+}
+#tvscreen tr.almost-starting {
+  font-weight: bold;
+}
+#tvscreen tr.odd {
+  background-color: #444;
+}
+#tvscreen tr.date-separator {
+  font-weight: normal;
+  font-style: normal;
+  line-height: normal;
+  font-family: 'AntennaCondBlack', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.00em;
+}
+body.template-personal-information #contentview-user_data-personal-preferences,
+body.template-change-password #contentview-user_data-personal-preferences {
+  display: none;
+}
+#my_users td,
+#my_users th {
+  padding-left: 10px;
+}
+.template-personal-information .events {
+  padding-left: 1em;
+}
+#event_aanmelden_table td {
+  padding-right: 1em;
+  padding-bottom: 0.5em;
+}
+.template-event-aanmelden #content h1.documentFirstHeading,
+.template-aanmelden_event #content h1.documentFirstHeading {
+  margin-top: 0.5em;
+}
+.template-register #formfield-form-email .formHelp {
+  display: none;
+}
+#ui-datepicker-div {
+  background: white;
+  border: 1px solid;
+}
+#ui-datepicker-div td {
+  width: 25px;
+  height: 25px;
+  text-align: center;
+}
+.ui-datepicker-title {
+  padding: 0.5em 0.2em;
+  text-align: center;
+}
+.gf_login #login-form label {
+  display: inline-block;
+  margin-right: 0.5em;
+  padding-top: 0.2em;
+  text-align: right;
+  width: 8em;
+}
+.pb-ajax #login-form {
+  text-align: left;
+}
+.event_succes {
+  height: 7em;
+  width: 100%;
+}
+.event_succes h1,
+h1.event {
+  font-size: 1.3em;
+}
+.event_succes div {
+  margin-top: 1em;
+  font-size: 1em;
+}
+.ui-multiselect {
+  border: solid 1px;
+  font-size: 0.8em;
+}
+.ui-multiselect ul {
+  -moz-user-select: none;
+  margin-left: 0;
+}
+#content .ui-multiselect ul {
+  -moz-user-select: none;
+  margin-left: 0;
+}
+.ui-multiselect li {
+  margin: 0;
+  padding: 0;
+  cursor: default;
+  line-height: 20px;
+  height: 20px;
+  font-size: 11px;
+  list-style: none;
+}
+.ui-multiselect li.ui-element {
+  display: block;
+}
+.ui-multiselect li a {
+  color: #999;
+  text-decoration: none;
+  padding: 0;
+  display: block;
+  float: left;
+  cursor: pointer;
+  border-bottom: 0;
+}
+.ui-multiselect li.ui-draggable-dragging {
+  padding-left: 10px;
+}
+.ui-multiselect div.selected {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  float: left;
+}
+.ui-multiselect ul.selected {
+  padding: 0;
+  overflow: auto;
+  overflow-x: hidden;
+  background: #fff;
+  margin: 0;
+  list-style: none;
+  border: 0;
+  position: relative;
+  width: 100%;
+  height: 100% !important;
+}
+#content .ui-multiselect ul.selected li {
+  margin-bottom: 0;
+}
+.ui-multiselect div.available {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  float: left;
+  border-left: 1px solid;
+}
+.ui-multiselect ul.available {
+  position: relative;
+  padding: 0;
+  overflow: auto;
+  overflow-x: hidden;
+  background: #fff;
+  margin: 0;
+  list-style: none;
+  border: 0;
+  width: 100%;
+}
+#content .ui-multiselect ul.available li {
+  padding-left: 10px;
+  margin-bottom: 0;
+}
+.ui-multiselect .ui-state-default {
+  border: none;
+  margin-bottom: 1px;
+  position: relative;
+  padding-left: 20px;
+}
+.ui-multiselect .ui-state-hover {
+  border: none;
+}
+.ui-multiselect .ui-widget-header {
+  border: none;
+  font-size: 11px;
+  margin-bottom: 1px;
+}
+.ui-multiselect .add-all {
+  float: right;
+  padding: 7px;
+}
+.ui-multiselect .remove-all {
+  float: right;
+  padding: 7px;
+}
+.ui-multiselect .search {
+  float: left;
+  padding: 4px;
+}
+.ui-multiselect .count {
+  float: left;
+  padding: 7px;
+}
+.ui-multiselect li span.ui-icon-arrowthick-2-n-s {
+  position: absolute;
+  left: 2px;
+}
+.ui-multiselect li a.action {
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  display: block;
+}
+.ui-multiselect input.search {
+  height: 14px;
+  padding: 1px;
+  opacity: 0.5;
+  margin: 4px;
+  width: 100px;
+}
+#content .ui-multiselect a {
+  border-bottom: 0;
+}
+.multiselect {
+  width: 400px;
+  height: 22em;
+}
+.multiselect a {
+  border-bottom: 0;
+}
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+  background: grey !important;
+}
+
+.cloned {
+  display: block;
+}
+.clone {
+  display: none;
+}

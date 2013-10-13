@@ -1,0 +1,94 @@
+body #gf-site-selector li#gf-site-groninger-forum {
+  background-color: #F50099;
+}
+body #content #gf-news-widget .gf-news-widget-cell a:hover {
+  color: #F50099 !important;
+}
+body dl.portlet.gf-EventOfActiviteit dt.portletHeader a {
+  color: #F50099;
+}
+#gf-titlebar-links li a:link,
+#gf-titlebar-links li a:visited,
+body #portal-columns #content a:link,
+body #portal-columns #content a:visited,
+body #portal-columns #content #gf-news-widget .gf-news-widget-cell p a:link,
+body #portal-columns #content #gf-news-widget .gf-news-widget-cell p a:visited,
+dl.portlet a:link,
+dl.portlet a:visited {
+  color: #f50099;
+}
+#content a:link,
+#content a:visited,
+dl.portlet a:link,
+dl.portlet a:visited {
+  border-bottom: 1px solid #f50099;
+}
+#gf-portal-footer-newsletter {
+  background-color: #f50099;
+}
+#gf-portal-footer-newsletter form input[type="submit"] {
+  border: 0px solid #f50099;
+}
+#gf-footer-facebook p a,
+#gf-footer-twitter p a {
+  color: #f50099;
+}
+#doormat-container a:hover {
+  color: #f50099;
+}
+#gf-portal-footer-copyright p a:hover {
+  color: #f50099;
+}
+.gf-highlight-selector .gf-highlight-selection.selected {
+  background-color: #f50099;
+}
+#content #gf-activiteiten-filter-viewlet .gf-filterBlok ul li a:hover {
+  color: #f50099 !important;
+}
+#content #gf-activiteiten-filter-viewlet p.gf-button a:hover {
+  color: #f50099 !important;
+}
+p.tileFooter a,
+dl.portlet dd.portletFooter span a,
+#content p.gf-button.white a.gf-button {
+  color: #f50099;
+}
+#today-tomorrow .title h2,
+.gf-vandaagUitgelichtTitle.gf-selected h2 {
+  color: #f50099;
+}
+#today-tomorrow .datetime,
+.gf-datetime {
+  background-color: #f50099;
+}
+#today-tomorrow .link p a:hover,
+dl.portletVandaagUitgelicht .gf-vandaag-uitgelicht-collection-text p a:hover {
+  color: #f50099 !important;
+}
+.listingBar span.current {
+  border: 1px solid #f50099;
+  color: #f50099;
+}
+body.template-agenda-overzicht .gf-agenda-description {
+  background-color: #f50099;
+}
+#content .gf-item-container h2 a:hover {
+  color: #f50099 !important;
+}
+#content .gf-agenda-item .gf-item-footer .gf-date-location a:visited,
+#content .gf-agenda-item .gf-item-footer .gf-date-location a:link {
+  color: #f50099;
+}
+.gf-agenda-item .gf-item-image .gf-buy-ticket input[type="submit"] {
+  background-color: #f50099;
+}
+.gf-filter label.selected {
+  color: #f50099;
+}
+.ui-widget-header {
+  background-color: #f50099;
+}
+.discussion a:link,
+.discussion a:visited {
+  color: #f50099;
+}

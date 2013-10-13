@@ -30,6 +30,8 @@ setup(name='copsclub.content',
           'plone.app.referenceablebehavior',
           'plone.app.relationfield',
           'plone.namedfile [blobs]',
+          'myswimmingclub.theme',
+          'myswimmingclub.content',
           # -*- Extra requirements: -*-
       ],
       extras_require={
