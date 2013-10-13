@@ -689,18 +689,19 @@ input[type="submit"].btn.btn-mini {
   float: left;
   position: relative;
   background-color: #adafae;
-  line-height: 1.6em;
-  min-height: 11.21em;
+  line-height: 1.28em;
+  min-height: 7.5em;
   margin: 15px 9.75px;
 }
 .event-panel dl {
   text-align: center;
+  min-height: 10.58em;
 }
 .event-panel dl dt {
-  font-size: 1.5em;
+  font-size: 1.17em;
   font-weight: normal;
-  line-height: 1.6em;
-  min-height: 3.21em;
+  line-height: 1.28em;
+  min-height: 3.58em;
   margin: 0;
   padding: 3px 6px;
   background-color: #111987;
