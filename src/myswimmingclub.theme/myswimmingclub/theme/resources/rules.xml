@@ -26,28 +26,28 @@
         <copy attributes="class id dir"
         content="/html/body"
         theme="/html/body" />
-<!-- COPS Club Specific Content -->
-<replace css:content="#portal-columns"
-css:theme="#portal-columns" />
-<!-- Tools portal-personaltools-->
-<replace css:content="#portal-personaltools"
-css:theme="#portal-personaltools" />
-<!-- Tools portal-siteactions-->
-<replace css:content="#portal-siteactions"
-css:theme="#portal-siteactions" />
-<!-- Global navigation -->
-<replace css:content='#portal-globalnav'
-css:theme='#portal-globalnav' />
-<!-- Logo -->
-<copy css:content='#portal-logo'
-css:theme='#portal-logo' attributes="href title accesskey"/>
-<!-- Search -->
-<replace css:content='#portal-searchbox'
-css:theme='#portal-searchbox' />
-<!-- Search -->
-<merge attributes="class" css:content='#doormat-container'
-css:theme='#footer-columns' />
-<replace css:content-children='#doormat-container'
-css:theme-children='#footer-columns' />
+	<!-- COPS Club Specific Content -->
+	<replace css:content="#portal-columns"
+		css:theme="#portal-columns" />
+	<!-- Tools portal-personaltools-->
+	<replace css:content="#portal-personaltools"
+		css:theme="#portal-personaltools" />
+	<!-- Global navigation -->
+	<replace css:content='#portal-globalnav'
+		css:theme='#portal-globalnav' />
+	<!-- Logo -->
+	<copy css:content='#portal-logo'
+		css:theme='#portal-logo' attributes="href title accesskey"/>
+	<!-- Search -->
+	<replace css:content='#portal-searchbox'
+		css:theme='#portal-searchbox' />
+	<!-- Tools portal-siteactions-->
+	<before css:content='#portal-siteactions'
+		css:theme='#gf-site-selector ul' />
+	<drop css:theme='#gf-site-selector ul' />
+	<!-- portal footer  -->
+	<copy css:content='#portal-footer-wrapper&gt;div&gt;div'
+		css:theme='#social_newsletter_footer&gt;div.cell' />
+	<drop css:theme='.gf-divider'/>
     </rules>
 </rules>

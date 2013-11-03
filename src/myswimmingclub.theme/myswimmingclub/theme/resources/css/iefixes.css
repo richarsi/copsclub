@@ -1,0 +1,23 @@
+
+/* - IEFixes.css - */
+@media screen {
+/* http://www.groningerforum.nl/portal_css/IEFixes.css?original=1 */
+/* */
+*html ul#content-views{
+margin: -2px -3px 0px -3px;
+}
+/* */
+#portal-logo {
+margin-top: 0;
+}
+/* */
+.hiddenStructure {
+position: absolute;
+}
+/* */
+div.cell {
+float: none;
+*float: left;
+}
+}
+

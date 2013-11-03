@@ -3,10 +3,14 @@
     <!-- stylesheet id="public.css"
         expression="not:request/HTTP_X_THEME_ENABLED | nothing"
         / -->
-    <stylesheet id="++theme++myswimmingclub.theme/css/forumbase.css"
+    <stylesheet id="++theme++myswimmingclub.theme/css/font-awesome.css"
         expression="request/HTTP_X_THEME_ENABLED | nothing"
         applyPrefix="True" />
-    <stylesheet id="++theme++myswimmingclub.theme/css/groningerforum.css"
+    <stylesheet id="++theme++myswimmingclub.theme/css/font-awesome-ie7.css"
+        expression="request/HTTP_X_THEME_ENABLED | nothing"
+        conditionalcomment="IE"
+        applyPrefix="True" />
+    <stylesheet id="++theme++myswimmingclub.theme/css/myswimmingclub.css"
         expression="request/HTTP_X_THEME_ENABLED | nothing"
         applyPrefix="True" />
     <stylesheet id="++theme++myswimmingclub.theme/css/iefixes.css"
