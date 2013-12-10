@@ -29,6 +29,8 @@ setup(name='copsclub.policy',
           'copsclub.theme',
           'copsclub.content',
           'Products.Doormat',
+          'myswimmingclub.theme',
+          'collective.embedly',
           # -*- Extra requirements: -*-
       ],
       extras_require={

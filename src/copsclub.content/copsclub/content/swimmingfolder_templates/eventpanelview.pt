@@ -22,7 +22,7 @@ int(b_start), orphan=int(b_orphan));">
 
                 <div tal:repeat="item batch">
                     <tal:block define="type item/type">
-                    <div class="width-4 event-panel event" 
+                    <div class="width-3 event-panel event" 
                         tal:condition="python: type=='Event'">
                         <dl>
                             <dt>
@@ -33,7 +33,7 @@ int(b_start), orphan=int(b_orphan));">
                             <a class="btn" tal:attributes="href item/url">View details &raquo;</a>
                         </dl>
                     </div>
-                    <div class="width-4 event-panel meet" 
+                    <div class="width-3 event-panel meet" 
                         tal:condition="python: type=='Swimming Meet'">
                         <dl>
                             <dt>
@@ -45,7 +45,7 @@ int(b_start), orphan=int(b_orphan));">
                             <a class="btn" tal:attributes="href item/url">View details &raquo;</a>
                         </dl>
                     </div>
-                    <div class="width-4 event-panel location" 
+                    <div class="width-3 event-panel location" 
                          tal:condition="python: type=='Location'">
                         <dl>
                             <dt>
@@ -55,7 +55,7 @@ int(b_start), orphan=int(b_orphan));">
                             <a class="btn" tal:attributes="href item/url">View details &raquo;</a>
                         </dl>
                     </div>
-                    <div class="width-4 event-panel folder" 
+                    <div class="width-3 event-panel folder" 
                          tal:condition="python: type=='Swimming Folder'">
                         <dl>
                             <dt>

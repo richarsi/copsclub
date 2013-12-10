@@ -1,0 +1,889 @@
+/* CSS crunched with Crunch - http://crunchapp.net/ */
+/**
+ * CSS Media query detection within JS 
+ */
+@media (min-device-width: 1px) {
+  #media-query-check {
+    margin-bottom: 1px;
+  }
+  p,
+  img,
+  embed,
+  object {
+    max-width: 100%;
+  }
+  iframe {
+    max-width: 99%;
+    max-height: 100%;
+  }
+}
+/* For devices with narrow screens, phones, tablets, etc. */
+/* support these sizes: 320,480, 600, 768, 1024, 1200 Ethan Marcotte */
+/*  * 1. 1201px and above huge screens * */
+/*  * 2. 1025px to 1200px * */
+/*  * 3. 769px to 1024px  * */
+/*  * 4. 769px to 1024px  * */
+/*  * 5. 601px to 768px  * */
+/*  * 6. 600px and below  * */
+/*  * 7. 481px to 600px  * */
+/*  * 8. 480px wide and below * */
+/*  * 9. iPhone Portrait * */
+/*  * 10. iPhone Landscape * */
+/*  * 1. 1625px and above huge screens * */
+@media only screen and (min-width: 1625px) {
+  body {
+    width: 100%;
+  }
+}
+/*  * END 1. 1625px and above huge screens * */
+/*  * 2. 1301px and above huge screens * */
+@media only screen and (min-width: 1301px) {
+  body {
+    width: 100%;
+  }
+  #portal-header,
+  #breadcrumbs-wrapper,
+  #portal-globalnav,
+  #visual-portal-wrapper,
+  #doormat-container {
+    max-width: 1280px;
+  }
+  #edit-bar {
+    font-size: 75%;
+  }
+}
+/*  * END 2. 1301px and above huge screens * */
+/*  * 3. 1025px to 1300px * */
+@media only screen and (min-width: 1025px) and (max-width: 1300px) {
+  
+}
+/*  * END 3. 1025px to 1300px * */
+/*  * 4. 769px to 1024px  * */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  body.debug {
+    background-color: blue;
+    /* blue */
+  
+  }
+}
+/*  * END 4. 769px to 1024px * */
+/*  * 5. 601px to 768px  * */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+  body.debug {
+    background-color: purple;
+    /* purple */
+  
+  }
+}
+/*  * END 5. 601px to 985px  * *//*  * 6. 600px and below-common things for 480px, 600px, and below .. IE 9 ignored this if it had 'only screen' in the query* */
+@media (max-width: 600px) {
+  body {
+    background-image: none !important;
+  }
+  body.debug {
+    background-color: green;
+    /* green */
+  
+  }
+  body {
+    font-size: 110%;
+  }
+  body #visual-portal-wrapper {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+  body .cloned {
+    display: none;
+  }
+  body .clone {
+    display: block;
+  }
+  /** Hide navigation, show menu bar and icon **/
+  body #menu {
+    margin-top: 8px;
+    float: none;
+    width: 100%;
+    top: 0;
+    clear: both;
+    background-color: #fff;
+  }
+  #menu ul#portal-globalnav {
+    display: none;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    padding-left: 0px;
+  }
+  #menu ul#portal-globalnav > li > a {
+    border-right: 0;
+    padding: 5px 5px 5px 0px;
+  }
+  #menu li {
+    display: block;
+    margin: 0;
+  }
+  #menu li a {
+    display: inline-block;
+    border-bottom: 1px solid #555;
+    background-color: #333;
+  }
+  #menu a {
+    width: 100%;
+    padding: 0.5rem 0 0 0;
+    font-size: 1.3rem;
+    padding-left: 0px;
+    margin-left: 4px;
+  }
+  #menu a#pull {
+    color: black;
+    display: block;
+  }
+  #menu a#pull i {
+    display: inline;
+    text-indent: 0;
+  }
+  #menu #portaltab-index_html {
+    display: none;
+  }
+  /* Logo */
+  body #portal-logo {
+    display: block;
+    margin: 0;
+    background: #fff;
+  }
+  body #portal-logo img {
+    width: 55.713286713px;
+    height: 55px;
+    margin-left: 0;
+  }
+  /* Searchbox  */
+  body #portal-searchbox {
+    position: absolute;
+    width: 70%;
+    margin: 0;
+    padding: 0;
+    display: block;
+    height: 21px;
+    margin-top: 23px;
+    text-align: right;
+    right: 0;
+  }
+  #portal-searchbox input[type='text'] {
+    width: 86%;
+    height: 21px;
+  }
+  body #portal-searchbox input.searchButton {
+    width: 32px;
+    padding: 0 !important;
+    max-width: 29px;
+    height: 25px;
+  }
+  /* Global nav*/
+  body #portal-globalnav {
+    display: block;
+    top: 0;
+    left: 0;
+    bottom: 0;
+  }
+  body #visual-portal-wrapper {
+    width: 97%;
+    margin: 0 1.5%;
+  }
+  body #content {
+    width: 100%;
+  }
+  body #portal-breadcrumbs {
+    display: none;
+  }
+  /*Full width columns  */
+  body.template-document_view #portal-column-content,
+  body.template-document_view #portal-column-one,
+  body.template-document_view #portal-column-two,
+  body.template-activiteit_view #portal-column-content,
+  body.template-activiteit_view #portal-column-one,
+  body.template-activiteit_view #portal-column-two,
+  body.template-homepage-event-view #portal-column-one,
+  body.template-homepage-event-view #portal-column-two,
+  body.template-homepage-event-view #portal-column-content {
+    width: 99%;
+    float: none;
+    clear: both;
+    left: 0;
+    margin-left: 0;
+  }
+  body #portal-column-one,
+  body #portal-column-two,
+  body #portal-column-content {
+    width: 100%;
+  }
+  body #portal-columns {
+    margin-top: 5px;
+  }
+  /*Hide some stuff, to prevent flashes of unstyled.*/
+  body #gf-site-selector,
+  body #portal-personaltools-wrapper {
+    display: none;
+  }
+  /*Hide footer stuff*/
+  #social_newsletter_footer,
+  #doormat-container {
+    display: none;
+  }
+  /*Site selector*/
+  body #gf-site-selector {
+    width: 100%;
+    text-align: center;
+    height: 25px;
+    margin-bottom: 5px;
+  }
+  body #gf-site-selector ul li {
+    margin-left: 1px;
+    font-size: 0.913rem;
+  }
+  /*Keep the divider in the footer*/
+  #gf-portal-footer-copyright {
+    display: block;
+  }
+  body #gf-portal-footer-copyright .clone {
+    display: block;
+  }
+  /*Personal tools*/
+  body #portal-personaltools-wrapper {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    float: none;
+  }
+  body #portal-personaltools {
+    float: none;
+  }
+  /* Hide these elements, we show them in the bottom */
+  body #portal-top #portal-personaltools,
+  body #portal-top #gf-site-selector {
+    display: none;
+  }
+  body #content h1.documentFirstHeading {
+    border-bottom: 0;
+    margin-top: 0.5rem;
+    margin-left: 4px;
+  }
+  body dl.portletBanner {
+    padding-left: 7px;
+  }
+  /* Navigation Portlet before Content */
+  body dl.portletNavigationTree {
+    font-size: 100%;
+    border-width: 0 1px 0 0 ;
+    margin-left: 5px;
+  }
+  body dl.portletNavigationTree dt.portletHeader {
+    display: block;
+    font-size: 120%;
+    font-weight: normal;
+    padding: 0.42em 0;
+    background: transparent;
+  }
+  body dl.portletNavigationTree dt.portletHeader a:link {
+    color: #f50099;
+  }
+  body dl.portletNavigationTree dd.portletItem {
+    display: none;
+    padding: 0.42em 0;
+  }
+  body dl.portletNavigationTree ul {
+    margin-left: 0;
+    list-style-type: none;
+  }
+  body dl.portlet.portletNavigationTree ul.navTree li.navTreeItem {
+    padding: 0;
+  }
+  iframe {
+    width: 100%;
+  }
+  img.image-right,
+  img.image-left,
+  img.image-inline {
+    float: none;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+  /* search */
+  .template-search form .discreet {
+    display: none;
+  }
+  .template-search form input.searchPage {
+    font-size: 100% !important;
+  }
+  .template-search h1 .discreet {
+    display: block;
+  }
+  .template-search h1 {
+    font-size: 1rem;
+  }
+  .template-search a.link-feed {
+    display: none;
+  }
+}
+/*  * END 6. 600px and below  * */
+/*  * 7. 481px to 600px  * */
+@media only screen and (min-width: 481px) and (max-width: 600px) {
+  
+}
+/*  * END 7. 481px to 600px  * */
+/*  *  8. 480px wide and below many smart phones * */
+@media only screen and (max-width: 480px) {
+  body.debug {
+    background-color: #CEDEF4;
+    /* blue */
+  
+  }
+  body #portal-searchbox {
+    width: 300px;
+  }
+}
+/*  * END 8. 480px wide and below * */
+/*  * 9. iPhone Portrait * */
+@media screen and (max-width: 320px) {
+  body.debug {
+    background-color: #a8e0af;
+    /* green */
+  
+  }
+  body #portal-searchbox {
+    width: 188px;
+  }
+  #portal-searchbox input[type='text'] {
+    width: 79%;
+  }
+}
+/*  * END 9. iPhone Portrait * */
+/*  * 10. iPhone Landscape. Since portrait has a max of 320 this effects the iPhone in landscape only * */
+@media screen and (min-width: 321px) and (max-width: 480px) {
+  body.debug {
+    background-color: yellow;
+    /* yellow */
+  
+  }
+}
+/*  * END 10. iPhone Landscape * */@media screen and (max-width: 240px) {
+  body.debug {
+    background-color: #34f534;
+    /* green */
+  
+  }
+  body #gf-site-selector {
+    height: auto;
+    clear: both;
+  }
+  body #gf-site-selector ul li {
+    display: block;
+    margin-bottom: 2px;
+    font-size: 1rem;
+  }
+  body #portal-searchbox {
+    width: 118px;
+  }
+  #portal-searchbox input[type='text'] {
+    width: 68%;
+  }
+}
+/* End of media queries */
+#content p,
+#content table,
+#content dl,
+dl.portlet p,
+dl.portlet {
+  margin-bottom: 0px;
+}
+#content #banners a.link-overlay {
+  border-bottom: none !important;
+}
+body {
+  background-image: url("../images/background-circles-grey.png");
+  background-repeat: repeat-x;
+}
+#portal-logo {
+  float: left;
+  margin: -5px 0px 25px 0px;
+}
+#portal-logo img {
+  background-color: #fff;
+}
+#visual-portal-wrapper {
+  width: 90%;
+  max-width: 960px;
+  margin: auto;
+}
+.width-full.position-0 {
+  margin-left: -100%;
+}
+div.width-full {
+  width: 100%;
+}
+div.position-0 {
+  margin-left: -100%;
+}
+div.width-1\3a 4 {
+  width: 24%;
+}
+div.width-1\:2 {
+  width: 47.75%;
+}
+#portal-column-two dl.portletBanner dd.portletItem {
+  padding: 0 ;
+}
+dl.portletBanner dd.portletItem a {
+  border-bottom: 0;
+}
+dl.portletBanner dd.portletItem img {
+  max-width: 100%;
+}
+dl.portletBanner {
+  padding-bottom: 1.2em;
+}
+#content a:hover,
+dl.portlet a:hover {
+  color: #000 !important;
+}
+#content a:link,
+#content a:visited,
+dl.portlet a:link,
+dl.portlet a:visited {
+  color: #444444;
+}
+#content a:link,
+#content a:visited,
+dl.portlet a:link,
+dl.portlet a:visited {
+  border-bottom: 1px solid #444444;
+}
+#content h1 {
+  margin-top: 0px;
+}
+#content h2.tileHeadline {
+  margin-top: 0.7em;
+}
+#portal-column-content {
+  margin-bottom: 10px;
+}
+#portal-column-content #content {
+  margin: 0px 0px 5px 0px;
+}
+#portal-siteactions-wrapper {
+  background-color: transparent;
+  text-align: right;
+  padding-top: 3px;
+}
+#portal-siteactions-wrapper ul {
+  margin-top: 3px;
+  display: inline;
+}
+#portal-siteactions-wrapper ul li {
+  padding: 5px 10px;
+  margin-left: 2px;
+  background-color: #000;
+  font-size: 0.813rem;
+}
+#portal-siteactions-wrapper ul li a:link,
+#portal-siteactions-wrapper ul li a:visited,
+#portal-siteactions-wrapper ul li a {
+  color: #fff;
+}
+#menu #pull {
+  display: none;
+}
+ul#portal-globalnav {
+  clear: both;
+  float: left;
+}
+/** 
+ * The below is taken from 29-navigation.less
+ */ul#portal-globalnav {
+  background-color: transparent;
+  display: inline;
+}
+ul#portal-globalnav > li > a {
+  padding: 5px 15px;
+  min-width: 0px;
+  font-size: 1.125rem;
+  border-right: 4px solid #f4f4f4;
+}
+ul#portal-globalnav li:last-child a {
+  border-right-color: transparent ;
+}
+ul#portal-globalnav ul.submenu a:hover,
+ul#portal-globalnav li.selected ul.submenu a,
+ul#portal-globalnav li.selected a:focus,
+ul#portal-globalnav li a {
+  background-color: #fff;
+  color: #000;
+}
+ul#portal-globalnav > li > a:hover,
+ul#portal-globalnav > li > a:focus,
+ul#portal-globalnav li.selected > a:hover,
+ul#portal-globalnav li.selected > a {
+  background-color: #000;
+  background-image: url("../images/gradient-black-29.png");
+  background-repeat: repeat-x;
+  color: #fff;
+}
+ul.submenu {
+  border-width: 0;
+  padding: 1em 1em;
+  z-index: 500;
+}
+#portal-globalnav ul.submenu li a {
+  border-width: 0;
+  font-size: 1.3em;
+  padding: 0.3em 0;
+}
+#portal-globalnav ul.submenu li.end-of-list {
+  background: url('../images/diagonal-stripes-white.png') repeat;
+  height: 0.8em;
+  margin-top: 0.5em;
+}
+#portal-top {
+  z-index: 500;
+}
+#portal-searchbox {
+  clear: none;
+  font-size: 1rem;
+  /*float: right;*/
+
+}
+#portal-searchbox,
+#portal-personaltools-wrapper {
+  padding: 10px;
+  margin: 15px 0px;
+  height: 25px;
+  background-color: #fff;
+}
+#portal-searchbox form .searchSection {
+  display: none;
+}
+#portal-searchbox input.searchField {
+  height: 19px;
+  border: 1px solid #ccc;
+  border-right: 0px;
+  background-color: #eee;
+  color: #000;
+  padding: 2px 0px 2px 5px;
+  float: left;
+}
+#portal-searchbox input.searchButton {
+  background: transparent url("../images/search-button.png") no-repeat center;
+  width: 29px;
+  height: 25px;
+  border: none;
+  color: transparent;
+  margin-left: 0px;
+  padding: 0 0 0 29px !important;
+}
+#portal-personaltools-wrapper {
+  float: right;
+}
+#portal-personaltools {
+  background-color: #fff;
+}
+#portal-personaltools a {
+  background-image: url("../images/bullet-grey.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 16px;
+}
+#portal-personaltools a:link,
+#portal-personaltools a:visited {
+  color: #000;
+}
+dt.portletHeader,
+#menu a,
+#portal-columns h1,
+#portal-columns h2,
+#portal-columns h4 {
+  font-weight: normal;
+  font-style: normal;
+  line-height: normal;
+  font-family: 'AntennaCondBlack', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.00em;
+}
+#portal-breadcrumbs {
+  /* margin-bottom: 0; */
+
+  font-size: 0.813em;
+}
+#breadcrumbs-you-are-here {
+  /* display: none; */
+
+}
+.breadcrumbSeparator {
+  padding: 0 0.25em;
+}
+#portal-breadcrumbs span,
+#portal-breadcrumbs a,
+.breadcrumbSeparator {
+  color: #999999;
+}
+body.portaltype-plone-site #portal-breadcrumbs {
+  display: none;
+}
+#social_newsletter_footer {
+  margin-top: 10px;
+}
+#doormat-container {
+  background-color: #f3f3f3;
+  border: 1px solid #e1e1e1;
+  padding: 1.03950104%;
+  width: 97.883657343%;
+}
+#doormat-container .doormatColumn h3 {
+  text-transform: uppercase;
+}
+#doormat-container .doormatColumn h3 {
+  font-size: 1.09375em;
+  font-weight: bold;
+  border-bottom: 1px solid #e1e1e1;
+}
+#doormat-container h2,
+#doormat-container h3,
+#doormat-container a:link,
+#doormat-container a:visited {
+  color: black;
+  margin-left: 0px;
+}
+#doormat-container a:hover {
+  color: #444444;
+}
+#doormat-container .doormatColumn {
+  width: 20%;
+  margin: 0px;
+  padding: 0px;
+}
+#doormat-container dl.doormatSection,
+#doormat-container h3 {
+  padding-right: 2em;
+}
+dt.doormatSectionHeader {
+  padding-bottom: 0.5em;
+}
+.portlets-manager .section {
+  line-height: 2em;
+}
+div.managePortletsLink,
+a.managePortletsFallback {
+  margin-top: 2em;
+}
+p.tileFooter,
+dl.portlet dd.portletFooter span {
+  background-image: url("../images/gradient-black-29.png");
+  background-position: bottom;
+  background-repeat: repeat-x;
+  position: absolute;
+  padding: 0.385em 4.867211704%;
+}
+dl.portlet dd.portletFooter span {
+  bottom: 0px;
+}
+p.tileFooter,
+dl.portlet dd.portletFooter span {
+  background-color: #fefefe;
+  background-image: url("../images/gradient-white-23.png");
+  border: 1px solid #e2e2e2;
+}
+p.tileFooter a,
+dl.portlet dd.portletFooter span a {
+  color: #fff;
+  background-image: url("../images/bullet-right.png");
+  background-position: right center;
+  padding-right: 1.5em;
+  background-repeat: no-repeat;
+  font-weight: bold;
+  display: block;
+}
+#content p.tileFooter a:link,
+#content p.tileFooter a:visited,
+dl.portlet dd.portletFooter span a:link,
+dl.portlet dd.portletFooter span a:visited {
+  border-bottom: none;
+}
+p.tileFooter a,
+dl.portlet dd.portletFooter span a {
+  color: #444444;
+  background-image: url("../images/bullet-right.png");
+}
+p.tileFooter {
+  position: relative;
+  display: inline-block;
+}
+.link p a {
+  background-image: url("../images/bullet-right.png");
+  background-position: right center;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-weight: bold;
+  padding-right: 1.5em;
+}
+dl.portlet dt.portletHeader a:visited,
+dl.portlet dt.portletHeader a:link {
+  color: #999999;
+}
+dl.portlet dd.portletFooter span.portletBottomLeft,
+dl.portlet dd.portletFooter span.portletBottomRight {
+  display: none;
+}
+dl.portlet dd.portletItem {
+  padding: 1em 1em 0.5em 1em;
+}
+dl.portlet dd.portletFooter {
+  padding-top: 0px;
+}
+dl.portlet dd.portletFooter span {
+  position: relative;
+  display: inline-block;
+}
+#content p.tileFooter {
+  line-height: 100%;
+}
+#content dl.portlet.portletNavigationTree i {
+  font-size: 100%;
+  margin-left: 0.2rem;
+  font-weight: normal;
+}
+#content dl.portlet.portletNavigationTree,
+dl.portlet.portletNavigationTree {
+  border-width: 1px 0px;
+  border-style: solid;
+  border-color: #e5e5e5;
+}
+#content dl.portlet.portletNavigationTree ul.navTree li.navTreeItem,
+dl.portlet.portletNavigationTree ul.navTree li.navTreeItem {
+  background-color: #f3f3f3;
+  margin-bottom: 0px;
+  border-bottom: 1px solid #e5e5e5;
+  border-top: 1px solid #fafafa;
+}
+#content dl.portlet.portletNavigationTree .navTreeItem a,
+dl.portlet.portletNavigationTree .navTreeItem a {
+  background-color: transparent;
+  border-bottom: 0;
+}
+#content dl.portlet.portletNavigationTree a:visited,
+#content dl.portlet.portletNavigationTree a:link,
+dl.portlet.portletNavigationTree a:visited,
+dl.portlet.portletNavigationTree a:link {
+  color: #000;
+  border-bottom: 0;
+}
+dl.portlet.portletNavigationTree ul.navTree li.navTreeItem.navTreeCurrentNode {
+  background-color: #fff;
+}
+dl.portlet.portletNavigationTree a.navTreeCurrentItem {
+  border-left: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  font-weight: bold;
+}
+#content h1.documentFirstHeading {
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+}
+#content .documentDescription {
+  margin-bottom: 14px;
+}
+#content dl.image-inline.captioned {
+  line-height: 1em;
+}
+#content dd.image-caption {
+  margin: 0px 0px 0px 0px;
+  padding: 5px 10px;
+  border-bottom: 1px solid #e5e5e5;
+  background-color: #f3f3f3;
+  color: #000;
+  font-size: 100%;
+}
+body #content dd {
+  margin: 0;
+  padding: 0;
+}
+.template-search #content h1 {
+  margin-top: 5px;
+}
+#search-results-wrapper {
+  text-align: left;
+}
+#search-results-bar .actionMenu {
+  display: none;
+}
+#content dl.searchResults dt a {
+  font-family: 'Helvetica Neue', Arial, FreeSans, sans-serif;
+  font-weight: bold;
+  line-height: 1.5em;
+  font-size: 18px;
+  color: black;
+  text-decoration: none;
+  border: 0;
+}
+#content dl.searchResults dd {
+  margin-left: 0;
+  padding-bottom: 20px;
+  background: transparent url("../images/diagonal-stripes-white.png") left bottom repeat-x;
+}
+body.template-personal-information #contentview-user_data-personal-preferences,
+body.template-change-password #contentview-user_data-personal-preferences {
+  display: none;
+}
+#my_users td,
+#my_users th {
+  padding-left: 10px;
+}
+.template-personal-information .events {
+  padding-left: 1em;
+}
+.template-register #formfield-form-email .formHelp {
+  display: none;
+}
+.gf_login #login-form label {
+  display: inline-block;
+  margin-right: 0.5em;
+  padding-top: 0.2em;
+  text-align: right;
+  width: 8em;
+}
+.pb-ajax #login-form {
+  text-align: left;
+}
+body #portal-columns #content a:link,
+body #portal-columns #content a:visited,
+dl.portlet a:link,
+dl.portlet a:visited {
+  color: #f50099;
+}
+#content a:link,
+#content a:visited,
+dl.portlet a:link,
+dl.portlet a:visited {
+  border-bottom: 1px solid #f50099;
+}
+#doormat-container a:hover {
+  color: #f50099;
+}
+p.tileFooter a,
+dl.portlet dd.portletFooter span a {
+  color: #f50099;
+}
+.listingBar span.current {
+  border: 1px solid #f50099;
+  color: #f50099;
+}
+.ui-widget-header {
+  background-color: #f50099;
+}
+.discussion a:link,
+.discussion a:visited {
+  color: #f50099;
+}

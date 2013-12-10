@@ -1,6 +1,7 @@
 from five import grok
 from zope import schema
 from plone.directives import form, dexterity
+from datetime import datetime
 
 from plone.app.textfield import RichText
 from z3c.relationfield.schema import RelationList, RelationChoice
@@ -12,9 +13,14 @@ from copsclub.content.squad import ISquad
 
 from copsclub.content import _
 
+# Validators
+from z3c.form import validator
+import zope.component
+
 # View
 from zope.component import getMultiAdapter
 from plone.memoize.instance import memoize
+from Products.CMFCore.utils import getToolByName
 
 # Indexer
 from plone.indexer import indexer
@@ -79,6 +85,28 @@ class ISwimmingMeet(form.Schema):
             required=True
         )
 
+#
+# VALIDATORS
+#
+
+# dates must be after 1st Jan 2010
+class DateValidator(validator.SimpleFieldValidator):
+    """ z3c.form validator class for dates """
+
+    def validate(self,value):
+        """ validate dates > 1 Jan 2010 """
+        if value != None:
+            if value < datetime(2010,01,01).date():
+                raise zope.interface.Invalid(_(u"Date must be greater than 1st Jan 2010"))
+
+
+# Set conditions for which fields the validator class applies
+# validator.WidgetValidatorDiscriminators(DateValidator, field=ISwimmingMeet['start_date'])
+validator.WidgetValidatorDiscriminators(DateValidator, field=schema.Date)
+
+# Register the validator so it will be looked up by z3c.form machinery
+zope.component.provideAdapter(DateValidator)
+
 @indexer(ISwimmingMeet)
 def swimmingmeetStartIndexer(context):
     """Create a catalogue indexer, registered as an adapter, which can
@@ -115,6 +143,7 @@ class View(grok.View):
         self.age_as_of_date_formatted = self.context.age_as_of_date.strftime("%d %b %Y")
         self.organisers_entry_date_formatted = self.context.organisers_entry_date.strftime("%d %b %Y")
         self.club_entry_date_formatted = self.context.club_entry_date.strftime("%d %b %Y")
+        self.haveFiles    = len(self.files()) > 0
     
     @memoize
     def locations(self):
@@ -162,3 +191,23 @@ class View(grok.View):
                     })
         
         return s
+
+    @memoize
+    def files(self):
+        catalog = getToolByName(self.context, 'portal_catalog')
+        folder_path = '/'.join(self.context.getPhysicalPath())
+        results = catalog(path={'query': folder_path, 'depth': 1})
+        f = []
+        if results is not None:
+            for brain in results:
+
+                f.append({
+                        'url': brain.getURL(),
+                        'title': brain["Title"],
+                        'summary': brain["Description"],
+                        'meta_type': brain["meta_type"],
+                        'size': brain["getObjSize"],
+                        'icon': brain["getIcon"],
+                    })
+        
+        return f

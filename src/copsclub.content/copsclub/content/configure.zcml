@@ -1,13 +1,17 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
     xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:five="http://namespaces.zope.org/five"
     xmlns:grok="http://namespaces.zope.org/grok"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     i18n_domain="copsclub.content">
 
   <includeDependencies package="." />
   <include file="permissions.zcml" />
+
   <grok:grok package="." />
+
+  <include package=".browser" />
 
   <genericsetup:registerProfile
       name="default"

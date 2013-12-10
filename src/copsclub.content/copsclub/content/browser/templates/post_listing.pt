@@ -1,0 +1,83 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="plone">
+
+<body>
+    <metal:content-core fill-slot="content-core">
+                        <div id="post-content"
+                             tal:define="limit_display python:12+0;">
+        <metal:block define-macro="listing" extend-macro="context/modified_date_folder_listing/macros/content-core">
+            <!-- we don't want the dl -->
+            <metal:entries fill-slot="entries">
+                <metal:block use-macro="context/modified_date_folder_listing/macros/entries">
+                     <metal:entry fill-slot="entry">
+                            <div class="post">
+                                <div class="postmetadata"> 
+                                    <strong>Post Details</strong>
+                                    <br />
+                                    <span class="documentModified">
+                                        <tal:modified i18n:translate="label_updated">Updated:</tal:modified>
+                                        <span tal:replace="python:toLocalizedTime(item_modified,long_format=False)"> Nov 27, 2013 </span>
+                                    </span>
+                                    <br />
+                                    <br />
+                                    <div i18n:domain="plone"
+                                         id="category"
+                                         class="documentByLine"
+                                         tal:define="categories item/Subject|nothing;url_quote nocall:modules/Products.PythonScripts.standard/url_quote;"
+                                         tal:condition="categories">
+                                    <tal:filedunder i18n:translate="label_filed_under">Filed under:</tal:filedunder>
+                                    <br />
+                                    <span tal:repeat="category categories">
+                                        <a href=""
+                                            class="link-category"
+                                            rel="tag"
+                                            tal:content="category"
+                                            tal:define="quotedCat python:url_quote(category);"
+                                            tal:attributes="href string:${context/@@plone_portal_state/navigation_root_url}/@@search?Subject%3Alist=${quotedCat}">
+                                            Plone Category
+                                        </a>
+                                        <span class="separator" tal:condition="not: repeat/category/end">,</span>
+                                    </span>
+                                    </div>
+                                </div><!-- when this was a 'p' tag with matching for class postmetadata I encountered runtime errors -->
+                                <h2 class="tileHeadline"
+                                    metal:define-macro="listitem">
+                                    <a href="#"
+                                       class="summary url"
+                                       tal:attributes="href python:(item_type in use_view_action) and item_url+'/view' or item_url;"
+                                       tal:content="item_title_or_id">
+                                        Item Title
+                                    </a>
+                                </h2>
+
+                                <div class="entry">
+                                    <p class="tileBody" tal:condition="item_description">
+                                        <span class="description" tal:content="item_description">
+                                            description
+                                        </span>
+                                    </p>
+    
+                                    <p class="tileFooter">
+                                        <a href=""
+                                           tal:attributes="href python:(item_type in use_view_action) and item_url+'/view' or item_url;">
+                                           <span class="hiddenStructure"> <span tal:replace="item_title_or_id" > - </span></span>
+                                           <span i18n:translate="read_more">Read More&hellip;</span>
+                                        </a>
+                                    </p>
+                                </div>
+                                <div class="visualClear"><!-- --></div>
+                            </div><!-- //post -->
+                    </metal:entry>
+                </metal:block>
+            </metal:entries>
+        </metal:block>
+                        </div><!-- //post-content -->
+    </metal:content-core>
+
+</body>
+</html>

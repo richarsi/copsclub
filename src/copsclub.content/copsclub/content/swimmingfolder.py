@@ -137,29 +137,7 @@ class ISwimmingFolder(form.Schema):
     """A folder that can contain swimmingmeets
     """
 
-class View(grok.View):
-    """Default view (called "@@view"") for a swimming folder.
-    
-    The associated template is found in swimmingfolder_templates/view.pt.
-    """
-    
-    grok.context(ISwimmingFolder)
-    grok.require('zope2.View')
-    grok.name('view')
-    
-    def update(self):
-        """Called before rendering the template for this view
-        """
-        
-        self.haveContents       = len(self.folder_contents()) > 0
-    
-    @memoize
-    def folder_contents(self):
-        """Get all child contents in this swimming folder.
-        """
-        return get_folder_contents(self)
-
-class AllSFContent(grok.View):
+class EventPanelView(grok.View):
     """A new view for a swimming folder.
     
     The associated template is found in swimmingfolder_templates/allsfcontent.pt.
@@ -167,7 +145,7 @@ class AllSFContent(grok.View):
     
     grok.context(ISwimmingFolder)
     grok.require('zope2.View')
-    grok.name('all-sf-content')
+    grok.name('event_panel_view')
 
     def update(self):
         """Called before rendering the template for this view
