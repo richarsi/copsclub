@@ -1,0 +1,23 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="maps">
+
+  <include package="plone.app.contentmenu" />
+
+  <browser:page
+      for="Products.CMFCore.interfaces.IFolderish"
+      name="modified_date_folder_listing"
+      template="./templates/modified_date_folder_listing.pt"
+      permission="zope2.View"
+      />   
+  <browser:page
+      for="Products.CMFCore.interfaces.IFolderish"
+      name="post_listing"
+      template="./templates/post_listing.pt"
+      permission="zope2.View"
+      />   
+
+</configure>

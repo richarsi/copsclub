@@ -41,3 +41,4 @@ class ILocation(form.Schema):
             description=_(u"Post or ZIP code"),
             required=False
         )
+

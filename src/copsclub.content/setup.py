@@ -24,6 +24,7 @@ setup(name='copsclub.content',
       include_package_data=True,
       zip_safe=False,
       install_requires=[
+          'five.grok',
           'setuptools',
           'Products.CMFPlone',
           'plone.app.dexterity [grok]',

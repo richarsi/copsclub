@@ -42,9 +42,9 @@
 	<replace css:content='#portal-searchbox'
 		css:theme='#portal-searchbox' />
 	<!-- Tools portal-siteactions-->
-	<before css:content='#portal-siteactions'
-		css:theme='#gf-site-selector ul' />
-	<drop css:theme='#gf-site-selector ul' />
+	<replace css:content='#portal-siteactions'
+		css:theme-children='#portal-siteactions-wrapper' />
+	<!-- drop css:theme='#gf-site-selector ul' / -->
 	<!-- portal footer  -->
 	<copy css:content='#portal-footer-wrapper&gt;div&gt;div'
 		css:theme='#social_newsletter_footer&gt;div.cell' />

@@ -6,7 +6,7 @@
     <!-- Basic Property Details -->
     <property name="title" i18n:translate="">Swimming Folder</property>
     <property name="description" i18n:translate="">A description of the swimming folder</property>
-    <property name="content_icon">folder_icon.gif</property>
+    <property name="content_icon">++resource++copsclub.content/myswimmingclub-icon-16x16.png</property>
     <property name="allow_discussion">False</property>
 
     <!-- Hierarchy control -->
@@ -36,6 +36,11 @@
     <property name="default_view_fallback">False</property>
     <property name="view_methods">
         <element value="view"/>
+        <element value="folder_summary_view"/>
+        <element value="folder_tabular_view"/>
+        <element value="atct_album_view"/>
+        <element value="folder_listing"/>
+        <element value="event_panel_view"/>
     </property>
     
     <alias from="(Default)" to="(selected layout)"/>

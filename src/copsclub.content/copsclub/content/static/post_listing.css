@@ -1,0 +1,89 @@
+@CHARSET "ISO-8859-1";
+
+/* Acknowledgement http://www.davidmihm.com/blog */
+#post-content {
+	margin: 25px 0px 0 160px;
+	/* padding: 40px 40px 40px 20px; */
+	padding: 0px 40px 0px 20px;
+	font-family: font-weight : normal;
+	border-left: 1px solid #d2d2d2;
+}
+
+
+#post-content p {
+	font-size: 15px;
+	line-height: 1.3em;
+}
+
+#post-content div.postmetadata {
+	// font-family: "Oswald", Helvetica, Arial, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	border-top: 1px dotted #d2d2d2;
+	padding: 20px 20px 20px 0px;
+	margin: 0px 0 5px 0px;
+	width: 120px;
+	display: block;
+	color: #666666;
+	position: absolute;
+	left: 20px;
+	text-align: right;
+	font-weight: 300;
+}
+
+.postmetadata a {
+	color: #666666;
+	text-decoration: none;
+	font-weight: 300;
+}
+
+.postmetadata a:hover {
+	/* color: #cd8200; */
+	/* color: #FFCC00; */
+	text-decoration: underline;
+}
+
+.post {
+	clear: both !important;
+	border-bottom: 0px solid #d2d2d2;
+	margin: 30px 0px;
+	text-align: left;
+	font-size: .6em;
+	line-height: 1.5em;
+}
+
+.post h2 {
+	font-size: 2.9em;
+	letter-spacing: -1px;
+	padding: 0 0 15px 0;
+	margin: 0em 25px 0 0;
+	font-weight: 100;
+	line-height: 1.2em;
+	border-bottom: 1px solid #d2d2d2; 
+}
+
+.post h2 a {
+	/* color: #333333; */
+        color: #111987;
+	line-height: 1.1em;
+	text-decoration: none;
+}
+
+.post h2 a:visited {
+	color: #999999;
+}
+
+.post h2 a:hover {
+	/* color: #d17b28; */
+	/* color: #FFCC00; */
+	text-decoration: underline;
+}
+
+.post h2.posttitle {
+	font-weight: bold;
+}
+
+
+.post strong,b {
+	font-weight: bold !important;
+} /**/
