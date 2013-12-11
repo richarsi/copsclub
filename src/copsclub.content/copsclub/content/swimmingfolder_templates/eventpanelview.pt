@@ -30,7 +30,7 @@ int(b_start), orphan=int(b_orphan));">
                                        tal:content="item/title" />
                             </dt>
                             <dd tal:content="item/date_range_formatted">3 - 4 Dec 2013</dd>
-                            <a class="btn" tal:attributes="href item/url">View details &raquo;</a>
+                            <a class="btn clearfix" tal:attributes="href item/url">View details &raquo;</a>
                         </dl>
                     </div>
                     <div class="width-3 event-panel meet" 
@@ -42,7 +42,7 @@ int(b_start), orphan=int(b_orphan));">
                             </dt>
                             <dd tal:content="item/date_range_formatted">3 - 4 Dec 2013</dd>
                             <dd tal:content="item/days_left_formatted">Replace Me</dd>
-                            <a class="btn" tal:attributes="href item/url">View details &raquo;</a>
+                            <a class="btn clearfix" tal:attributes="href item/url">View details &raquo;</a>
                         </dl>
                     </div>
                     <div class="width-3 event-panel location" 
@@ -52,7 +52,7 @@ int(b_start), orphan=int(b_orphan));">
                                 <a tal:attributes="href item/url"
                                        tal:content="item/title" />
                             </dt>
-                            <a class="btn" tal:attributes="href item/url">View details &raquo;</a>
+                            <a class="btn clearfix" tal:attributes="href item/url">View details &raquo;</a>
                         </dl>
                     </div>
                     <div class="width-3 event-panel folder" 
