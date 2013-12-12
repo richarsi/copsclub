@@ -1,10 +1,8 @@
 <?xml version="1.0"?>
 <metadata>
-  <version>1</version>
+  <version>1.3</version>
   <dependencies>
     <dependency>profile-copsclub.theme:default</dependency>
     <dependency>profile-copsclub.content:default</dependency>
-    <dependency>profile-myswimmingclub.theme:default</dependency>
-    <dependency>profile-myswimmingclub.content:default</dependency>
   </dependencies>
 </metadata>
