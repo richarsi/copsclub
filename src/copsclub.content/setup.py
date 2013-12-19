@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '1.1'
+version = '1.3'
 
 setup(name='copsclub.content',
       version=version,
@@ -31,8 +31,6 @@ setup(name='copsclub.content',
           'plone.app.referenceablebehavior',
           'plone.app.relationfield',
           'plone.namedfile [blobs]',
-          'myswimmingclub.theme',
-          'myswimmingclub.content',
           # -*- Extra requirements: -*-
       ],
       extras_require={

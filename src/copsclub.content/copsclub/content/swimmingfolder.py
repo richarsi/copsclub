@@ -140,7 +140,7 @@ class ISwimmingFolder(form.Schema):
 class EventPanelView(grok.View):
     """A new view for a swimming folder.
     
-    The associated template is found in swimmingfolder_templates/allsfcontent.pt.
+    The associated template is found in swimmingfolder_templates/event_panel_view.pt.
     """
     
     grok.context(ISwimmingFolder)
