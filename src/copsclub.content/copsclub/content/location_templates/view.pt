@@ -1,0 +1,31 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="copsclub.content">
+<body>
+
+<metal:content-core fill-slot="content-core">
+    <metal:content-core define-macro="content-core">
+
+        <div id="location-address">
+            <label for="address" i18n:translate="label_address">Address:</label>
+            <span>
+                <div tal:content="line" tal:repeat="line view/location_lines" />
+            </span>
+        </div>
+        
+        <div tal:define="details context/details|None"
+             tal:condition="details">
+            <label for="details" i18n:translate="label_details">Details:</label>
+            <span id="details" tal:replace="structure details/output" />
+        </div>
+
+    </metal:content-core>
+</metal:content-core>
+
+</body>
+</html>
+

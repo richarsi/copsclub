@@ -774,3 +774,10 @@ div.squads a>div {
     clear: left;
     width: 100%;
 }
+#location-address {
+    clear: right;
+    float: right;
+    margin: 0 0 0.5em 1em;
+    padding: 0 1em;
+    border: 1px dashed #999;
+}

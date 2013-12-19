@@ -5,6 +5,10 @@ from plone.directives import form, dexterity
 from plone.app.textfield import RichText
 from plone.namedfile.field import NamedImage
 
+# View
+from zope.component import getMultiAdapter
+from plone.memoize.instance import memoize
+
 from copsclub.content import _
 
 class ILocation(form.Schema):
@@ -42,3 +46,36 @@ class ILocation(form.Schema):
             required=False
         )
 
+    details = RichText (
+            title=_(u"Details"),
+            description=_(u"Some details about the location"),
+            required=False
+        )
+
+class View(grok.View):
+    """Default view (called "@@view"") for a lcoation.
+    
+    The associated template is found in lcoation_templaten/view.pt.
+    """
+    
+    grok.context(ILocation)
+    grok.require('zope2.View')
+    grok.name('view')
+
+    @memoize
+    def location_lines(self):
+        l = []
+        if self.context.address_line_1 is not None:
+            l.append(self.context.address_line_1)
+        if self.context.address_line_2 is not None:
+            l.append(self.context.address_line_2)
+        if self.context.address_line_3 is not None:
+            l.append(self.context.address_line_3)
+        if self.context.town_or_city is not None:
+            l.append(self.context.town_or_city)
+        if self.context.county_or_state is not None:
+            l.append(self.context.county_or_state)
+        if self.context.post_or_zip_code is not None:
+            l.append(self.context.post_or_zip_code)
+        
+        return l
