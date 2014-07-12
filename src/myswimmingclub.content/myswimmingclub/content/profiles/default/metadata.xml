@@ -4,7 +4,8 @@
     <dependencies>
         <dependency>profile-plone.app.registry:default</dependency>
         <dependency>profile-plone.app.dexterity:default</dependency>
-        <dependency>profile-plone.app.event.dx:default</dependency>
+        <!-- requires plone.app.portlet version conflict with Plone 4.2 -->
+        <!-- dependency>profile-plone.app.event.dx:default</dependency -->
     </dependencies>
 
 </metadata>
