@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules xmlns="http://namespaces.plone.org/diazo" xmlns:css="http://namespaces.plone.org/diazo/css"
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+	<!-- Apply the following rules to standard Plone pages -->
+	<rules css:if-content="#visual-portal-wrapper">
+
+		<theme href="index.html" />
+
+		<!-- Replace title with Plone's page title -->
+		<replace css:theme="html head title" css:content="html head title" />
+
+		<!-- Copy base tag from Plone -->
+		<before css:theme-children="html head" css:content="html head base" />
+
+		<!-- Copy link, style, meta tags from Plone head -->
+		<after css:theme-children="html head"
+			content="/html/head/link | /html/head/style | /html/head/meta" />
+
+		<!-- merge classes from Plone body with theme body -->
+		<merge attributes="class" css:theme="body" css:content="body" />
+
+		<!-- Copy script tags from Plone head to end of body -->
+		<after css:theme-children="html body" css:content="html head script" />
+
+		<!-- MAGUIRE RULES -->
+		<!-- ============= -->
+		<!-- portal logo -->
+		<merge attributes="title accesskey href" css:theme="#portal-logo"
+			css:content="#portal-logo" />
+		<!-- Search, Tools and Navigation -->
+		<before css:theme="#portal-logo" css:content="#portal-header > p:nth-child(1)" />
+		<before css:theme="#portal-logo" css:content="#portal-personaltools-wrapper" />
+		<before css:theme="#portal-logo" css:content="#portal-searchbox" />
+		<after css:theme="#portal-logo" css:content="#portal-globalnav" />
+		<!-- portal columns -->
+		<replace css:theme="#portal-columns" css:content="#portal-columns" />
+		<!-- portal-personaltools-wrapper -->
+
+
+		<!-- psuedo menu -->
+		<replace css:theme-children="#slick-navmenu">
+			<xsl:for-each css:select="#portal-globalnav > li">
+				<xsl:apply-templates css:select="li.plain, li.selected" />
+			</xsl:for-each>
+		</replace>
+		<replace css:theme="#portal-personaltools-wrapper"
+			css:content="#portal-personaltools-wrapper" />
+		<!-- Site Actions -->
+		<replace css:theme="#site-action" css:content="#site-actions" />
+	</rules>
+
+</rules>

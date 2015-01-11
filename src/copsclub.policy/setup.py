@@ -28,6 +28,7 @@ setup(name='copsclub.policy',
           'Plone',
           'copsclub.theme',
           'copsclub.content',
+          'copsclub.maguiretheme',
           'Products.Doormat',
           'collective.embedly',
           # -*- Extra requirements: -*-
