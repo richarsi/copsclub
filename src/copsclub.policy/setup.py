@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '1.1'
+version = '1.2'
 
 setup(name='copsclub.policy',
       version=version,
@@ -31,6 +31,7 @@ setup(name='copsclub.policy',
           'copsclub.maguiretheme',
           'Products.Doormat',
           'collective.embedly',
+          'plone.app.kss',
           # -*- Extra requirements: -*-
       ],
       extras_require={

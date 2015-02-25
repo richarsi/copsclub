@@ -1,12 +1,12 @@
-from five import grok
-from zope import schema
-from plone.directives import form, dexterity
 from datetime import datetime
-
+from five import grok
 from plone.app.textfield import RichText
-from z3c.relationfield.schema import RelationList, RelationChoice
-from plone.formwidget.contenttree import ObjPathSourceBinder
 from plone.formwidget.autocomplete import AutocompleteFieldWidget
+from plone.formwidget.contenttree import ObjPathSourceBinder
+from plone.namedfile.interfaces import IImageScaleTraversable
+from plone.supermodel import model
+from z3c.relationfield.schema import RelationList, RelationChoice
+from zope import schema
 
 from copsclub.content.location import ILocation
 from copsclub.content.squad import ISquad
@@ -25,7 +25,7 @@ from Products.CMFCore.utils import getToolByName
 # Indexer
 from plone.indexer import indexer
 
-class ISwimmingMeet(form.Schema):
+class ISwimmingMeet(model.Schema, IImageScaleTraversable):
     """A folder that can contain files
     """
 

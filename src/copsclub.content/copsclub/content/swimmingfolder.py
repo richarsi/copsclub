@@ -2,7 +2,8 @@ import datetime
 from DateTime import DateTime
 from five import grok
 from zope import schema
-from plone.directives import form
+from plone.namedfile.interfaces import IImageScaleTraversable
+from plone.supermodel import model
 
 from plone.app.textfield import RichText
 
@@ -133,7 +134,7 @@ def get_folder_contents(view):
                )
     return folders + locations + results
     
-class ISwimmingFolder(form.Schema):
+class ISwimmingFolder(model.Schema, IImageScaleTraversable):
     """A folder that can contain swimmingmeets
     """
 

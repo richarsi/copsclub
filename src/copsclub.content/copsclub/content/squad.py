@@ -1,14 +1,13 @@
 from five import grok
 from zope import schema
-from plone.directives import form, dexterity
-
+from plone.supermodel import model
 from plone.app.textfield import RichText
 from plone.namedfile.interfaces import IImageScaleTraversable
 from plone.namedfile.field import NamedBlobImage
 
 from copsclub.content import _
 
-class ISquad(form.Schema, IImageScaleTraversable):
+class ISquad(model.Schema, IImageScaleTraversable):
     """A content item to hold squad details as used by the SwimmingMeet content type
     """
     
