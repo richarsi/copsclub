@@ -1,9 +1,9 @@
 from five import grok
 from zope import schema
-from plone.directives import form, dexterity
-
+from plone.supermodel import model
 from plone.app.textfield import RichText
 from plone.namedfile.field import NamedImage
+from plone.namedfile.interfaces import IImageScaleTraversable
 
 # View
 from zope.component import getMultiAdapter
@@ -11,7 +11,7 @@ from plone.memoize.instance import memoize
 
 from copsclub.content import _
 
-class ILocation(form.Schema):
+class ILocation(model.Schema, IImageScaleTraversable):
     """A content item to hold location details as used by the SwimmingMeet content type
     """
     
