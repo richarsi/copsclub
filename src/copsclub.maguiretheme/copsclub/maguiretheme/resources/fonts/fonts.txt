@@ -1,0 +1,4 @@
+    src: url('../fonts/Arvo/Arvo-Regular.ttf');
+    src: url('../fonts/Arvo/Arvo-BoldItalic.ttf');
+    src: url('../fonts/Arvo/Arvo-Italic.ttf');
+    src: url('../fonts/Arvo/Arvo-Bold.ttf');

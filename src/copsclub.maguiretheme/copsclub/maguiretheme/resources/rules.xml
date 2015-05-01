@@ -6,7 +6,13 @@
 	<rules css:if-content="#visual-portal-wrapper">
 
 		<theme href="index.html" />
-
+        <drop theme="/html/head/meta" />
+        <drop theme="/html/head/title" />
+        <drop theme="/html/head/base" />
+        <drop theme="/html/head/style" />
+        <drop theme="/html/head/script" />
+        <drop theme="/html/head/link" />
+        <drop theme="/html/head/comment()" />
 		<!-- Replace title with Plone's page title -->
 		<replace css:theme="html head title" css:content="html head title" />
 
@@ -15,13 +21,13 @@
 
 		<!-- Copy link, style, meta tags from Plone head -->
 		<after css:theme-children="html head"
-			content="/html/head/link | /html/head/style | /html/head/meta" />
+			content="/html/head/link | /html/head/style | /html/head/meta | /html/head/script " />
 
 		<!-- merge classes from Plone body with theme body -->
 		<merge attributes="class" css:theme="body" css:content="body" />
 
 		<!-- Copy script tags from Plone head to end of body -->
-		<after css:theme-children="html body" css:content="html head script" />
+		<!--   -->after css:theme-children="html body" css:content="html head script" / -->
 
 		<!-- MAGUIRE RULES -->
 		<!-- ============= -->
@@ -31,23 +37,27 @@
 		<!-- Search, Tools and Navigation -->
 		<before css:theme="#portal-logo" css:content="#portal-header > p:nth-child(1)" />
 		<before css:theme="#portal-logo" css:content="#portal-personaltools-wrapper" />
+                <before css:theme="#portal-logo" css:content="#portal-siteactions" />
 		<before css:theme="#portal-logo" css:content="#portal-searchbox" />
-		<after css:theme="#portal-logo" css:content="#portal-globalnav" />
-		<!-- portal columns -->
-		<replace css:theme="#portal-columns" css:content="#portal-columns" />
-		<!-- portal-personaltools-wrapper -->
-
-
-		<!-- psuedo menu -->
-		<replace css:theme-children="#slick-navmenu">
+		<!-- maguire menu -->
+		<replace css:theme-children="#maguire-globalnav">
 			<xsl:for-each css:select="#portal-globalnav > li">
 				<xsl:apply-templates css:select="li.plain, li.selected" />
 			</xsl:for-each>
 		</replace>
+		<!-- portal-personaltools-wrapper -->
 		<replace css:theme="#portal-personaltools-wrapper"
 			css:content="#portal-personaltools-wrapper" />
 		<!-- Site Actions -->
 		<replace css:theme="#site-action" css:content="#site-actions" />
+		<!-- portal columns -->
+		<replace css:theme="#portal-columns" css:content="#portal-columns" />
+		
+		<!-- Doormat -->
+		<merge attributes="class" css:content='#doormat-container'
+		css:theme='#footer' />
+		<replace css:content-children='#doormat-container'
+		css:theme-children='#footer' />
 	</rules>
 
 </rules>
