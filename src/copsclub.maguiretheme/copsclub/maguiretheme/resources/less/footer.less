@@ -1,0 +1,110 @@
+/*---------- PORTAL FOOTER ----------*/
+#footer {
+    display: table;
+    width: 100%;
+    background-color: @maguire-doormat-body-bg;
+}
+div.doormatColumn {
+    float: left;
+    margin: 0 0.75em;
+}
+div.columns-2 .doormatColumn {
+    width: 45%;
+}
+div.columns-3 .doormatColumn {
+    width: 31%;
+}
+div.columns-4 .doormatColumn {
+    width: 23%;
+}
+div.columns-5 .doormatColumn {
+    width: 17.85%;
+}
+div.columns-6 .doormatColumn {
+    width: 14%;
+}
+div.columns-7 .doormatColumn {
+    width: 12%;
+}
+div.doormatColumn h3 {
+    color: @maguire-doormat-header-text-color;
+    text-transform: uppercase;
+    letter-spacing: -0.08333333333333333em;
+    font-weight: normal;
+}
+    
+dl.doormatSection dd a:link,
+dl.doormatSection dd a:visited,
+dl.doormatSection dd a:hover {
+    color: @maguire-doormat-body-text-color;
+    display: block;
+    border: none;
+}
+
+/*---------- PORTAL COLOPHON ----------*/
+#connect-with-us .social-media-group {
+  padding: 0.2em 0;
+}
+#connect-with-us a {
+  display: block;
+  width: 32px;
+  height: 32px;
+}
+#connect-with-us h4 {
+  margin: 0 0 0 38px;
+  display: inline-block;
+  text-indent: -7777em;
+}
+#connect-with-us .email {
+  background: url(../images/email.png) no-repeat;
+}
+#connect-with-us .rss {
+  background: url(../images/rss.png) no-repeat;
+}
+#connect-with-us .twitter {
+  background: url(../images/twitter.png) no-repeat;
+}
+#connect-with-us .facebook {
+  background: url(../images/facebook.png) no-repeat;
+}
+#portal-colophon {
+  color: #666;
+  margin: 0 0 1em;
+  padding: 0 0 1em;
+  text-align: center;
+}
+#portal-colophon a {
+  border-bottom: 1px solid #ccc;
+  color: #666;
+  text-decoration: none;
+  font-size: 84%;
+}
+
+@media (max-width: @grid-float-breakpoint-max) {
+     div.doormatColumn {
+        float: none;
+        margin: 0 0.75em;
+    }
+    div.columns-2 .doormatColumn {
+        width: 100%;
+    }
+    div.columns-3 .doormatColumn {
+        width: 100%;
+    }
+    div.columns-4 .doormatColumn {
+        width: 100%;
+    }
+    div.columns-5 .doormatColumn {
+        width: 100%;
+    }
+    div.columns-6 .doormatColumn {
+        width: 100%;
+    }
+    div.columns-7 .doormatColumn {
+        width: 100%;
+    }
+    // div.doormatColumn h3 {
+    //    display: block;
+    //    width: 100%;
+    //}
+}

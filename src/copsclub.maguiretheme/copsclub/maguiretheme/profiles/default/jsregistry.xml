@@ -1,9 +1,7 @@
 <?xml version="1.0"?>
 <object name="portal_javascripts">
-	<javascript id="++theme++doesnotexist.theme/js/jquery.js"
-		expression="request/HTTP_X_THEME_ENABLED | nothing" />
-	<javascript id="++theme++doesnotexist.theme/js/bootstrap-collapse.js"
-		expression="request/HTTP_X_THEME_ENABLED | nothing" />
 	<javascript id="++theme++copsclub.maguiretheme/js/jquery.slicknav.min.js"
+		expression="request/HTTP_X_THEME_ENABLED | nothing" />
+	<javascript id="++theme++copsclub.maguiretheme/js/copsclub-maguire.js"
 		expression="request/HTTP_X_THEME_ENABLED | nothing" />
 </object>

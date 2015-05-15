@@ -1,9 +1,0 @@
-        <!-- portal logo -->
-        <!-- merge attributes="title accesskey href" css:theme="#portal-logo" css:content="#portal-logo" / -->
-        
-        <!-- portal columns -->
-        <replace css:theme="#portal-columns" css:content="#portal-columns" />
-        <!-- portal-personaltools-wrapper-->
-        <replace css:theme="#portal-personaltools-wrapper" css:content="#portal-personaltools-wrapper" />
-        <!-- Site Actions -->
-        <replace css:theme="#site-action" css:content="#site-actions" />

@@ -2,22 +2,34 @@
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
 <head>
-<title>Plone OpenSource CMS auf Basis von Python und Zope</title>
+<title>Plone Maguire a Diazo theme for Plone</title>
 <meta name="viewport" content="width=device-width" />
-<link href='./css/copsclub-maguire.css' rel='stylesheet'>
+<link href='./css/copsclub-maguire.css' rel='stylesheet' />
+<!-- link href='./css/slicknav.css' rel='stylesheet' / -->
+<link href='./css/iefixes.css' rel='stylesheet' />
+<script type="text/javascript" src="./js/jquery.slicknav.min.js" />
 </head>
 <body>
-	<img id="bg"></img>
 	<div id="visual-portal-wrapper">
 		<!-- Plone header -->
 		<div id="portal-top" class="row">
 			<div class="cell width-full position-0">
 				<div id="portal-header">
-					<a id="portal-logo" accesskey="" title="" href=""> <img
-						src="./images/Logo.jpg"
-						alt="City of Peterborough Swimming Club Logo"></img> </a>
+					<a id="portal-logo"> 
+						<img src="./images/logo.png"
+							alt="City of Peterborough Swimming Club Logo"></img>
+					</a>
+					<a id="portal-mobile-logo"> 
+						<img src="./images/mobile-logo.png"
+							alt="City of Peterborough Swimming Club Logo"></img>
+					</a>
 				</div>
 			</div>
+		</div>
+		<div id="navigation-wrapper">
+			<!--  slicknav -->
+			<div id="maguire-slicknav-wrapper"></div>
+			<ul id="maguire-globalnav"></ul>		
 		</div>
 		<!-- Plone body -->
 		<div id="portal-columns">
@@ -42,10 +54,6 @@
 
 			<div id="portal-column-two">### COL2 ###</div>
 		</div>
-		<!--  test menu -->
-		<ul id="slick-navmenu">
-
-		</ul>
 		<!-- Plone footer -->
 		<div id="#site-action"></div>
 		<div id="footer">
@@ -60,10 +68,5 @@
 			</div>
 		</div>
 	</div>
-	<script>
-		$(document).ready(function() {
-			$('#slick-navmenu').slicknav();
-		});
-	</script>
 </body>
 </html>
