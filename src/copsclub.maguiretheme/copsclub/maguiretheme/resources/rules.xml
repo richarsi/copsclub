@@ -34,6 +34,8 @@
 		<!-- portal logo -->
 		<merge attributes="title accesskey href" css:theme="#portal-logo"
 			css:content="#portal-logo" />
+		<merge attributes="title accesskey href" css:theme="#portal-mobile-logo"
+			css:content="#portal-logo" />
 		<!-- Search, Tools and Navigation -->
 		<before css:theme="#portal-logo" css:content="#portal-header > p:nth-child(1)" />
 		<before css:theme="#portal-logo" css:content="#portal-personaltools-wrapper" />

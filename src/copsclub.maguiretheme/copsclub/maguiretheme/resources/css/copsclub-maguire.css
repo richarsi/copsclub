@@ -1,7 +1,4 @@
 /* CSS crunched with Crunch - http://crunchapp.net/ */
-/* #1E2C7f; gold */
-/* #3342A7; blue */
-/* #D6C249;*/
 /* "Roboto-Bold"; "JosefinSans-SemiBold"; */
 /* "Montserrat-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif; */
 /* @link-color; */
@@ -1730,6 +1727,12 @@ blockquote {
   background-repeat: x-repeat;
   background-color: #464646;
 }
+#portal-logo {
+  display: block;
+}
+#portal-mobile-logo {
+  display: none;
+}
 /* Personal Tools */
 #portal-personaltools-wrapper {
   position: absolute;
@@ -2341,8 +2344,29 @@ dl.portlet ul.navTree .navTreeCurrentItem {
     width: 97.75%;
     margin-left: -98.875%;
   }
+  #portal-top {
+    background-color: #332b8a;
+    background-image: url("../images/mobile_banner_background.png");
+    background-repeat: x-repeat;
+    height: 221px;
+    /* 171px + 50px */
+  }
   #portal-logo {
     display: none;
+  }
+  #portal-mobile-logo {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 115px;
+  }
+  #portal-searchbox {
+    margin-top: 4.56349206em;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 3;
   }
   #portal-top {
     font-size: 180%;

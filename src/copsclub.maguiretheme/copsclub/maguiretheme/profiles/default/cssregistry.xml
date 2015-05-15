@@ -3,7 +3,22 @@
 	<stylesheet id="++theme++copsclub.maguiretheme/css/iefixes.css"
 		expression="request/HTTP_X_THEME_ENABLED | nothing"
 		conditionalcomment="IE" applyPrefix="True" />
+        <!-- Disable caching allowed by setting cacheable to False  -->
+        <!-- Disable merging allowed by setting cookable to False   -->
+        <!-- see: Products.ResourceRegistries.www.cssconfig.zpt     -->
 	<stylesheet id="++theme++copsclub.maguiretheme/css/copsclub-maguire.css"
-		expression="request/HTTP_X_THEME_ENABLED | nothing" applyPrefix="True" />
-	<stylesheet id="mobile.css" enabled="0" />
+                media="screen" 
+                rel="stylesheet" 
+                rendering="link"
+		expression="request/HTTP_X_THEME_ENABLED | nothing" 
+                applyPrefix="True" 
+                cacheable="False" 
+                compression="safe" 
+                cookable="False"
+                enabled="1" 
+        />
+        <!-- a little hack to disable mobile.css if the theme is enabled -->
+	<stylesheet id="mobile.css" 
+                expression="not:request/HTTP_X_THEME_ENABLED | nothing"
+                enabled="1" />
 </object>
