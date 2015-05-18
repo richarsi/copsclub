@@ -2349,7 +2349,7 @@ dl.portlet ul.navTree .navTreeCurrentItem {
     background-image: url("../images/mobile_banner_background.png");
     background-repeat: x-repeat;
     height: 221px;
-    /* 171px + 50px */
+    /* is perfect for what we want 171px + 50px */
   }
   #portal-logo {
     display: none;
@@ -2359,7 +2359,7 @@ dl.portlet ul.navTree .navTreeCurrentItem {
     position: absolute;
     top: 0;
     left: 0;
-    height: 115px;
+    /* height: 137px; */
   }
   #portal-searchbox {
     margin-top: 4.56349206em;
