@@ -21,8 +21,9 @@
 int(b_start), orphan=int(b_orphan));">
 
                 <div tal:repeat="item batch">
+                  <div class="event-panel-wrapper">
                     <tal:block define="type item/type">
-                    <div class="width-3 event-panel event" 
+                    <div class="event-panel event" 
                         tal:condition="python: type=='Event'">
                         <dl>
                             <dt>
@@ -30,10 +31,10 @@ int(b_start), orphan=int(b_orphan));">
                                        tal:content="item/title" />
                             </dt>
                             <dd tal:content="item/date_range_formatted">3 - 4 Dec 2013</dd>
-                            <a class="btn clearfix" tal:attributes="href item/url">View details &raquo;</a>
+                            <a class="btn active clearfix" tal:attributes="href item/url">View details &raquo;</a>
                         </dl>
                     </div>
-                    <div class="width-3 event-panel meet" 
+                    <div class="event-panel meet" 
                         tal:condition="python: type=='Swimming Meet'">
                         <dl>
                             <dt>
@@ -42,30 +43,31 @@ int(b_start), orphan=int(b_orphan));">
                             </dt>
                             <dd tal:content="item/date_range_formatted">3 - 4 Dec 2013</dd>
                             <dd tal:content="item/days_left_formatted">Replace Me</dd>
-                            <a class="btn clearfix" tal:attributes="href item/url">View details &raquo;</a>
+                            <a class="btn active clearfix" tal:attributes="href item/url">View details &raquo;</a>
                         </dl>
                     </div>
-                    <div class="width-3 event-panel location" 
+                    <div class="event-panel location" 
                          tal:condition="python: type=='Location'">
                         <dl>
                             <dt>
                                 <a tal:attributes="href item/url"
                                        tal:content="item/title" />
                             </dt>
-                            <a class="btn clearfix" tal:attributes="href item/url">View details &raquo;</a>
+                            <a class="btn active clearfix" tal:attributes="href item/url">View details &raquo;</a>
                         </dl>
                     </div>
-                    <div class="width-3 event-panel folder" 
+                    <div class="event-panel folder" 
                          tal:condition="python: type=='Swimming Folder'">
                         <dl>
                             <dt>
                                 <a tal:attributes="href item/url"
                                        tal:content="item/title" />
                             </dt>
-                            <a class="btn" tal:attributes="href item/url">View details &raquo;</a>
+                            <a class="btn active clearfix" tal:attributes="href item/url">View details &raquo;</a>
                         </dl>
                     </div>
                     </tal:block>
+                  </div>
                 </div>
                 <div style="clear: both;"></div>
                 <div class="batch-navigation" metal:use-macro="context/batch_macros/macros/navigation" />

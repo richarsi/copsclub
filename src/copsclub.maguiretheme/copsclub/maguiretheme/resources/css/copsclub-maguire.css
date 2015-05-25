@@ -1,9 +1,4 @@
 /* CSS crunched with Crunch - http://crunchapp.net/ */
-/* "Roboto-Bold"; "JosefinSans-SemiBold"; */
-/* "Montserrat-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif; */
-/* @link-color; */
-/* @link-hover-color; */
-/* @maguire-brand-color-2; */
 /*---------------------------------------------------
     LESS Elements 0.9
   ---------------------------------------------------
@@ -1293,12 +1288,12 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #332b8a;
+  color: #002f91;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #332b8a;
+  color: #002f91;
   text-decoration: underline;
 }
 a:focus {
@@ -1759,13 +1754,13 @@ blockquote {
 #portal-personaltools a:visited,
 #portal-personaltools a:active {
   background: #d9d9d9;
-  color: #332b8a;
+  color: #002f91;
 }
 #portal-personaltools dd a:hover,
 #portal-personaltools dd a:visited,
 #portal-personaltools dd a:active {
   background: transparent;
-  color: #332b8a;
+  color: #002f91;
 }
 #portal-personaltools #anon-personalbar a {
   float: left;
@@ -1853,7 +1848,7 @@ input.searchField {
 }
 #portal-siteactions li a {
   border: 0;
-  color: #332b8a;
+  color: #002f91;
   margin-right: 0.2em;
   padding: 0.2em 0.35em;
   text-decoration: none;
@@ -1892,6 +1887,10 @@ input.searchField {
     width: 90%;
   }
 }
+#portal-top .position-0 {
+  margin-left: 0px;
+  left: 0px;
+}
 #navigation-wrapper {
   clear: both;
 }
@@ -1911,18 +1910,18 @@ input.searchField {
   -moz-border-radius: 6px;
   border-radius: 6px;
   background-color: #d8c207;
-  color: #332b8a;
+  color: #002f91;
 }
 #maguire-globalnav a {
   height: 100%;
   line-height: 44px;
   text-decoration: none;
-  color: #332b8a;
+  color: #002f91;
 }
 #maguire-globalnav a:visited,
 #maguire-globalnav a:hover,
 #maguire-globalnav a:target {
-  color: #332b8a;
+  color: #002f91;
 }
 #maguire-slicknav-wrapper {
   display: none;
@@ -1945,7 +1944,7 @@ input.searchField {
 }
 .slicknav_menu {
   background: #f8e224;
-  color: #332b8a;
+  color: #002f91;
   /* #fff */
   font-size: 0.875em;
   padding: 5px;
@@ -1954,7 +1953,7 @@ input.searchField {
   display: block;
   line-height: 1.188em;
   float: left;
-  color: #332b8a;
+  color: #002f91;
   /* #FFF; */
   font-weight: bold;
   /* text-shadow: 0 1px 3px #000; */
@@ -1967,7 +1966,7 @@ input.searchField {
   margin: 0;
 }
 .slicknav_menu .slicknav_icon-bar {
-  background-color: #332b8a;
+  background-color: #002f91;
   width: 1.125em;
   height: 0.125em;
   -webkit-border-radius: 1px;
@@ -1994,13 +1993,13 @@ input.searchField {
   -moz-border-radius: 6px;
   border-radius: 6px;
   background: #d8c207;
-  color: #332b8a;
+  color: #002f91;
 }
 .slicknav_menu a {
   padding: 5px 10px;
   margin: 2px 5px;
   text-decoration: none;
-  color: #332b8a;
+  color: #002f91;
   /* #fff; */
 }
 .slicknav_btn .slicknav_icon-bar + .slicknav_icon-bar {
@@ -2107,7 +2106,7 @@ div.columns-7 .doormatColumn {
   width: 12%;
 }
 div.doormatColumn h3 {
-  color: #332b8a;
+  color: #002f91;
   text-transform: uppercase;
   letter-spacing: -0.08333333em;
   font-weight: normal;
@@ -2115,7 +2114,7 @@ div.doormatColumn h3 {
 dl.doormatSection dd a:link,
 dl.doormatSection dd a:visited,
 dl.doormatSection dd a:hover {
-  color: #332b8a;
+  color: #002f91;
   display: block;
   border: none;
 }
@@ -2195,7 +2194,7 @@ dl.portletError {
 }
 dl.portlet dt {
   padding: 0.42em 1em;
-  background: #332b8a;
+  background: #002f91;
   line-height: normal;
 }
 dl.portlet dt.hiddenStructure {
@@ -2215,7 +2214,7 @@ dl.portlet dt a:hover {
 dl.portlet dd a:link,
 dl.portlet dd a:visited,
 dl.portlet dd a:hover {
-  color: #332b8a;
+  color: #002f91;
 }
 dl.portlet dd.portletItem,
 dl.portlet dd.portletFooter,
@@ -2345,7 +2344,7 @@ dl.portlet ul.navTree .navTreeCurrentItem {
     margin-left: -98.875%;
   }
   #portal-top {
-    background-color: #332b8a;
+    background-color: #002f91;
     background-image: url("../images/mobile_banner_background.png");
     background-repeat: x-repeat;
     height: 221px;
@@ -2366,7 +2365,7 @@ dl.portlet ul.navTree .navTreeCurrentItem {
     position: relative;
     top: 0;
     left: 0;
-    z-index: 3;
+    z-index: 2;
   }
   #portal-top {
     font-size: 180%;
