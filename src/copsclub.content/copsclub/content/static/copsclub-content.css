@@ -419,9 +419,12 @@ input[type="button"].btn-block {
 #content-core div.event-panel dl {
   display: block;
   margin: 0em;
-  min-height: 10.58em;
-  padding: 0 0 1em 0;
+  padding: 0;
+  font-size: 18px;
+  height: 9.22222222em;
+  min-height: 9.22222222em;
   text-align: center;
+  line-height: 1.38888889em;
 }
 #content-core div.event-panel dl dt {
   text-transform: uppercase;
@@ -441,24 +444,27 @@ input[type="button"].btn-block {
   -moz-background-clip: padding-box;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-  display: block;
-  font-size: 1.17em;
-  font-weight: normal;
-  line-height: 1.28em;
+  display: table;
   margin: 0;
+  padding: 0;
+  font-size: 18px;
+  height: 3.58em;
   min-height: 3.58em;
-  padding: 1em 0 0 0;
-  vertical-align: middle;
+  width: 100%;
 }
 #content-core div.event-panel dl dt a {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: centre;
   color: #f8e224;
   text-decoration: none;
+  font-size: 18px;
+  font-weight: normal;
 }
 #content-core div.event-panel dl dd {
   color: #002f91;
-  font-size: 1.17em;
+  font-size: 18px;
   font-weight: normal;
-  line-height: 1.28em;
   margin: 0;
   padding: 2px 4px;
 }
@@ -479,6 +485,14 @@ dl .listingBar {
     position: relative;
     margin: 9.75px 0 0 0;
   }
+  #content-core div.event-panel dl {
+    height: 11.44444444em;
+    min-height: 11.44444444em;
+  }
+  #content-core div.event-panel dl dt {
+    height: 5.72222222em;
+    min-height: 5.72222222em;
+  }
 }
 #content-core div.copsclub-field {
   position: relative;
@@ -494,7 +508,8 @@ dl .listingBar {
   float: left;
   display: block;
 }
-#content-core div.locations {
+#content-core div.locations,
+#content-core div.files {
   clear: both;
   padding: 0.5em 0 0 0;
 }

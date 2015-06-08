@@ -7,8 +7,14 @@
 	background-repeat: x-repeat;
 	background-color: #464646;
 }
-
-
+#portal-logo {
+    display: block;
+    margin-left: -1.125%;
+}
+#portal-mobile-logo {
+    display: none;
+    margin-left: -1.125%;
+}
 /* Personal Tools */
 #portal-personaltools-wrapper {
   position: absolute;
@@ -57,35 +63,70 @@
 	// margin: 1.2em 0;
 	// font-size: 80%;
 }
-
-#portal-searchbox form {
-	white-space: nowrap;
+/* Maguire Search Form */
+.LSBox {
+    float: right;
+}
+#maguire-search{
+  vertical-align: middle;
+  white-space: nowrap;
+  position: relative;
+}
+#maguire-search input#searchGadget{
+  width: 300px;
+  height: 50px;
+  background: @maguire-brand-color-3;
+  border: none;
+  // font-size: 10pt;
+  float: left;
+  color: #63717f;
+  padding-left: 45px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-transition: background .55s ease;
+  -moz-transition: background .55s ease;
+  -ms-transition: background .55s ease;
+  -o-transition: background .55s ease;
+  transition: background .55s ease;
+}
+#maguire-search input#searchGadget::-webkit-input-placeholder {
+   color: #65737e;
+}
+ 
+#maguire-search input#searchGadget:-moz-placeholder { /* Firefox 18- */
+   color: #65737e;  
+}
+ 
+#maguire-search input#searchGadget::-moz-placeholder {  /* Firefox 19+ */
+   color: #65737e;  
+}
+ 
+#maguire-search input#searchGadget:-ms-input-placeholder {  
+   color: #65737e;  
+}
+#maguire-search .icon{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-left: 17px;
+  margin-top: 17px;
+  z-index: 1;
+  color: #4f5b66;
+}
+#maguire-search i:hover {
+  cursor: pointer;
 }
 
-#portal-searchbox label {
-	font-weight: normal;
+#maguire-search input#searchGadget:hover, 
+#maguire-search input#searchGadget:focus, 
+#maguire-search input#searchGadget:active{
+    outline:none;
+    background: #ffffff;
 }
-
-#searchGadget {
-	width: 13em;
+.searchSection {
+   clear: both;
 }
-
-#searchGadget,.LSBox input.searchButton {
-	
-}
-
-.LSBox .searchSection {
-	
-}
-
-#content input.searchField {
-	margin-bottom: 1em;
-}
-
-input.searchField { /*  -webkit-appearance: searchfield;*/
-	-moz-appearance: searchfield;
-}
-
 /* Collapsible elements in search_form */
 .collapsible .collapser.collapsed {
 	padding-right: 14px;
@@ -164,6 +205,9 @@ input.searchField { /*  -webkit-appearance: searchfield;*/
 @media (max-width: @grid-float-breakpoint-max) {
     #portal-siteactions {
         display: none;
+    }
+    #maguire-search input#searchGadget {
+        width: 265px;
     }
     
     #LSResult {

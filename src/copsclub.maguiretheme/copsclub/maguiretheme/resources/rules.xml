@@ -40,7 +40,13 @@
 		<before css:theme="#portal-logo" css:content="#portal-header > p:nth-child(1)" />
 		<before css:theme="#portal-logo" css:content="#portal-personaltools-wrapper" />
                 <before css:theme="#portal-logo" css:content="#portal-siteactions" />
-		<before css:theme="#portal-logo" css:content="#portal-searchbox" />
+		<!-- before css:theme="#portal-logo" css:content="#portal-searchbox" / -->
+                <!-- Maguire Custom Search Form -->
+                <after css:theme="#maguire-search" css:content=".searchSection"/>
+                <after css:theme="#maguire-search" css:content="#LSResult"/>
+		<merge attributes="accesskey title size name autocomplete" css:theme="#searchGadget" css:content="#searchGadget"/>
+		<merge attributes="action" css:theme="#portal-searchbox form" css:content="#portal-searchbox form"/>
+                <after css:theme="#portal-searchbox form" css:content="#portal-advanced-search" />
 		<!-- maguire menu -->
 		<replace css:theme-children="#maguire-globalnav">
 			<xsl:for-each css:select="#portal-globalnav > li">
