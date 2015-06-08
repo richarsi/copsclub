@@ -1,5 +1,6 @@
 /*---------- PORTAL FOOTER ----------*/
 #footer {
+    clear: both;
     display: table;
     width: 100%;
     background-color: @maguire-doormat-body-bg;
@@ -81,27 +82,23 @@ dl.doormatSection dd a:hover {
 }
 
 @media (max-width: @grid-float-breakpoint-max) {
-     div.doormatColumn {
-        float: none;
-        margin: 0 0.75em;
-    }
-    div.columns-2 .doormatColumn {
-        width: 100%;
-    }
-    div.columns-3 .doormatColumn {
-        width: 100%;
-    }
-    div.columns-4 .doormatColumn {
-        width: 100%;
-    }
-    div.columns-5 .doormatColumn {
-        width: 100%;
-    }
-    div.columns-6 .doormatColumn {
-        width: 100%;
-    }
-    div.columns-7 .doormatColumn {
-        width: 100%;
+    #footer {
+        .doormatColumn {
+            margin: 0;
+            padding: 0.42em 1em 0 1em;
+            width: 45%;
+            float: left;
+            h3 {
+                font-size: 14px;
+                font-weight: 700;
+            }
+            &.column-0,
+            &.column-2,
+            &.column-4 {
+                clear: both;
+            }
+
+        }
     }
     // div.doormatColumn h3 {
     //    display: block;

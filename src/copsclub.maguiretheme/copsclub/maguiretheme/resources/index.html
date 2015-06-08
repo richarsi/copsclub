@@ -15,6 +15,18 @@
 		<div id="portal-top" class="row">
 			<div class="cell width-full position-0">
 				<div id="portal-header">
+<div id="portal-searchbox">
+    <form id="livesearch0">
+        <div class="LSBox">
+            <div id="maguire-search">
+		<label for="mySearch" class="icon"><i class="glyphicon glyphicon-search"></i></label>
+		<input id="mySearch" class="searchButton hiddenStructure" type="submit"></input>
+		<input type="search" id="searchGadget" placeholder="Search..." />
+	    </div><!-- end maguire-search -->
+            <!-- TODO add class="searchSection", id="LSResult" -->
+        </div><!-- end LSBox -->
+    </form>
+</div><!-- end portal-searchbox -->
 					<a id="portal-logo"> 
 						<img src="./images/logo.png"
 							alt="City of Peterborough Swimming Club Logo"></img>
@@ -26,10 +38,13 @@
 				</div>
 			</div>
 		</div>
-		<div id="navigation-wrapper">
+		<div id="navigation-wrapper" class="row">
 			<!--  slicknav -->
 			<div id="maguire-slicknav-wrapper"></div>
-			<ul id="maguire-globalnav"></ul>		
+			<!-- div id="maguire-globalnav-wrapper" class="cell width-full position-0" -->
+			<div id="maguire-globalnav-wrapper" >
+				<ul id="maguire-globalnav"></ul>
+                        </div>
 		</div>
 		<!-- Plone body -->
 		<div id="portal-columns">

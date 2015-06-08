@@ -1,9 +1,4 @@
 /* CSS crunched with Crunch - http://crunchapp.net/ */
-/* "Roboto-Bold"; "JosefinSans-SemiBold"; */
-/* "Montserrat-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif; */
-/* @link-color; */
-/* @link-hover-color; */
-/* @maguire-brand-color-2; */
 /*---------------------------------------------------
     LESS Elements 0.9
   ---------------------------------------------------
@@ -267,8 +262,8 @@ th {
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url('../fonts/glyphicons-halflings-regular.eot');
-  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+  src: url('../fonts/glyphicons-halflings/glyphicons-halflings-regular.eot');
+  src: url('../fonts/glyphicons-halflings/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 .glyphicon {
   position: relative;
@@ -1293,12 +1288,12 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #332b8a;
+  color: #002f91;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #332b8a;
+  color: #002f91;
   text-decoration: underline;
 }
 a:focus {
@@ -1729,9 +1724,11 @@ blockquote {
 }
 #portal-logo {
   display: block;
+  margin-left: -1.125%;
 }
 #portal-mobile-logo {
   display: none;
+  margin-left: -1.125%;
 }
 /* Personal Tools */
 #portal-personaltools-wrapper {
@@ -1759,13 +1756,13 @@ blockquote {
 #portal-personaltools a:visited,
 #portal-personaltools a:active {
   background: #d9d9d9;
-  color: #332b8a;
+  color: #002f91;
 }
 #portal-personaltools dd a:hover,
 #portal-personaltools dd a:visited,
 #portal-personaltools dd a:active {
   background: transparent;
-  color: #332b8a;
+  color: #002f91;
 }
 #portal-personaltools #anon-personalbar a {
   float: left;
@@ -1778,21 +1775,66 @@ blockquote {
   clear: right;
   margin: 2.914285714em 0 1.2em 0;
 }
-#portal-searchbox form {
+/* Maguire Search Form */
+.LSBox {
+  float: right;
+}
+#maguire-search {
+  vertical-align: middle;
   white-space: nowrap;
+  position: relative;
 }
-#portal-searchbox label {
-  font-weight: normal;
+#maguire-search input#searchGadget {
+  width: 300px;
+  height: 50px;
+  background: #d9d9d9;
+  border: none;
+  float: left;
+  color: #63717f;
+  padding-left: 45px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-transition: background .55s ease;
+  -moz-transition: background .55s ease;
+  -ms-transition: background .55s ease;
+  -o-transition: background .55s ease;
+  transition: background .55s ease;
 }
-#searchGadget {
-  width: 13em;
+#maguire-search input#searchGadget::-webkit-input-placeholder {
+  color: #65737e;
 }
-#content input.searchField {
-  margin-bottom: 1em;
+#maguire-search input#searchGadget:-moz-placeholder {
+  /* Firefox 18- */
+  color: #65737e;
 }
-input.searchField {
-  /*  -webkit-appearance: searchfield;*/
-  -moz-appearance: searchfield;
+#maguire-search input#searchGadget::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #65737e;
+}
+#maguire-search input#searchGadget:-ms-input-placeholder {
+  color: #65737e;
+}
+#maguire-search .icon {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-left: 17px;
+  margin-top: 17px;
+  z-index: 1;
+  color: #4f5b66;
+}
+#maguire-search i:hover {
+  cursor: pointer;
+}
+#maguire-search input#searchGadget:hover,
+#maguire-search input#searchGadget:focus,
+#maguire-search input#searchGadget:active {
+  outline: none;
+  background: #ffffff;
+}
+.searchSection {
+  clear: both;
 }
 /* Collapsible elements in search_form */
 .collapsible .collapser.collapsed {
@@ -1853,7 +1895,7 @@ input.searchField {
 }
 #portal-siteactions li a {
   border: 0;
-  color: #332b8a;
+  color: #002f91;
   margin-right: 0.2em;
   padding: 0.2em 0.35em;
   text-decoration: none;
@@ -1864,6 +1906,9 @@ input.searchField {
 @media (max-width: 767px) {
   #portal-siteactions {
     display: none;
+  }
+  #maguire-search input#searchGadget {
+    width: 265px;
   }
   #LSResult {
     position: absolute;
@@ -1894,11 +1939,13 @@ input.searchField {
 }
 #navigation-wrapper {
   clear: both;
+  background-color: #f8e224;
 }
 #maguire-globalnav {
   width: 100%;
   height: 50px;
   background-color: #f8e224;
+  margin-bottom: 0px;
 }
 #maguire-globalnav li {
   display: inline-block;
@@ -1911,18 +1958,18 @@ input.searchField {
   -moz-border-radius: 6px;
   border-radius: 6px;
   background-color: #d8c207;
-  color: #332b8a;
+  color: #002f91;
 }
 #maguire-globalnav a {
   height: 100%;
   line-height: 44px;
   text-decoration: none;
-  color: #332b8a;
+  color: #002f91;
 }
 #maguire-globalnav a:visited,
 #maguire-globalnav a:hover,
 #maguire-globalnav a:target {
-  color: #332b8a;
+  color: #002f91;
 }
 #maguire-slicknav-wrapper {
   display: none;
@@ -1945,7 +1992,7 @@ input.searchField {
 }
 .slicknav_menu {
   background: #f8e224;
-  color: #332b8a;
+  color: #002f91;
   /* #fff */
   font-size: 0.875em;
   padding: 5px;
@@ -1954,7 +2001,7 @@ input.searchField {
   display: block;
   line-height: 1.188em;
   float: left;
-  color: #332b8a;
+  color: #002f91;
   /* #FFF; */
   font-weight: bold;
   /* text-shadow: 0 1px 3px #000; */
@@ -1967,7 +2014,7 @@ input.searchField {
   margin: 0;
 }
 .slicknav_menu .slicknav_icon-bar {
-  background-color: #332b8a;
+  background-color: #002f91;
   width: 1.125em;
   height: 0.125em;
   -webkit-border-radius: 1px;
@@ -1994,13 +2041,13 @@ input.searchField {
   -moz-border-radius: 6px;
   border-radius: 6px;
   background: #d8c207;
-  color: #332b8a;
+  color: #002f91;
 }
 .slicknav_menu a {
   padding: 5px 10px;
   margin: 2px 5px;
   text-decoration: none;
-  color: #332b8a;
+  color: #002f91;
   /* #fff; */
 }
 .slicknav_btn .slicknav_icon-bar + .slicknav_icon-bar {
@@ -2080,6 +2127,7 @@ input.searchField {
 }
 /*---------- PORTAL FOOTER ----------*/
 #footer {
+  clear: both;
   display: table;
   width: 100%;
   background-color: #d9d9d9;
@@ -2107,7 +2155,7 @@ div.columns-7 .doormatColumn {
   width: 12%;
 }
 div.doormatColumn h3 {
-  color: #332b8a;
+  color: #002f91;
   text-transform: uppercase;
   letter-spacing: -0.08333333em;
   font-weight: normal;
@@ -2115,7 +2163,7 @@ div.doormatColumn h3 {
 dl.doormatSection dd a:link,
 dl.doormatSection dd a:visited,
 dl.doormatSection dd a:hover {
-  color: #332b8a;
+  color: #002f91;
   display: block;
   border: none;
 }
@@ -2158,27 +2206,20 @@ dl.doormatSection dd a:hover {
   font-size: 84%;
 }
 @media (max-width: 767px) {
-  div.doormatColumn {
-    float: none;
-    margin: 0 0.75em;
+  #footer .doormatColumn {
+    margin: 0;
+    padding: 0.42em 1em 0 1em;
+    width: 45%;
+    float: left;
   }
-  div.columns-2 .doormatColumn {
-    width: 100%;
+  #footer .doormatColumn h3 {
+    font-size: 14px;
+    font-weight: 700;
   }
-  div.columns-3 .doormatColumn {
-    width: 100%;
-  }
-  div.columns-4 .doormatColumn {
-    width: 100%;
-  }
-  div.columns-5 .doormatColumn {
-    width: 100%;
-  }
-  div.columns-6 .doormatColumn {
-    width: 100%;
-  }
-  div.columns-7 .doormatColumn {
-    width: 100%;
+  #footer .doormatColumn.column-0,
+  #footer .doormatColumn.column-2,
+  #footer .doormatColumn.column-4 {
+    clear: both;
   }
 }
 /* @group Portlets */
@@ -2195,7 +2236,7 @@ dl.portletError {
 }
 dl.portlet dt {
   padding: 0.42em 1em;
-  background: #332b8a;
+  background: #002f91;
   line-height: normal;
 }
 dl.portlet dt.hiddenStructure {
@@ -2215,7 +2256,7 @@ dl.portlet dt a:hover {
 dl.portlet dd a:link,
 dl.portlet dd a:visited,
 dl.portlet dd a:hover {
-  color: #332b8a;
+  color: #002f91;
 }
 dl.portlet dd.portletItem,
 dl.portlet dd.portletFooter,
@@ -2345,11 +2386,11 @@ dl.portlet ul.navTree .navTreeCurrentItem {
     margin-left: -98.875%;
   }
   #portal-top {
-    background-color: #332b8a;
+    background-color: #002f91;
     background-image: url("../images/mobile_banner_background.png");
     background-repeat: x-repeat;
-    height: 221px;
-    /* 171px + 50px */
+    height: 222px;
+    /* is perfect for what we want 171px + 51px */
   }
   #portal-logo {
     display: none;
@@ -2359,14 +2400,14 @@ dl.portlet ul.navTree .navTreeCurrentItem {
     position: absolute;
     top: 0;
     left: 0;
-    height: 115px;
+    /* height: 137px; */
   }
   #portal-searchbox {
     margin-top: 4.56349206em;
     position: relative;
     top: 0;
     left: 0;
-    z-index: 3;
+    z-index: 2;
   }
   #portal-top {
     font-size: 180%;

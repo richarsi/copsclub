@@ -10,29 +10,34 @@
 <metal:content-core fill-slot="content-core">
     <metal:content-core define-macro="content-core">
 
-        <div>
+        <div class="copsclub-field">
             <label for="start_date" i18n:translate="label_promotion_shown_from">Start Date:</label>
             <span id="start_date" tal:content="view/start_date_formatted" />
         </div>
         
-        <div>
+        <div class="copsclub-field">
             <label for="end_date" i18n:translate="label_end_date">End Date:</label>
             <span id="end_date" tal:content="view/end_date_formatted" />
         </div>
 
-        <div>
+        <div class="copsclub-field">
             <label for="age_as_of_date" i18n:translate="label_age_as_of_date">Age As Of Date:</label>
             <span id="age_as_of_date" tal:content="view/age_as_of_date_formatted" />
         </div>
         
-        <div>
+        <div class="copsclub-field">
             <label for="organisers_entry_date" i18n:translate="label_organisers_entry_date">Organisers Entry Date:</label>
             <span id="organisers_entry_date" tal:content="view/organisers_entry_date_formatted" />
         </div>
 
-        <div>
+        <div class="copsclub-field">
             <label for="club_entry_date" i18n:translate="label_club_entry_date">Club Entry Date:</label>
             <span id="club_entry_date" tal:content="view/club_entry_date_formatted" />
+        </div>
+
+        <div class="copsclub-field">
+            <label for="team_manager" i18n:translate="label_team_manager">Team Manager</label>
+            <span id="team_manager" tal:content="context/team_manager" />
         </div>
 
         <div class="locations" tal:condition="view/locations">
@@ -54,13 +59,9 @@
             </div>
         </div>
 
-        <div>
-            <label for="team_manager" i18n:translate="label_team_manager">Team Manager</label>
-            <span id="team_manager" tal:content="context/team_manager" />
-        </div>
 
 
-        <fieldset id="folder-listing">
+        <!-- fieldset id="folder-listing"-->
         <div class="files" tal:condition="view/files">
             <h3 i18n:translate="heading_files">Files:</h3>
             <div tal:repeat="file view/files">
@@ -75,7 +76,7 @@
                 </span>  
             </div>
         </div>
-        </fieldset>
+        <!-- /fieldset -->
     </metal:content-core>
 </metal:content-core>
 
