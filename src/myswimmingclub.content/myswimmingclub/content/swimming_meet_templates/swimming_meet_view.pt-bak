@@ -1,0 +1,98 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="myswimmingclub.content">
+<body>
+
+<tal:comment tal:condition="nothing">
+    This is a sample view template. It will not be used for rendering the
+    content unless activated by creation of a view class with a matching name.
+</tal:comment>
+
+<metal:main fill-slot="content-core">
+  <metal:content-core define-macro="content-core">
+
+
+    <h2>
+        Rendered from
+        swimming_meet_templates/<span tal:replace="template/id" />
+    </h2>
+    <div class="eventDetails vcard">
+        <table class="vertical listing" summary="Event details"
+            tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime;
+                        DateTime python:modules['DateTime'];
+                        start_date python:DateTime.DateTime(context.start);
+                        end_date python:DateTime.DateTime(context.end);
+                        same_time python:start_date.Time() == end_date.Time();
+                        same_day python:start_date.Date() == end_date.Date(); ">
+            <tal:swimming_event_when metal:use-macro="container/date_template/macros/swimming_event_when" />
+            <tr i18n:translate="event_days_left_to_enter"
+                tal:define="entry_date python:context.getDateTime(context.club_entry_date);">
+                <th>Club Entry Date</th>
+                <td>
+                    <abbr>
+                         <span tal:replace="python:toLocalizedTime(entry_date)">Entry Date</span>
+                                <br i18n:name="linebreak" />
+                         <span tal:replace="context/formatDaysLeft">3 days left</span>
+                    </abbr>
+                </td>
+            </tr>
+            <tr>
+                <th i18n:translate="heading_add_to_calendar">Add event to calendar</th>
+                <td tal:define="here_url context/@@plone_context_state/object_url;
+                                portal context/@@plone_portal_state/portal;">
+                    <a href="#"
+                       tal:attributes="href string:$here_url/vcs_view"
+                       title="Download this event in vCal format"
+                       i18n:attributes="title title_add_to_vcal;">
+                        <img tal:replace="structure portal/icon_export_vcal.png" src="" alt="" />
+                        <span i18n:translate="label_add_to_vcal">vCal</span></a><br />
+                    <a href="#"
+                       tal:attributes="href string:$here_url/ics_view"
+                       title="Download this event in iCal format"
+                       i18n:attributes="title title_add_to_ical;">
+                        <img tal:replace="structure portal/icon_export_ical.png" src="" alt="" />
+                        <span i18n:translate="label_add_to_ical">iCal</span></a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="files">
+        <div tal:repeat="file context/listFolderContents">
+            <a tal:attributes="title file/summary; href string:${file/absolute_url}/at_download/file;">
+                        <img tal:define="icon python:file.getIcon() or None" src="" alt=""
+                            tal:condition="icon"
+                            tal:attributes="src string:${context/portal_url}/$icon"/>
+                        <tal:title tal:replace="file/title" />
+            </a>
+            <span class="discreet">
+                (<span tal:content="file/size">Size</span>)
+            </span> 
+        </div>
+    </div>
+    <div id="locations"
+        tal:repeat="location view/locations" >
+        <div class="locationWrapper">
+            <dl class="poolAddress">
+               <dt><a tal:attributes="title location/title;
+                               href python: location['location_url'] 
+                                            or location['url']"
+                   tal:content="location/title" />
+               </dt>
+               <tal:address tal:repeat="line location/address" >
+                <dd tal:condition="line" tal:content="line">address</dd> 
+              </tal:address>
+            </dl>
+            <iframe tal:replace="structure location/GoogleMap" />
+        </div>
+    </div>
+  </metal:content-core>
+</metal:main>
+
+</body>
+</html>
+

@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<model xmlns="http://namespaces.plone.org/supermodel/schema"
+       xmlns:form="http://namespaces.plone.org/supermodel/form">
+    
+    <schema>
+
+        <field name="stroke" type="zope.schema.Choice">
+            <description/>
+            <required>False</required>
+            <title>Stroke</title>
+            <vocabulary>myswimmingclub.content.Strokes</vocabulary>
+        </field>
+        <field name="notes" type="zope.schema.Text">
+            <description/>
+            <required>False</required>
+            <title>Notes</title>
+        </field>
+        
+    </schema>
+    
+</model>

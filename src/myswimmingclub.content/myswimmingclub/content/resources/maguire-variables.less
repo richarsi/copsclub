@@ -1,0 +1,63 @@
+//
+// Variables
+// --------------------------------------------------
+
+// Branding - used Adobe Kuler to get the colours #332B8A
+@maguire-brand-color-1:                            #F8E224; 
+@maguire-brand-color-2:                            #002F91; 
+@maguire-brand-color-3:                            lighten(#000, 85%); 
+@maguire-brand-color-4:                            #A6851E;
+@maguire-brand-color-5:                            #AFABA2;
+
+// Typography
+@maguire-headings-font-family:                     "Montserrat-Regular";
+@maguire-headings-font-weight:                     @headings-font-weight;
+@maguire-headings-line-height:                     @headings-line-height;
+@maguire-headings-color:                           @maguire-brand-color-1;
+@maguire-font-family-base:                         "Oxygen-Regular";
+@maguire-font-size-base:                           @font-size-base;
+@maguire-line-height-base:                         @line-height-base;
+@maguire-text-color:                               @maguire-brand-color-2;
+@maguire-link-color:                               @maguire-brand-color-2;
+@maguire-link-hover-color:                         @maguire-brand-color-2;
+@maguire-blockquote-font-family:                   "Arvo-Regular";
+
+// portal-top
+@maguire-portal-siteactions-bg-color:              @maguire-brand-color-3;
+@maguire-portal-siteactions-text-color:            @maguire-brand-color-2;
+@maguire-portal-personaltools-bg-color:            @maguire-brand-color-3;
+@maguire-portal-personaltools-text-color:          @maguire-brand-color-2;
+
+// Navigation basis
+@maguire-navbar-default-bg:                        @maguire-brand-color-1;
+@maguire-navbar-default-color:                     @maguire-brand-color-2;
+@maguire-navbar-default-hover-color:               @maguire-brand-color-2;
+@maguire-navbar-default-hover-bg:                  transparent;
+@maguire-navbar-default-active-color:              @maguire-brand-color-2;
+@maguire-navbar-default-active-bg:                 darken(@maguire-navbar-default-bg, 12%);
+@maguire-navbar-default-disabled-color:            #ccc;
+@maguire-navbar-default-disabled-bg:               transparent;
+
+// Portlets and Panels
+@maguire-portlets-header-bg:                       @maguire-brand-color-2;
+@maguire-portlets-header-text-color:               @maguire-brand-color-1;
+@maguire-portlets-body-bg:                         @maguire-brand-color-3;
+@maguire-portlets-body-text-color:                 @maguire-brand-color-2;
+
+@maguire-portlets-error-bg:                        #FFA500;
+@maguire-portlets-calendar-bg:                     #eee;
+@maguire-portlets-navtree-bg:                      #ddd;
+
+// Doormat
+@maguire-doormat-header-bg:                       transparent;
+@maguire-doormat-header-text-color:               @maguire-brand-color-2;
+@maguire-doormat-body-bg:                         @maguire-brand-color-3;
+@maguire-doormat-body-text-color:                 @maguire-brand-color-2;
+
+// Variables to support Reponsive Design
+
+//** Point at which the navbar becomes uncollapsed.
+@screen-sm:                                       768px;
+@grid-float-breakpoint:                           @screen-sm-min;
+//** Point at which the navbar begins collapsing.
+@grid-float-breakpoint-max:                       (@grid-float-breakpoint - 1);

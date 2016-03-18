@@ -1,0 +1,5 @@
+<registry>
+    <records
+        interface="myswimmingclub.content.interfaces.IMySwimmingClubSettings"
+    />
+</registry>

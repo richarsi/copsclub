@@ -1,0 +1,7 @@
+<portlets>
+    <portlet
+        addview="myswimmingclub.SwimmingMeet"
+        title="Swimming Meets"
+        description="A portlet which can show current swimming meets."
+        />
+</portlets>

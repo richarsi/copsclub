@@ -1,0 +1,73 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="myswimmingclub.content">
+<body>
+
+<tal:comment tal:condition="nothing">
+    This is a sample view template. It will not be used for rendering the
+    content unless activated by creation of a view class with a matching name.
+</tal:comment>
+
+<metal:main fill-slot="content-core">
+  <metal:content-core define-macro="content-core">
+
+    <tal:main-macro metal:define-macro="main"
+        tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime">
+
+
+        <div tal:replace="structure provider:plone.abovecontenttitle" />
+
+        <!-- h1 class="documentFirstHeading" tal:content="context/title" / -->
+
+        <iframe style="display:block;clear:both;"
+             width="600"
+             height="450"
+             frameborder="0"
+             style="border:0"
+             tal:attributes="src view/getGoogleIframeSrc"
+        >
+        </iframe>
+        <div class="eventDetails vCard">
+            <table class="vertical listing">
+                <tbody>
+                    <tr tal:condition="context/address_line_1 | nothing">
+                        <th i18n:translate="label_from">Address Line 1:</th>
+                        <td tal:content="context/address_line_1" />
+                    </tr>
+                    <tr tal:condition="context/address_line_2 | nothing">
+                        <th i18n:translate="label_from">Address Line 2:</th>
+                        <td tal:content="context/address_line_2" />
+                    </tr>
+                    <tr tal:condition="context/address_line_3 | nothing">
+                        <th i18n:translate="label_from">Address Line 3:</th>
+                        <td tal:content="context/address_line_3" />
+                    </tr>
+                    <tr tal:condition="context/town_or_city | nothing">
+                        <th i18n:translate="label_from">Town or City:</th>
+                        <td tal:content="context/town_or_city" />
+                    </tr>
+                    <tr tal:condition="context/county_or_state | nothing">
+                        <th i18n:translate="label_from">County or State:</th>
+                        <td tal:content="context/county_or_state" />
+                    </tr>
+                    <tr tal:condition="context/post_or_zip_code | nothing">
+                        <th i18n:translate="label_from">Post or ZIP Code:</th>
+                        <td tal:content="context/post_or_zip_code" />
+                    </tr>
+                <tbody>
+            </table> 
+        </div>
+
+
+        <div tal:replace="structure provider:plone.belowcontentbody" />
+     </tal:main-macro>
+  </metal:content-core>
+</metal:main>
+
+</body>
+</html>
+

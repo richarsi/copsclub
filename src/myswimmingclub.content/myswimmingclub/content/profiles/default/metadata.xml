@@ -1,0 +1,11 @@
+<metadata>
+  <version>1</version>
+    <dependencies>
+        <dependency>profile-plone.app.dexterity:default</dependency>
+        <dependency>profile-plone.app.relationfield:default</dependency>
+        <dependency>profile-collective.z3cform.widgets:default</dependency>
+        <dependency>profile-collective.z3cform.datagridfield:default</dependency>
+        <dependency>profile-plone.app.registry:default</dependency>
+        <dependency>profile-Products.ImageEditor:default</dependency>
+    </dependencies>
+</metadata>

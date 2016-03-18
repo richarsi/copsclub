@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<model xmlns="http://namespaces.plone.org/supermodel/schema"
+       xmlns:form="http://namespaces.plone.org/supermodel/form">
+    
+    <schema>
+        <!-- field definitions -->
+        <field name="membership_number" type="zope.schema.TextLine">
+            <description></description>
+            <required>True</required>
+            <title>Membership Number</title>
+        </field>
+        <field name="first_name" type="zope.schema.TextLine">
+            <description></description>
+            <required>True</required>
+            <title>First Name</title>
+        </field>
+        <field name="surname" type="zope.schema.TextLine">
+            <description></description>
+            <required>True</required>
+            <title>Surname</title>
+        </field>
+        <field name="date_of_birth" type="zope.schema.Date">
+            <description></description>
+            <required>True</required>
+            <title>Date of Birth</title>
+        </field>
+        <field name="photo" type="plone.namedfile.field.NamedBlobImage">
+            <description></description>
+            <required>True</required>
+            <title>Photo</title>
+        </field>
+        <field name="bio" type="plone.app.textfield.RichText">
+            <description></description>
+            <required>False</required>
+            <title>Biography</title>
+        </field>
+        <field name="squad" type="plone.app.relationfield.RelationList">
+            <title>Squad</title>
+            <value_type type="plone.app.relationfield.Relation"
+                        form:widget="plone.formwidget.autocomplete.AutocompleteMultiFieldWidget">
+                <title>Related</title>
+                <source>myswimmingclub.content.squad_path_src_binder</source>
+            </value_type>
+            <required>False</required>
+        </field>
+    </schema>
+    
+</model>

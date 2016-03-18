@@ -5,5 +5,6 @@
     <dependency>profile-copsclub.theme:default</dependency>
     <dependency>profile-copsclub.content:default</dependency>
     <dependency>profile-copsclub.maguiretheme:default</dependency>
+    <dependency>profile-myswimmingclub.content:default</dependency>
   </dependencies>
 </metadata>

@@ -1,0 +1,13 @@
+<tal:event-message tal:condition="context/club_entry_date"
+       tal:define="days_left context/daysLeft;
+                   entry_closed python:days_left<0;
+                   enter_today python:days_left==0;
+                   one_day_left python:days_left==1;
+                   more_days_left python:days_left>1;
+                   toLocalizedTime nocall:context/@@plone/toLocalizedTime;
+                   entry_date python:context.getDateTime(context.club_entry_date);">
+    <p class="event-message msg-danger" tal:condition="entry_closed">The club entry for this meet closed on <span tal:replace="python:toLocalizedTime(entry_date)">5 Feb, 2016</span>.</p>
+    <p class="event-message msg-warning" tal:condition="enter_today">The club entry for this meet closes today.</p>
+    <p class="event-message msg-warning" tal:condition="one_day_left">There is only 1 day left to enterthis meet.</p>
+    <p class="event-message msg-info" tal:condition="more_days_left">There are still <b tal:replace="days_left">100</b> days left to enter this meet.</p>
+</tal:event-message>

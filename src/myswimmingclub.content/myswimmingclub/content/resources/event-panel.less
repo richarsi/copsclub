@@ -1,0 +1,99 @@
+/**
+ * event-panel.less
+ **/
+ 
+ #content-core {
+    div.event-panel-wrapper {
+        width: 25%;
+        float: left;
+        position: relative;
+        margin: 9.75px 0 0 0;
+    }
+    div.event-panel {
+        background-color: @maguire-portlets-body-bg;
+        line-height: 1.28em;
+        min-height: 7.5em;
+        margin: 0 0.5em;
+        .rounded(0.5em);
+        dl {
+            display: block;
+            margin: 0em;
+            padding: 0;
+            font-size: 18px;
+            height: 9.22222222em;
+            min-height: 9.22222222em;
+            text-align: center;
+            line-height: 1.38888889em;
+            dt {
+                text-transform: uppercase;
+                background-color: @maguire-portlets-header-bg;
+                .border-radius(0.5em, 0, 0, 0.5em);
+                display: table;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                font-size: 18px;
+                height: 3.58em;
+                min-height: 3.58em;
+                width: 100%;
+                a {
+                    display: table-cell;
+                    vertical-align: middle;
+                    text-align: center;
+                    color: @maguire-portlets-header-text-color;
+                    text-decoration: none;
+                    font-size: 18px;
+                    font-weight: normal;                    
+                }
+            }
+            dd {
+                color: #002f91;
+                font-size: 18px;
+                font-weight: normal;
+                margin: 0;
+                padding: 2px 4px;
+            }
+        }
+        a.btn {
+            position: absolute;
+            bottom: 4px;
+            right: 4px;
+            margin: 4px 8px 4px 0;
+        }
+    }
+}
+dl .listingBar {
+  float: none;
+  clear: both;
+}
+
+@media (max-width: @grid-float-breakpoint-max) {
+  #content-core div.event-panel-wrapper {
+    width: 50%;
+    float: left;
+    position: relative;
+    margin: 9.75px 0 0 0;
+  }
+  #content-core div.event-panel dl {
+    height: 11.44444444em;
+    min-height: 11.44444444em;
+  }
+  #content-core div.event-panel dl dt {
+    height: 5.72222222em;
+    min-height: 5.72222222em;
+  }
+}
+#content-core div.copsclub-field {
+    position: relative;
+    line-height: 1.05ems;
+    label {
+        clear: both;
+        float: left;
+        display: block;
+        width: 12em;
+    }
+    span {
+        float: left;
+        display: block;
+    }
+}

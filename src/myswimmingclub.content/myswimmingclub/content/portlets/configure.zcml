@@ -1,0 +1,13 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:plone="http://namespaces.plone.org/plone">
+    <include package="plone.app.portlets" />
+    <plone:portlet
+        name="myswimmingclub.SwimmingMeet"
+        interface=".swimmingmeet.ISwimmingMeetPortlet"
+        assignment=".swimmingmeet.Assignment"
+        renderer=".swimmingmeet.Renderer"
+        addview=".swimmingmeet.AddForm"
+        editview=".swimmingmeet.EditForm"
+    />
+</configure>

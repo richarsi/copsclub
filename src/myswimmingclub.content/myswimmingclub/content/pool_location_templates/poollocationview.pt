@@ -1,0 +1,66 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="myswimmingclub.content">
+<body>
+
+<tal:comment tal:condition="nothing">
+    This is a sample view template. It will not be used for rendering the
+    content unless activated by creation of a view class with a matching name.
+</tal:comment>
+
+<metal:main fill-slot="content-core">
+  <metal:content-core define-macro="content-core">
+
+    <tal:main-macro metal:define-macro="main"
+        tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime">
+
+
+        <div tal:replace="structure provider:plone.abovecontenttitle" />
+
+        <!-- h1 class="documentFirstHeading" tal:content="context/title" / -->
+        <div class="locationWrapper">
+            <dl class="poolAddress">
+                <dt tal:content="context/title"/>
+                <tal:block tal:condition="context/address_line_1">
+                    <dd tal:content="context/address_line_1" />
+                </tal:block>
+                <tal:block tal:condition="context/address_line_2">
+                    <dd tal:content="context/address_line_2" />
+                </tal:block>
+                <tal:block tal:condition="context/address_line_3">
+                    <dd tal:content="context/address_line_3" />
+                </tal:block>
+                <tal:block tal:condition="context/town_or_city">
+                    <dd tal:content="context/town_or_city" />
+                </tal:block>
+                <tal:block tal:condition="context/county_or_state">
+                    <dd tal:content="context/county_or_state" />
+                </tal:block>
+                <tal:block tal:condition="context/post_or_zip_code">
+                    <dd tal:content="context/post_or_zip_code" />
+                </tal:block>
+            </dl>
+    
+            <!-- iframe class="googleMap" 
+                 width="600"
+                 height="450"
+                 frameborder="0"
+                 style="border:0"
+                 tal:attributes="src view/getGoogleIframeSrc"
+            >
+            </iframe -->
+            <iframe tal:replace="structure view/getGoogleMap"/>
+        </div><!-- locationWrapper -->
+
+        <div tal:replace="structure provider:plone.belowcontentbody" />
+     </tal:main-macro>
+  </metal:content-core>
+</metal:main>
+
+</body>
+</html>
+

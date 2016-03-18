@@ -1,0 +1,4 @@
+tal:define="DateTime = python:modules['DateTime'];
+            start_date  = context/start|nothing;
+            end_date  = context/end|nothing;
+            
