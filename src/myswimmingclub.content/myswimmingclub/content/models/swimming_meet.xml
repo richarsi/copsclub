@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<model xmlns="http://namespaces.plone.org/supermodel/schema"
+       xmlns:form="http://namespaces.plone.org/supermodel/form">
+    
+    <schema>
+        <!-- none of these widgets work on a Datetime field -->
+        <!-- because they don't implement IFieldWidget      -->
+        <!-- form:widget="collective.z3cform.datetimewidget.DateFieldWidget" -->
+        <!-- form:widget="plone.app.z3cform.widget.DatetimeWidget" -->
+        <!-- form:widget="plone.app.z3cform.widget.DateFieldWidget" -->
+        <!-- form:widget="zope.formlib.textwidgets.DateWidget" -->
+
+        <!-- field definitions -->
+        <fieldset name="smdates"
+            label="Swimming Meet Dates"
+            description="Key dates for the swimming meet">
+            <!-- see portlets where we use toLocalizedTime and this requires -->
+            <!-- datetime object                                             -->
+            <field name="start" type="zope.schema.Datetime">
+                <description/>
+                <title>Start Date</title>
+                <required>True</required>
+            </field>
+            <field name="end" type="zope.schema.Datetime">
+                <description/>
+                <title>End Date</title>
+                <required>True</required>
+            </field>
+            <field name="age_as_of_date" type="zope.schema.Date">
+                <description/>
+                <title>Age as of Date</title>
+                <required>False</required>
+            </field>
+            <field name="organisers_entry_date" type="zope.schema.Date">
+                <description/>
+                <title>Organisers Entry Date</title>
+                <required>False</required>
+            </field>
+            <field name="club_entry_date" type="zope.schema.Date">
+                <description>The latest date this swimming club will accept entry forms.</description>
+                <title>Club Entry Date</title>
+                <required>False</required>
+            </field>
+        </fieldset>
+        <field name="location" type="plone.app.relationfield.RelationList">
+            <title>Location</title>
+            <description/>
+            <value_type type="plone.app.relationfield.Relation"
+                        form:widget="plone.formwidget.autocomplete.AutocompleteMultiFieldWidget">
+                <title>Related</title>
+                <source>myswimmingclub.content.pool_location_path_src_binder</source>
+            </value_type>
+            <required>False</required>
+        </field>
+        <field name="event_url" type="zope.schema.TextLine">
+            <description>Web address with more info about the event. Add http:// for external links</description>
+            <title>Event URL</title>
+            <required>False</required>
+        </field>
+        <field name="contact_name" type="zope.schema.TextLine">
+            <description>Contact name</description>
+            <title>Contact Name</title>
+            <required>False</required>
+        </field>
+        <field name="contact_email" type="zope.schema.TextLine">
+            <description>Contact email address</description>
+            <title>Contact Email</title>
+            <required>False</required>
+        </field>
+        <field name="contact_telephone" type="zope.schema.TextLine">
+            <description>Contact telephone number</description>
+            <title>Contact Address</title>
+            <required>False</required>
+        </field>
+        <!-- fieldset name="events"
+            label="Swimming Meet Events"
+            description="The events being raced at the swimming meet">
+            <field name="events" type="zope.schema.List"
+                            form:widget="collective.z3cform.datagridfield.DataGridFieldFactory">
+                <title>Events</title>
+                <description/>
+                <value_type type="collective.z3cform.datagridfield.DictRow">
+                    <title>Events</title>
+                    <schema>myswimmingclub.content.swimming_meet_event.ISwimmingMeetEvent</schema>
+                </value_type>
+                <defaultFactory>myswimmingclub.content.defaults.DefaultStrokesFactory</defaultFactory>
+                <required>False</required>
+            </field>
+         </fieldset -->
+    </schema>
+</model>

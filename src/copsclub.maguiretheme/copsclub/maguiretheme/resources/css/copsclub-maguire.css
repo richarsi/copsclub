@@ -1748,7 +1748,7 @@ blockquote {
   top: 0;
   right: 0;
   padding: 0.25em 0.5em;
-  font-size: 80%;
+  font-size: 100%;
   border-bottom-right-radius: 0.5em;
   border-bottom-left-radius: 0.5em;
 }
@@ -1939,6 +1939,7 @@ blockquote {
 }
 #navigation-wrapper {
   clear: both;
+  margin: 0 0 1em;
   background-color: #f8e224;
 }
 #maguire-globalnav {
@@ -2128,6 +2129,7 @@ blockquote {
 /*---------- PORTAL FOOTER ----------*/
 #footer {
   clear: both;
+  margin: 0.5em 0 0 0;
   display: table;
   width: 100%;
   background-color: #d9d9d9;

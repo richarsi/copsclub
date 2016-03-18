@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<model xmlns="http://namespaces.plone.org/supermodel/schema"
+       xmlns:form="http://namespaces.plone.org/supermodel/form">
+    
+    <schema>
+        <!-- field definitions -->
+        <field name="code" type="zope.schema.Text">
+            <description>A short character code for the squad which is used when the squad is referenced</description>
+            <required>True</required>
+            <title>Code</title>
+        </field>
+        <field name="information" type="plone.app.textfield.RichText">
+            <description/>
+            <required>False</required>
+            <title>Information</title>
+        </field>
+
+    </schema>
+    
+</model>

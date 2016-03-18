@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+<model xmlns="http://namespaces.plone.org/supermodel/schema"
+       xmlns:form="http://namespaces.plone.org/supermodel/form">
+    
+    <schema>
+
+        <!-- field definitions -->
+        <field name="address_line_1" type="zope.schema.TextLine">
+            <description/>
+            <required>False</required>
+            <title>Address Line 1</title>
+        </field>
+        <field name="address_line_2" type="zope.schema.TextLine">
+            <description/>
+            <required>False</required>
+            <title>Address Line 2</title>
+        </field>
+        <field name="address_line_3" type="zope.schema.TextLine">
+            <description/>
+            <required>False</required>
+            <title>Address Line 3</title>
+        </field>
+        <field name="town_or_city" type="zope.schema.TextLine">
+            <description/>
+            <required>False</required>
+            <title>Town or City</title>
+        </field>
+        <field name="county_or_state" type="zope.schema.TextLine">
+            <description/>
+            <required>False</required>
+            <title>County or State</title>
+        </field>
+        <field name="post_or_zip_code" type="zope.schema.TextLine">
+            <description/>
+            <required>False</required>
+            <title>Post or Zip Code</title>
+        </field>
+        <field name="location_url" type="zope.schema.TextLine">
+            <description>A website address for the location.</description>
+            <required>False</required>
+            <title>Location URL</title>
+        </field>
+        <field name="google_api_query" type="zope.schema.ASCIILine">
+            <description>Google Maps search string.  Usually the venue name and post code will be sufficient.</description>
+            <required>False</required>
+            <title>Google API Query</title>
+        </field>
+        
+    </schema>
+    
+</model>

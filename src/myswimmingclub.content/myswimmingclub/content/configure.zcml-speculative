@@ -1,0 +1,155 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="myswimmingclub.content">
+
+  <!-- Include configuration for dependencies listed in setup.py -->
+  <includeDependencies package="." />
+
+  <!-- Include the sub-packages that use their own configure.zcml files. -->
+  <include package=".portlets" />
+
+  <include package="plone.app.relationfield" />
+
+  <!-- Register a resource directory from which we can deploy static
+   resource files. -->
+  <browser:resourceDirectory
+    name="myswimmingclub.content"
+    directory="resources" />
+
+  <i18n:registerTranslations directory="locales" />
+
+  <!-- Register an extension profile to make the product installable
+       in Plone -->
+  <genericsetup:registerProfile
+      name="default"
+      title="Content types for My Swimming Club"
+      directory="profiles/default"
+      description="Extension profile for Content types for My Swimming Club"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <!-- -*- extra stuff goes here -*- -->
+    <class class=".swimming_folder.SwimmingFolder">
+        <implements interface=".swimming_folder.ISwimmingFolder" />
+    </class>
+
+    <browser:page
+        for=".swimming_folder.ISwimmingFolder"
+        name="event_panel_view"
+        class=".swimming_folder.EventPanelView"
+        template="swimming_templates/event_panel_view.pt"
+        permission="zope2.View"
+        />
+
+    <class class=".swimming_meet_event.SwimmingMeetEvent">
+        <implements interface=".swimming_meet_event.ISwimmingMeetEvent" />
+    </class>
+    <utility
+        name="myswimmingclub.content.Strokes"
+        provides="zope.schema.interfaces.IVocabularyFactory"
+        component="myswimmingclub.content.vocabularies.StrokesVocabularyFactory"
+    />
+    <utility
+        name="myswimmingclub.content.DefaultStrokes"
+        provides="plone.supermodel.interfaces.IDefaultFactory"
+        component="myswimmingclub.content.defaults.DefaultStrokesFactory"
+    />
+
+
+    <!-- browser:page
+        for=".swimming_meet_event.ISwimmingMeetEvent"
+        name="sampleview"
+        class=".swimming_meet_event.SampleView"
+        template="swimming_meet_event_templates/sampleview.pt"
+        permission="zope2.View"
+        / -->
+
+    <class class=".pool_location.PoolLocation">
+        <implements interface=".pool_location.IPoolLocation" />
+    </class>
+
+    <browser:page
+        for=".pool_location.IPoolLocation"
+        name="view"
+        class=".pool_location.PoolLocationView"
+        template="pool_location_templates/poollocationview.pt"
+        permission="zope2.View"
+        />
+
+    <class class=".swimming_meet.SwimmingMeet">
+        <implements interface=".swimming_meet.ISwimmingMeet" />
+    </class>
+
+    <browser:page
+        for=".swimming_meet.ISwimmingMeet"
+        name="sampleview"
+        class=".swimming_meet.SampleView"
+        template="swimming_templates/sampleview.pt"
+        permission="zope2.View"
+        />
+
+    <!-- a view includes iCalendarSupport -->
+    <browser:page
+        for=".swimming_meet.ISwimmingMeet"
+        name="view2"
+        class=".swimming_meet.View2"
+        template="swimming_templates/view2.pt"
+        permission="zope2.View"
+        />
+
+    <!-- a view includes iCalendarSupport -->
+    <browser:page
+        for=".swimming_meet.ISwimmingMeet"
+        name="ics_view"
+        class=".swimming_meet.ics_view"
+        permission="zope2.View"
+        />
+
+    <!-- a view includes iCalendarSupport -->
+    <browser:page
+        for=".swimming_meet.ISwimmingMeet"
+        name="vcs_view"
+        class=".swimming_meet.vcs_view"
+        permission="zope2.View"
+        />
+
+    <!-- experiment to create macros but not recommended  -->
+    <browser:page
+        for=".swimming_meet.ISwimmingMeet"
+        name="date_template"
+        class=".swimming_meet.View2"
+        permission="zope2.View"
+        template="swimming_templates/date_template.pt" 
+        />
+
+    <class class=".swimmer.Swimmer">
+        <implements interface=".swimmer.ISwimmer" />
+    </class>
+
+    <browser:page
+        for=".swimmer.ISwimmer"
+        name="sampleview"
+        class=".swimmer.SampleView"
+        template="swimmer_templates/sampleview.pt"
+        permission="zope2.View"
+        />
+
+    <class class=".squad.Squad">
+        <implements interface=".squad.ISquad" />
+    </class>
+
+    <browser:page
+        for=".squad.ISquad"
+        name="sampleview"
+        class=".squad.SampleView"
+        template="squad_templates/sampleview.pt"
+        permission="zope2.View"
+        />
+
+
+</configure>
